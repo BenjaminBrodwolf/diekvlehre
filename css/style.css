@@ -12,12 +12,10 @@ body {
 
 header {
   overflow: hidden;
-
-  /*position: sticky;*/
   top: 0;
   left: 0;
   width: 100vw;
-  height: 70px;
+  height: 50px;
   background: #cccccc;
   display: flex;
   flex-direction: row;
@@ -36,38 +34,31 @@ header button {
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
-  height: calc(100vh - 70px);
-  /*display: flex;*/
-  /*flex-direction: row;*/
-
+  height: calc(100vh - 50px);
   width: 100vw;
   position: relative;
 }
 
 section {
-  /*width: 100vw;*/
   width: 100%;
   height: 100%;
-  flex: 0 0 100%;
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
-section .topLeft,
-section .bottomRight {
+.pages section .topLeft,
+.pages section .bottomRight {
   height: 50%;
   padding: 1rem;
   position: relative;
 }
-section .bottomRight {
+.pages section .bottomRight {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
 }
-section .bottomRight::-webkit-scrollbar  {
+.pages section .bottomRight::-webkit-scrollbar  {
   display: none;
 }
 
@@ -90,24 +81,28 @@ section .bottomRight::-webkit-scrollbar  {
 }
 
 @media screen and (min-width: 768px) {
-  section .topLeft,
-  section .bottomRight {
+  .pages section {
+    display: flex;
+  }
+
+  .pages section .topLeft,
+  .pages section .bottomRight {
     height: 100%;
-    width: 50%;
+    width: 50vw;
   }
 
   .prevChevron {
-    top: 25%;
-    left: 20px;
+    top: 20px;
+    left: 50%;
   }
 
   .nextChevron {
-    top: 25%;
-    right: 20px;
+    bottom: 25px;
+    left: 50%;
+
   }
-
-
 }
+
 .selection-hero {
   background: #b3d4fc;
   height: 50px;
@@ -115,8 +110,6 @@ section .bottomRight::-webkit-scrollbar  {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .active {
