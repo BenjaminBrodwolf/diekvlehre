@@ -77,6 +77,15 @@ const jumpTo = nextSectionId => {
 
 let animationActive = false;
 
+const setTransforms = (element, direction) => {
+    element.style.WebkitTransform = translateDirection(direction);
+    element.style.transform = translateDirection(direction);
+    element.style.MozTransform = translateDirection(direction);
+    element.style.OTransform = translateDirection(direction);
+    element.style.msTransform = translateDirection(direction);
+}
+
+
 const transformSplittedSections = (activeSection, nextSection, direction) => {
     if (animationActive) {
         return
@@ -86,15 +95,15 @@ const transformSplittedSections = (activeSection, nextSection, direction) => {
     new Promise((resolve, reject) => {
         moveSectionInFrontDom(nextSection)
         removeTransitionCss();
-        nextSection.querySelector('.topLeft').style.transform = translateDirection(direction)
-        nextSection.querySelector('.bottomRight').style.transform = translateDirection(directionOpposite(direction))
+        setTransforms(nextSection.querySelector('.topLeft'), direction)
+        setTransforms(nextSection.querySelector('.bottomRight'), directionOpposite(direction))
 
         setTimeout(() => {
             addTransitionCss()
-            activeSection.querySelector('.topLeft').style.transform = translateDirection(directionOpposite(direction));
-            activeSection.querySelector(`.bottomRight`).style.transform = translateDirection(direction);
-            nextSection.querySelector('.bottomRight').style.transform = translateDirection('center');
-            nextSection.querySelector('.topLeft').style.transform = translateDirection('center');
+            setTransforms(activeSection.querySelector('.topLeft'), directionOpposite(direction))
+            setTransforms(activeSection.querySelector('.bottomRight'), direction)
+            setTransforms(nextSection.querySelector('.topLeft'), 'center')
+            setTransforms(nextSection.querySelector('.bottomRight'), 'center')
         }, 10);
 
         function handleAnimationEnd(event) {
@@ -120,14 +129,14 @@ const transformStartSections = (activeSection, nextSection, direction) => {
         new Promise((resolve, reject) => {
             moveSectionInFrontDom(nextSection)
             removeTransitionCss();
-            nextSection.querySelector('.topLeft').style.transform = translateDirection(directionOpposite(direction))
-            nextSection.querySelector('.bottomRight').style.transform = translateDirection(directionOpposite(direction))
+            setTransforms(nextSection.querySelector('.topLeft'), directionOpposite(direction))
+            setTransforms(nextSection.querySelector('.bottomRight'), directionOpposite(direction))
 
             setTimeout(() => {
                 addTransitionCss()
-                activeSection.querySelector(`.start-content`).style.transform = translateDirection(direction);
-                nextSection.querySelector('.bottomRight').style.transform = translateDirection('center');
-                nextSection.querySelector('.topLeft').style.transform = translateDirection('center');
+                setTransforms(activeSection.querySelector('.start-content'), direction)
+                setTransforms(nextSection.querySelector('.topLeft'), 'center')
+                setTransforms(nextSection.querySelector('.bottomRight'), 'center')
             }, 10);
 
             function handleAnimationEnd(event) {
@@ -143,13 +152,13 @@ const transformStartSections = (activeSection, nextSection, direction) => {
         new Promise((resolve, reject) => {
             moveSectionInFrontDom(nextSection)
             removeTransitionCss();
-            nextSection.querySelector(`.start-content`).style.transform = translateDirection(directionOpposite(direction));
+            setTransforms(nextSection.querySelector('.start-content'), directionOpposite(direction));
 
             setTimeout(() => {
                 addTransitionCss()
-                nextSection.querySelector(`.start-content`).style.transform = translateDirection('center');
-                activeSection.querySelector('.bottomRight').style.transform = translateDirection(direction);
-                activeSection.querySelector('.topLeft').style.transform = translateDirection(direction);
+                setTransforms(nextSection.querySelector('.start-content'), 'center');
+                setTransforms(activeSection.querySelector('.topLeft'),     direction)
+                setTransforms(activeSection.querySelector('.bottomRight'), direction)
             }, 10);
 
             function handleAnimationEnd(event) {
@@ -163,17 +172,6 @@ const transformStartSections = (activeSection, nextSection, direction) => {
     }
 
 }
-
-
-function getTransforms(translate3d) {
-    return {
-        '-webkit-transform': translate3d,
-        '-moz-transform': translate3d,
-        '-ms-transform': translate3d,
-        'transform': translate3d
-    };
-}
-
 
 const moveSectionInFrontDom = (nextSection) => {
     const pagesParent = document.querySelector('.pages');
