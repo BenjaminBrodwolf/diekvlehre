@@ -3,11 +3,18 @@ console.log(window.innerWidth)
 console.log(window.outerWidth)
 
 const mobileBreakpoint = 768;
-const isMobile = () => window.innerWidth > mobileBreakpoint;
-const nextDirection = () => isMobile() ? 'up' : 'right';
-const prevDirection = () => isMobile() ? 'down' : 'left';
+const loopSection = false;
+let activeSectionId = 0;
+
+
+const isMobile = () => window.innerWidth < mobileBreakpoint;
+const nextDirection = () => isMobile() ? 'right' : 'up';
+const prevDirection = () => isMobile() ? 'left' : 'down';
 const getPageWidth = () => document.querySelector('.pages').clientWidth;
 const getPageHeight = () => document.querySelector('.pages').clientHeight;
+const getSectionNodesMobile = () => document.querySelectorAll('.pages section:not(.section-start)');
+const getSectionNodesDesktop = () => document.querySelectorAll('.pages section');
+
 const translateDirection = direction => ({
     center: 'translate3d(0px, 0px, 0px)',
     left: 'translate3d(-' + getPageWidth() + 'px, 0px, 0px)',
@@ -24,64 +31,74 @@ const directionOpposite = direction => ({
 })[direction];
 
 const nextTo = (direction) => {
-    const sections = getSectionNodes();
+    const sections = isMobile() ? getSectionNodesMobile() : getSectionNodesDesktop();
     const activeSection = sections[sections.length - 1];
-    const activeSectionId = Number(activeSection.dataset.pageId)
+    const activeSectionId = Number(activeSection.dataset.pageId);
 
-    let nextId = (activeSectionId + (direction === 'right' || direction === 'down' ? 1 : -1))
+    let nextSectionId = (activeSectionId + (direction === 'right' || direction === 'up' ? 1 : -1));
 
-    if (nextId < 0) {
-        nextId = sections.length - 1
+    if (nextSectionId < (isMobile() ? 1 : 0)) {
+        if (loopSection) {
+            nextSectionId = sections.length;
+        } else {
+            return;
+        }
     }
-    if (nextId > sections.length - 1) {
-        nextId = 0;
+    if (nextSectionId > sections.length - (isMobile() ? 0 : 1)) {
+        if (loopSection) {
+            nextSectionId = (isMobile() ? 1 : 0);
+        } else {
+            return;
+        }
     }
 
-    const nextSection = getSectionById(nextId);
-    transformSections(activeSection, nextSection, direction)
+    const nextSection = getSectionById(nextSectionId);
+
+    (activeSectionId === 0 || nextSectionId === 0)
+        ? transformStartSections(activeSection, nextSection, direction)
+        : transformSplittedSections(activeSection, nextSection, direction);
 };
 
 const jumpTo = nextSectionId => {
-    const sections = getSectionNodes();
+    const sections = isMobile() ? getSectionNodesMobile() : getSectionNodesDesktop();
     const activeSection = sections[sections.length - 1];
 
-    const activeSectionId = activeSection.dataset.pageId;
-    if (nextSectionId.toString() === activeSectionId) {
+    const activeSectionId = Number(activeSection.dataset.pageId);
+    if (nextSectionId === activeSectionId) {
         return;
     }
 
     const direction = activeSectionId < nextSectionId ? nextDirection() : prevDirection();
     const nextSection = getSectionById(nextSectionId);
-    transformSections(activeSection, nextSection, direction)
+    (activeSectionId === 0 || nextSectionId === 0)
+        ? transformStartSections(activeSection, nextSection, direction)
+        : transformSplittedSections(activeSection, nextSection, direction);
 }
 
 let animationActive = false;
-const transformSections = (activeSection, nextSection, direction) => {
 
+const transformSplittedSections = (activeSection, nextSection, direction) => {
     if (animationActive) {
         return
     }
+    animationActive = true;
+
     new Promise((resolve, reject) => {
-        animationActive = true;
         moveSectionInFrontDom(nextSection)
         removeTransitionCss();
         nextSection.querySelector('.topLeft').style.transform = translateDirection(direction)
-        console.log(direction)
-        console.log(directionOpposite(direction))
         nextSection.querySelector('.bottomRight').style.transform = translateDirection(directionOpposite(direction))
 
         setTimeout(() => {
             addTransitionCss()
             activeSection.querySelector('.topLeft').style.transform = translateDirection(directionOpposite(direction));
             activeSection.querySelector(`.bottomRight`).style.transform = translateDirection(direction);
-
-            nextSection.querySelector('.bottomRight').style.transform = translateDirection('center')
-            nextSection.querySelector('.topLeft').style.transform = translateDirection('center')
-        });
+            nextSection.querySelector('.bottomRight').style.transform = translateDirection('center');
+            nextSection.querySelector('.topLeft').style.transform = translateDirection('center');
+        }, 10);
 
         function handleAnimationEnd(event) {
             event.stopPropagation();
-            console.log("animation end")
             animationActive = false;
             resolve('Animation ended');
         }
@@ -89,6 +106,64 @@ const transformSections = (activeSection, nextSection, direction) => {
         nextSection.addEventListener('transitionend', handleAnimationEnd, {once: true});
     });
 }
+
+const transformStartSections = (activeSection, nextSection, direction) => {
+    if (animationActive) {
+        return
+    }
+    animationActive = true;
+
+    console.log('activeSection ', activeSection)
+    console.log('nextSection ', nextSection)
+
+    if (direction === 'up') { // when UP means activeSection is StartSection
+        new Promise((resolve, reject) => {
+            moveSectionInFrontDom(nextSection)
+            removeTransitionCss();
+            nextSection.querySelector('.topLeft').style.transform = translateDirection(directionOpposite(direction))
+            nextSection.querySelector('.bottomRight').style.transform = translateDirection(directionOpposite(direction))
+
+            setTimeout(() => {
+                addTransitionCss()
+                activeSection.querySelector(`.start-content`).style.transform = translateDirection(direction);
+                nextSection.querySelector('.bottomRight').style.transform = translateDirection('center');
+                nextSection.querySelector('.topLeft').style.transform = translateDirection('center');
+            }, 10);
+
+            function handleAnimationEnd(event) {
+                event.stopPropagation();
+                animationActive = false;
+                resolve('Animation ended');
+            }
+
+            nextSection.addEventListener('transitionend', handleAnimationEnd, {once: true});
+        });
+
+    } else {
+        new Promise((resolve, reject) => {
+            moveSectionInFrontDom(nextSection)
+            removeTransitionCss();
+            nextSection.querySelector(`.start-content`).style.transform = translateDirection(directionOpposite(direction));
+
+            setTimeout(() => {
+                addTransitionCss()
+                nextSection.querySelector(`.start-content`).style.transform = translateDirection('center');
+                activeSection.querySelector('.bottomRight').style.transform = translateDirection(direction);
+                activeSection.querySelector('.topLeft').style.transform = translateDirection(direction);
+            }, 10);
+
+            function handleAnimationEnd(event) {
+                event.stopPropagation();
+                animationActive = false;
+                resolve('Animation ended');
+            }
+
+            nextSection.addEventListener('transitionend', handleAnimationEnd, {once: true});
+        });
+    }
+
+}
+
 
 function getTransforms(translate3d) {
     return {
@@ -99,28 +174,18 @@ function getTransforms(translate3d) {
     };
 }
 
-const getSectionNodes = () => document.querySelectorAll('.pages section');
 
 const moveSectionInFrontDom = (nextSection) => {
     const pagesParent = document.querySelector('.pages');
     pagesParent.appendChild(nextSection)
 }
 
-const addTransitionCss = () => document.querySelectorAll('section .topLeft, section .bottomRight')
+const addTransitionCss = () => document.querySelectorAll('.pages section .topLeft, section .bottomRight, section .start-content')
     .forEach(s => s.style.transition = 'all 0.7s ease-out');
-const removeTransitionCss = () => document.querySelectorAll('section .topLeft, section .bottomRight')
+const removeTransitionCss = () => document.querySelectorAll('.pages section .topLeft, section .bottomRight')
     .forEach(s => s.style.transition = 'none')
 
 const getSectionById = id => document.querySelector(`[data-page-id="${id}"]`);
-
-const prev = () => {
-    nextTo(nextDirection());
-}
-
-const next = () => {
-    nextTo(prevDirection());
-}
-
 
 let xDown = null;
 const getTouches = (evt) => evt.touches || evt.originalEvent.touches;
@@ -132,18 +197,11 @@ const handleTouchMove = (evt) => {
     if (!xDown) {
         return;
     }
-
     const xUp = evt.touches[0].clientX;
     const xDiff = xDown - xUp;
-
-    if (xDiff > 0) {
-        console.log('right touch')
-        setTimeout(next);
-    } else {
-        console.log('left touch')
-        setTimeout(prev);
-    }
-
+    xDiff > 0
+        ? setTimeout(() => nextTo(nextDirection()))
+        : setTimeout(() => nextTo(prevDirection()));
     xDown = null;
 };
 
@@ -167,7 +225,9 @@ const getArrowKeyDirection = (keyCode) =>
 document.addEventListener('keydown', event => {
     const direction = getArrowKeyDirection(event.code)
     if (direction) {
-        nextTo(direction)
+        (direction === 'right' || direction === 'up')
+            ? nextTo(nextDirection())
+            : nextTo(prevDirection())
     }
 })
 
