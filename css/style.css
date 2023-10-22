@@ -1,5 +1,6 @@
 :root {
   --mobile-breakpoint: 768px;
+  --header-height: 50px;
 }
 
 body {
@@ -15,8 +16,8 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 50px;
-  background: #cccccc;
+  height: var(--header-height);
+  background: #e5e6e7;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -34,12 +35,12 @@ header button {
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
-  height: calc(100vh - 50px);
+  height: calc(100vh - var(--header-height));
   width: 100vw;
   position: relative;
 }
 
-section {
+.pages section {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -84,10 +85,6 @@ section {
   display: none;
 }
 
-.active {
-  border: rebeccapurple solid 4px;
-}
-
 @media screen and (min-width: 768px) {
   .pages section {
     display: flex;
@@ -107,7 +104,6 @@ section {
   .nextChevron {
     bottom: 25px;
     left: 50%;
-
   }
 
   .section-start .start-content{
@@ -121,3 +117,54 @@ section {
   }
 }
 
+/* Sidebar */
+/* The sidebar menu */
+.sidebar {
+  height: 80vh; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: var(--header-height);
+  right: 0;
+  background-color: #e5e6e7; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}

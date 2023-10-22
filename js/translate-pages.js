@@ -209,7 +209,7 @@ document.querySelectorAll('.pages .topLeft')
     .forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, false));
 const checkScrollDirection = (evt) =>
     nextTo(evt.deltaY > 0 ? nextDirection() : prevDirection());
-document.querySelectorAll('.pages .topLeft')
+document.querySelectorAll('.pages .topLeft, .start-content')
     .forEach(topLeft => topLeft.addEventListener('wheel', checkScrollDirection, false));
 
 const getArrowKeyDirection = (keyCode) =>
