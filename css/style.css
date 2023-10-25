@@ -11,23 +11,23 @@
 
 @font-face {
   font-family: 'Montserrat-Bold';
-  src: url('/font/Montserrat-Bold.woff2') format('woff2');
+  src: url('../font/Montserrat-Bold.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Montserrat-Medium';
-  src: url('/font/Montserrat-Medium.woff2') format('woff2');
+  src: url('../font/Montserrat-Medium.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: url('/font/Montserrat-Regular.woff2') format('woff2');
+  src: url('../font/Montserrat-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'MontserratAlternates-Bold';
-  src: url('/font/MontserratAlternates-Bold.woff2') format('woff2');
+  src: url('../font/MontserratAlternates-Bold.woff2') format('woff2');
 }
 @font-face {
   font-family: 'MontserratAlternates-ExtraBold';
-  src: url('/font/MontserratAlternates-ExtraBold.woff2') format('woff2');
+  src: url('../font/MontserratAlternates-ExtraBold.woff2') format('woff2');
 }
 
 body {
@@ -102,13 +102,13 @@ section .topLeft, section .start-content {
 }
 
 .education .topLeft {
-  background-image: url(/img/ausbildung.webp);
+  background-image: url(../img/ausbildung.webp);
 }
 .movie .topLeft {
-  background-image: url(/img/movie.webp);
+  background-image: url(../img/movie.webp);
 }
 .application .topLeft {
-  background-image: url(/img/bewerbung.webp);
+  background-image: url(../img/bewerbung.webp);
 }
 @media screen and (min-width: 768px) {
   .pages section {
@@ -132,7 +132,7 @@ section .topLeft, section .start-content {
   }
 
   .section-start .start-content{
-    background-image: url(/img/start.webp);
+    background-image: url(../img/start.webp);
 
     width: 100%;
     height: 100%;
