@@ -49,6 +49,7 @@ body {
   width: 100vw;
   position: relative;
   background-color: var(--dunkelblau);
+  color: var(--weiss);
 }
 
 .pages section {
