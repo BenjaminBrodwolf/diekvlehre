@@ -23,12 +23,18 @@ const translateDirection = direction => ({
     down: 'translate3d(0px,' + getPageHeight() + 'px,  0px)'
 })[direction];
 
+
 const directionOpposite = direction => ({
     left: 'right',
     right: 'left',
     up: 'down',
     down: 'up',
 })[direction];
+const setActiveNavClass = sectionId => {
+    document.querySelectorAll('header .header-nav')
+        .forEach(nav => nav.classList.remove('active'));
+    document.querySelector(`.header-id-${sectionId}`).classList.add('active')
+}
 
 const nextTo = (direction) => {
     const sections = isMobile() ? getSectionNodesMobile() : getSectionNodesDesktop();
@@ -57,6 +63,8 @@ const nextTo = (direction) => {
     (activeSectionId === 0 || nextSectionId === 0)
         ? transformStartSections(activeSection, nextSection, direction)
         : transformSplittedSections(activeSection, nextSection, direction);
+
+    setActiveNavClass(nextSectionId);
 };
 
 const jumpTo = nextSectionId => {
@@ -73,6 +81,8 @@ const jumpTo = nextSectionId => {
     (activeSectionId === 0 || nextSectionId === 0)
         ? transformStartSections(activeSection, nextSection, direction)
         : transformSplittedSections(activeSection, nextSection, direction);
+
+    setActiveNavClass(nextSectionId);
 }
 
 let animationActive = false;
@@ -84,6 +94,7 @@ const setTransforms = (element, direction) => {
     element.style.OTransform = translateDirection(direction);
     element.style.msTransform = translateDirection(direction);
 }
+
 
 
 const transformSplittedSections = (activeSection, nextSection, direction) => {
@@ -121,9 +132,6 @@ const transformStartSections = (activeSection, nextSection, direction) => {
         return
     }
     animationActive = true;
-
-    console.log('activeSection ', activeSection)
-    console.log('nextSection ', nextSection)
 
     if (direction === 'up') { // when UP means activeSection is StartSection
         new Promise((resolve, reject) => {

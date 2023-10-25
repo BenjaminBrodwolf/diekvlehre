@@ -7,57 +7,51 @@
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <meta content="#fafafa" name="theme-color">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
 </head>
 
 <body>
 
 
 <header>
-    <button class="bg-blue-100" onclick="jumpTo(0)">0 (START)</button>
-    <button class="bg-blue-600" onclick="jumpTo(1)">1</button>
-    <button class="bg-amber-600" onclick="jumpTo(2)">2</button>
-    <button class="bg-green-600" onclick="jumpTo(3)">3</button>
-    <button class="bg-purple-600" onclick="jumpTo(4)">4</button>
-    <button class="openbtn" onclick="toggleSidebar()">&#9776; Sidebar</button>
+    <div class="header-logo">LOGO</div>
+    <div class="header-nav header-id-0 header-start active" onclick="jumpTo(0)">START</div>
+    <div class="header-nav header-id-1 header-application" onclick="jumpTo(1)">BEWERBUNG</div>
+    <div class="header-nav header-id-2 header-education" onclick="jumpTo(2)">AUSBILDUNG</div>
+    <div class="header-nav header-id-3 header-movie" onclick="jumpTo(3)">MOVIE</div>
+    <div class="header-nav header-id-4 header-contact" onclick="jumpTo(4)">KONTAKT</div>
+    <div class="header-languages">DE FR IT</div>
+
+    <div class="hamburger">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <div class="sidebar">
+            <p>LOGO</p>
+            <p>Elisabethenstrasse 44<br>4051 Basel</p>
+            <p>+41 61 205 98 00<br>+41 61 205 98 01</p>
+            <a href="mailto:office@spedlogswiss.com">office@spedlogswiss.com</a>
+            <p>Chatte mis uns!</p>
+        </div>
+    </div>
+<!--    <button class="openbtn" onclick="toggleSidebar()">&#9776; Sidebar</button>-->
 </header>
 
 <main class="pages">
-    <div class="sidebar">
-        <p>LOGO</p>
-        <p>Elisabethenstrasse 44<br>4051 Basel</p>
-        <p>+41 61 205 98 00<br>+41 61 205 98 01</p>
-        <a href="mailto:office@spedlogswiss.com">office@spedlogswiss.com</a>
-        <p>Chatte mis uns!</p>
-    </div>
-
-    <section data-page-id="4">
+    <section data-page-id="4" class="contact">
         <div class="topLeft bg-purple-600">
-            <h2>4</h2>
-            <button class="prevChevron" onclick="nextTo(prevDirection())"> <</button>
-            <button class="nextChevron" onclick="nextTo(nextDirection())"> ></button>
+            <h2>KONTAKT</h2>
+            <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
         </div>
-        <div class="bottomRight bg-purple-500">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        </div>
-    </section>
-
-    <section data-page-id="3">
-        <div class="topLeft bg-green-600">
-            <h2>3</h2>
-            <button class="prevChevron" onclick="nextTo(prevDirection())"> <</button>
-            <button class="nextChevron" onclick="nextTo(nextDirection())"> ></button>
-        </div>
-        <div class="bottomRight bg-green-500">
+        <div class="bottomRight">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
                 rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
@@ -67,72 +61,95 @@
         </div>
     </section>
 
-    <section data-page-id="2">
-        <div class="topLeft bg-amber-600">
-            <h2>2</h2>
-            <button class="prevChevron" onclick="nextTo(prevDirection())"> <</button>
-            <button class="nextChevron" onclick="nextTo(nextDirection())"> ></button>
+    <section data-page-id="3" class="movie">
+        <div class="topLeft">
+            <h2>MOVIE</h2>
+            <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
         </div>
-        <div class="bottomRight bg-amber-500">
+        <div class="bottomRight">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
                 rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
                 dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+        </div>
+    </section>
+
+    <section data-page-id="2" class="education">
+        <div class="topLeft">
+            <h2>AUSBILDUNG</h2>
+            <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+        </div>
+        <div class="bottomRight">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea t      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
                 clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
     </section>
 
-    <section data-page-id="1">
-        <div class="topLeft bg-blue-600">
-            <h2>1</h2>
-            <button class="prevChevron" onclick="nextTo(prevDirection())"> <</button>
-            <button class="nextChevron" onclick="nextTo(nextDirection())"> ></button>
+    <section data-page-id="1" class="application">
+        <div class="topLeft">
+            <h2>BEWERBUNG</h2>
+            <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
         </div>
-        <div class="bottomRight bg-blue-500">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum doloddr sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="bottomRight">
+            <h2>Ausbildungsregionen</h2>
+            <h4>SPEDLOGSWISS bildet in vier Ausbildungsregionen ihren Branchennachwuchs aus. </h4>
+            <p>Detaillierte Informationen finden Sie auf den Websites der Regionen
+                oder unserer Lehrstellenbörse.</p>
+            <hr style="border-top: dotted 1px;" />
+            <p>Wähle Deine Region</p>
         </div>
     </section>
 
     <section class="section-start" data-page-id="0">
         <div class="start-content">
-            <h1>START</h1>
-            <button class="nextChevron" onclick="nextTo(nextDirection())"> ></button>
+            <h1>Mach weltweite Connections.</h1>
+            <h4>Starte jetzt Deine Karriere als Kaufmann*frau EFZ Internationale Speditionslogistik </h4>
+            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+
         </div>
     </section>
 </main>
