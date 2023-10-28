@@ -14,8 +14,10 @@ header {
 
 header .header-logo {
     width: 200px;
-    margin-left: 2rem;
-    background: white;
+    height: 100%;
+    margin-left: 1rem;
+    display: grid;
+    align-content: center;
 }
 
 header .header-nav {
@@ -25,10 +27,17 @@ header .header-nav {
 @media screen and (min-width: 768px) {
     header .header-nav {
         display: inline-block;
+        color: var(--hellblau);
+        font-family: Montserrat-Regular, Montserrat, sans-serif;
+        letter-spacing: 1px;
+        transition: all 0.4s ease-in;
     }
+
     header .header-nav.active {
         color: var(--rot);
+        font-family: Montserrat-Bold, Montserrat, sans-serif;
     }
+
     header .header-nav:hover {
         cursor: pointer;
         font-weight: bolder;
@@ -92,7 +101,7 @@ header .hamburger {
 
 .hamburger .hamburger-lines .line {
     display: block;
-    height: 4px;
+    height: 3px;
     width: 100%;
     border-radius: 10px;
     background: var(--rot);

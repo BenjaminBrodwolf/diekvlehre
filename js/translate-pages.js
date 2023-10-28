@@ -61,10 +61,8 @@ const nextTo = (direction) => {
     const nextSection = getSectionById(nextSectionId);
 
     (activeSectionId === 0 || nextSectionId === 0)
-        ? transformStartSections(activeSection, nextSection, direction)
-        : transformSplittedSections(activeSection, nextSection, direction);
-
-    setActiveNavClass(nextSectionId);
+        ? transformStartSections(activeSection, nextSection, direction, nextSectionId)
+        : transformSplitSections(activeSection, nextSection, direction, nextSectionId);
 };
 
 const jumpTo = nextSectionId => {
@@ -79,10 +77,9 @@ const jumpTo = nextSectionId => {
     const direction = activeSectionId < nextSectionId ? nextDirection() : prevDirection();
     const nextSection = getSectionById(nextSectionId);
     (activeSectionId === 0 || nextSectionId === 0)
-        ? transformStartSections(activeSection, nextSection, direction)
-        : transformSplittedSections(activeSection, nextSection, direction);
+        ? transformStartSections(activeSection, nextSection, direction, nextSectionId)
+        : transformSplitSections(activeSection, nextSection, direction,nextSectionId);
 
-    setActiveNavClass(nextSectionId);
 }
 
 let animationActive = false;
@@ -96,12 +93,12 @@ const setTransforms = (element, direction) => {
 }
 
 
-
-const transformSplittedSections = (activeSection, nextSection, direction) => {
+const transformSplitSections = (activeSection, nextSection, direction, nextSectionId) => {
     if (animationActive) {
         return
     }
     animationActive = true;
+    setActiveNavClass(nextSectionId);
 
     new Promise((resolve, reject) => {
         moveSectionInFrontDom(nextSection)
@@ -120,6 +117,7 @@ const transformSplittedSections = (activeSection, nextSection, direction) => {
         function handleAnimationEnd(event) {
             event.stopPropagation();
             animationActive = false;
+
             resolve('Animation ended');
         }
 
@@ -127,11 +125,12 @@ const transformSplittedSections = (activeSection, nextSection, direction) => {
     });
 }
 
-const transformStartSections = (activeSection, nextSection, direction) => {
+const transformStartSections = (activeSection, nextSection, direction, nextSectionId) => {
     if (animationActive) {
         return
     }
     animationActive = true;
+    setActiveNavClass(nextSectionId);
 
     if (direction === 'up') { // when UP means activeSection is StartSection
         new Promise((resolve, reject) => {
