@@ -19,7 +19,7 @@
 
 <header>
     <div class="header-logo">
-        <img alt="SVG mit img laden" src="../icons/logo.svg">
+        <img alt="SpedLogSwiss" src="./icons/logo.svg">
     </div>
     <div class="header-nav header-id-0 header-start active" onclick="jumpTo(0)">START</div>
     <div class="header-nav header-id-1 header-application" onclick="jumpTo(1)">BEWERBUNG</div>
@@ -48,10 +48,34 @@
 
 <main class="pages">
     <section class="contact" data-page-id="4">
-        <div class="topLeft bg-purple-600">
-            <h2>KONTAKT</h2>
-            <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
-            <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+        <div class="topLeft">
+            <div class="topChevron">
+                <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            </div>
+            <div class="topText"><h2>KONTAKT</h2>
+            </div>
+            <div class="iconsNav">
+                <svg class="iconStart" viewBox="0 0 55.26 55.5">
+                    <use href="#svgStart"/>
+                </svg>
+                <svg viewBox="0 0 51.01 51.13">
+                    <use href="#svgBewerbung"/>
+                </svg>
+                <svg viewBox="0 0 57.37 41.82">
+                    <use href="#svgAusbildung"/>
+                </svg>
+                <svg viewBox="0 0 51.97 37.45">
+                    <use href="#svgMovie"/>
+                </svg>
+                <svg fill="#ffffff" viewBox="0 0 63.26 39.66">
+                    <use href="#svgKontakt"/>
+                </svg>
+            </div>
+            <div class="bottomText"><h4>Lorem ipsum......</h4>
+            </div>
+            <div class="bottomChevron">
+                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            </div>
         </div>
         <div class="bottomRight">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
@@ -71,7 +95,7 @@
             <div class="topText"><h2>Du magst es bewegt? Fahr unseren Film ab.</h2>
             </div>
             <div class="iconsNav">
-                <svg viewBox="0 0 55.26 55.5">
+                <svg class="iconStart" viewBox="0 0 55.26 55.5">
                     <use href="#svgStart"/>
                 </svg>
                 <svg viewBox="0 0 51.01 51.13">
@@ -109,7 +133,7 @@
             <div class="topText"><h2>Deine Ausbildung? Vollgepackt mit Inhalten.</h2>
             </div>
             <div class="iconsNav">
-                <svg viewBox="0 0 55.26 55.5">
+                <svg class="iconStart" viewBox="0 0 55.26 55.5">
                     <use href="#svgStart"/>
                 </svg>
                 <svg viewBox="0 0 51.01 51.13">
@@ -149,7 +173,7 @@
             <div class="topText"><h2>Bewirb dich, wo immer du willst.</h2>
             </div>
             <div class="iconsNav">
-                <svg viewBox="0 0 55.26 55.5">
+                <svg class="iconStart" viewBox="0 0 55.26 55.5">
                     <use href="#svgStart"/>
                 </svg>
                 <svg fill="#ffffff" viewBox="0 0 51.01 51.13">
@@ -189,7 +213,7 @@
                 <h3>Starte jetzt Deine Karriere als Kaufmann*frau EFZ Internationale Speditionslogistik </h3>
             </div>
             <div class="iconsNav">
-                <svg fill="#ffffff" viewBox="0 0 55.26 55.5">
+                <svg class="iconStart" fill="#ffffff" viewBox="0 0 55.26 55.5">
                     <use href="#svgStart"/>
                 </svg>
                 <svg  viewBox="0 0 51.01 51.13">
