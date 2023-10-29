@@ -4,7 +4,6 @@ console.log(window.outerWidth)
 
 const mobileBreakpoint = 768;
 const loopSection = false;
-let activeSectionId = 0;
 
 
 const isMobile = () => window.innerWidth < mobileBreakpoint;

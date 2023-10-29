@@ -157,15 +157,6 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.topLeft, .start-content {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: var(--dunkelblau);
-}
-
-
 .education .topLeft {
     background-image: url(../img/ausbildung.webp);
 }
@@ -182,6 +173,12 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/kontakt.webp);
 }
 
+.topLeft, .start-content {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--dunkelblau);
+    background-size: cover;
+}
 
 .topChevron {
     grid-area: topNav;
@@ -235,6 +232,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.svgMap {
+    fill: var(--hellblau);
+    cursor: pointer;
+}
+.svgMap:hover {
+    fill: var(--senfgelb);
+}
 
 @media screen and (min-width: 768px) {
     .pages section {
