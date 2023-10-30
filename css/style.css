@@ -47,7 +47,7 @@ h1 {
 
 h2 {
     font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
-    font-size: clamp(1.5rem, 0.7286rem + 1.6071vw, 2.175rem);
+    font-size: clamp(1.5rem, 0.676rem + 1.7167vw, 2.5rem);
 }
 
 h3 {
@@ -61,6 +61,17 @@ h4 {
 }
 
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    margin-block: 1rem;
+    color: var(--dunkelblau);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -71,9 +82,6 @@ body {
     background-color: var(--dunkelblau);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-}
 
 .pages {
     overflow: hidden;
@@ -107,22 +115,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .topLeft {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 2fr 1fr 1fr 2fr 1fr;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-     '.       .        . icons icons '
-     '.       .        . .     .     '
-     'topNav  .        . .     botNav'
-     '.       .        . .     .     '
-     'topText topText  topText .     .     '
-     'topText topText  topText .     .     ';
+     '.       .        icons  icons   icons '
+     '.       .        .       .      .     '
+     'topNav  .        .       .      botNav'
+     '.       .        .       .      .     '
+     '.       topText  topText .     .      '
+     '.       topText  topText .     .      ';
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
 
 .bottomRight {
-    padding-block: var(--padding-block);
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -138,7 +145,6 @@ h1, h2, h3, h4, h5, h6 {
 .prevChevron,
 .nextChevron {
     cursor: pointer;
-    /*position: absolute;*/
     width: 50px;
     height: 50px;
 }
@@ -207,11 +213,11 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    gap: 16px;
+    gap: 12px;
 }
 
 .iconsNav svg {
-    width: 3rem;
+    width: clamp(2.5rem, 1.9286rem + 1.1905vw, 3rem);
 }
 
 .iconsNav .iconStart {
@@ -232,23 +238,65 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.movieIframe {
+    height: 50vw;
+}
+
 .svgMap {
     fill: var(--hellblau);
     cursor: pointer;
 }
 .svgMap:hover {
+    fill: var(--mittelblau);
+}
+.svgMap.activeRegion {
     fill: var(--senfgelb);
 }
+
+button {
+    border: 0;
+    border:none;
+    outline:none;
+    border-radius: 2rem;
+    background-color: var(--mittelblau);
+    color: var(--dunkelblau);
+    font-weight: bold;
+    font-family: MontserratAlternates-ExtraBold, Montserrat, sans-serif;
+    padding: 8px 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:focus{
+    border: none;
+    outline: none;
+}
+button:hover {
+    background-color: var(--senfgelb);
+}
+
+
+.movie .bottomRightContent p {
+    padding-block:  min(2vw + 1rem, 1rem); ;
+}
+
+.centerDiv {
+    display: grid;
+    place-content: center;
+}
+
 
 @media screen and (min-width: 768px) {
     .pages section {
         display: flex;
     }
 
-    .pages section .topLeft,
-    .pages section .bottomRight {
+    .topLeft,
+    .bottomRight {
         height: 100%;
         width: 50vw;
+    }
+    .bottomRight {
+        padding-right: min(10vw + 1rem, 4rem);
     }
 
     .prevChevron {
@@ -259,8 +307,8 @@ h1, h2, h3, h4, h5, h6 {
         background: no-repeat url("../icons/chevron-down.svg");
     }
 
-    .section-start {
-
+    .bottomRightContent {
+        max-width: 720px;
     }
 
     .topLeft {
@@ -301,6 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .iconsNav {
         flex-direction: column;
+        gap: 16px;
     }
 
     .iconsNav .iconStart {
@@ -314,5 +363,13 @@ h1, h2, h3, h4, h5, h6 {
     .bottomText {
         display: block;
     }
+
+
+
+    .movieIframe {
+        height: clamp(11.25rem, -0.0805rem + 23.6052vw, 25rem);
+    }
+
+
 
 }
