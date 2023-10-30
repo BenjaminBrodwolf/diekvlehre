@@ -1,7 +1,3 @@
-console.log(screen.width)
-console.log(window.innerWidth)
-console.log(window.outerWidth)
-
 const mobileBreakpoint = 768;
 const loopSection = false;
 

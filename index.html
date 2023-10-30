@@ -53,8 +53,10 @@
 <main class="pages">
     <section class="contact" data-page-id="4">
         <div class="topLeft">
-            <div class="topChevron">
-                <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="topChevron" onclick="nextTo(prevDirection())">
+                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
             <div class="topText"><h2>KONTAKT</h2>
             </div>
@@ -77,8 +79,10 @@
             </div>
             <div class="bottomText"><h4>Lorem ipsum......</h4>
             </div>
-            <div class="bottomChevron">
-                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            <div class="bottomChevron" onclick="nextTo(nextDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
         </div>
         <div class="bottomRight">
@@ -100,8 +104,10 @@
 
     <section class="movie" data-page-id="3">
         <div class="topLeft">
-            <div class="topChevron">
-                <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="topChevron" onclick="nextTo(prevDirection())">
+                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
             <div class="topText"><h2>Du magst es bewegt? Fahr unseren Film ab.</h2>
             </div>
@@ -125,14 +131,15 @@
             <div class="bottomText"><h4>Schau dir unseren Film mit 7 guten Gründen für deine Ausbildung bei einem
                 Speditions- und Logistikunternehmen an.</h4>
             </div>
-            <div class="bottomChevron">
-                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            <div class="bottomChevron" onclick="nextTo(nextDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
                 <h2>Film</h2>
-
                 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
                         class="movieIframe"
@@ -147,14 +154,15 @@
                     <button>JETZT BEWERBEN!</button>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="education" data-page-id="2">
         <div class="topLeft">
-            <div class="topChevron">
-                <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="topChevron" onclick="nextTo(prevDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
             <div class="topText"><h2>Deine Ausbildung? Vollgepackt mit Inhalten.</h2>
             </div>
@@ -178,8 +186,10 @@
             <div class="bottomText"><h4>Entdecke deine Möglichkeiten in der Speditions- und Logistikbranche mit einer
                 kaufmännischen Ausbildung.</h4>
             </div>
-            <div class="bottomChevron">
-                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            <div class="bottomChevron" onclick="nextTo(nextDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
         </div>
         <div class="bottomRight">
@@ -196,8 +206,10 @@
 
     <section class="application" data-page-id="1">
         <div class="topLeft">
-            <div class="topChevron">
-                <div class="prevChevron" onclick="nextTo(prevDirection())"></div>
+            <div class="topChevron" onclick="nextTo(prevDirection())">
+                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
             <div class="topText"><h2>Bewirb dich, wo immer du willst.</h2>
             </div>
@@ -221,8 +233,10 @@
             <div class="bottomText"><h4>Finde deine Lehrstelle in der passenden Region und bewirb dich im Anschluss
                 direkt.</h4>
             </div>
-            <div class="bottomChevron">
-                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            <div class="bottomChevron" onclick="nextTo(nextDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
         </div>
         <div class="bottomRight">
@@ -241,6 +255,11 @@
                     <use class="svgMap mapTessin" href="#svgMapTessin"/>
                     <use class="svgMap mapRomandie" href="#svgMapRomandie"/>
                 </svg>
+
+                <h3 class="selectedRegion">
+
+                </h3>
+
             </div>
         </div>
     </section>
@@ -270,8 +289,10 @@
                 </svg>
             </div>
 
-            <div class="bottomChevron">
-                <div class="nextChevron" onclick="nextTo(nextDirection())"></div>
+            <div class="bottomChevron" onclick="nextTo(nextDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
+                    <use href="#svgChevronDown"/>
+                </svg>
             </div>
         </div>
     </section>
@@ -573,6 +594,14 @@
               fill="#245A74"/>
         <path d="M313.2 205.7V210.6H311.7V205.9C311.7 204.2 310.9 203.4 309.4 203.4C307.8 203.4 306.7 204.4 306.7 206.2V210.6H305.2V202.1H306.7V203.4C307.3 202.5 308.4 202 309.8 202C311.7 202 313.2 203.2 313.2 205.7Z"
               fill="#245A74"/>
+    </g>
+</svg>
+
+<svg style="display:none;" viewBox="0 0 63.8 24.7" x="0px" xmlns="http://www.w3.org/2000/svg"
+     y="0px">
+    <g id="svgChevronDown">
+        <path d="M31.9,24.7c-0.2,0-0.4-0.1-0.6-0.2L0.4,1.8C0,1.5-0.1,0.9,0.2,0.4c0.3-0.4,1-0.5,1.4-0.2l30.3,22.3L62.3,0.2
+			c0.4-0.3,1.1-0.2,1.4,0.2c0.3,0.4,0.2,1.1-0.2,1.4L32.5,24.5C32.3,24.6,32.1,24.7,31.9,24.7z" fill="#FFFFFF"/>
     </g>
 </svg>
 

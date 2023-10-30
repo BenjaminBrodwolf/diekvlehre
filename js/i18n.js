@@ -7,10 +7,6 @@ if (availableLocales.includes(navigatorLanguage)) {
     pageLanguage = navigatorLanguage;
 }
 
-
-
-console.log(pageLanguage)
-
 const locales = {
     de: {
         "start": {

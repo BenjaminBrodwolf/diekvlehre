@@ -82,7 +82,6 @@ body {
     background-color: var(--dunkelblau);
 }
 
-
 .pages {
     overflow: hidden;
     margin: 0 auto;
@@ -107,16 +106,14 @@ body {
 .bottomRight {
     overflow: hidden;
     height: 50%;
-    /*padding-inline: min(5vw + 0.5rem, 4rem);*/
-    /*padding-bottom: var(--padding-block);*/
     padding: var(--padding-block);;
     position: relative;
 }
 
 .topLeft {
     display: grid;
-    grid-template-columns: 20px 1fr 1fr 1fr 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: var(--padding-block) 1fr 1fr 1fr var(--padding-block);
+    grid-template-rows: var(--padding-block) 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
      '.       .        icons  icons   icons '
      '.       .        .       .      .     '
@@ -141,23 +138,6 @@ body {
     display: none;
 }
 
-
-.prevChevron,
-.nextChevron {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-}
-
-.prevChevron {
-    background: no-repeat url("../icons/chevron-left.svg");
-    left: 20px;
-}
-
-.nextChevron {
-    background: no-repeat url("../icons/chevron-right.svg");
-    right: 20px;
-}
 
 .section-start {
     display: none;
@@ -184,12 +164,6 @@ body {
     background-repeat: no-repeat;
     background-color: var(--dunkelblau);
     background-size: cover;
-}
-
-.topChevron {
-    grid-area: topNav;
-    display: grid;
-    place-content: center;
 }
 
 .topText {
@@ -228,12 +202,28 @@ body {
     grid-area: botText;
 }
 
+.chevron {
+    cursor: pointer;
+    rotate: 270deg;
+}
+
+.topChevron .chevron {
+    rotate: 90deg;
+}
+
+.topChevron, .bottomChevron {
+    display: flex;
+    cursor: pointer;
+}
+
+.topChevron {
+    grid-area: topNav;
+    justify-content: start;
+    align-items: center;
+}
+
 .bottomChevron {
     grid-area: botNav;
-    /*display: grid;*/
-    /*place-content: center;*/
-    display: flex;
-    flex-direction: column;
     justify-content: end;
     align-items: center;
 }
@@ -274,7 +264,6 @@ button:hover {
     background-color: var(--senfgelb);
 }
 
-
 .movie .bottomRightContent p {
     padding-block:  min(2vw + 1rem, 1rem); ;
 }
@@ -284,6 +273,9 @@ button:hover {
     place-content: center;
 }
 
+.selectedRegion {
+    font-family: Montserrat-Bold, Montserrat, sans-serif;
+}
 
 @media screen and (min-width: 768px) {
     .pages section {
@@ -343,6 +335,10 @@ button:hover {
         grid-row-gap: 1rem;
     }
 
+    .section-start .bottomChevron:hover {
+        animation: shake-vertical 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
     .startTitle {
         grid-area: startTitle;
     }
@@ -364,12 +360,50 @@ button:hover {
         display: block;
     }
 
-
-
     .movieIframe {
         height: clamp(11.25rem, -0.0805rem + 23.6052vw, 25rem);
     }
 
+    .topChevron {
+        justify-content: center;
+        align-items: start;
+    }
 
+    .bottomChevron {
+        justify-content: center;
+        align-items: end;
+    }
 
+    .topChevron .chevron {
+        rotate: 180deg;
+        max-height: 30px;
+
+    }
+
+    .bottomChevron .chevron {
+        rotate: 0deg;
+        max-height: 30px;
+
+    }
+
+    .start-content .chevron {
+        width: 7vw;
+    }
+
+}
+
+.shake-vertical {
+    animation: shake-vertical 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake-vertical {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
