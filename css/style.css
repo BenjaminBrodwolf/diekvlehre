@@ -1,7 +1,7 @@
 :root {
     --mobile-breakpoint: 768px;
     --header-height: 30px;
-    --padding: min(2vw + 1rem, 4rem);
+    --padding: min(5vw + 1rem, 3rem);
 
     --dunkelblau: #245a74;
     --mittelblau: #5facbd;
@@ -130,17 +130,17 @@ body {
 
 .topLeft {
     display: grid;
-    grid-template-columns: 3rem 1fr 1fr 1fr 3rem;
+    grid-template-columns: var(--padding) 1fr 1fr 1fr var(--padding);
     grid-template-rows: var(--padding) 1fr 1fr 1fr 1fr 1fr 1fr var(--padding);
     grid-template-areas:
-     '.       .        .       .      . '
-     '.       .        icons  icons   icons '
-     '.       .        .       .      .     '
-     'topNav  .        .       .      botNav'
-     '.       .        .       .      .     '
-     '.       topText  topText .     .      '
-     '.       topText  topText .     .      '
-     '.       .        .       .     .      ';
+     '.       .        icons   icons  icons  '
+     '.       .        .       .      .      '
+     '.       .        .       .      .      '
+     'topNav  .        .       .      botNav '
+     '.       .        .       .      .      '
+     '.       topText  topText .      .      '
+     '.       topText  topText .      .      '
+     '.       .        .       .      .      ';
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -152,13 +152,11 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     background: var(--dunkelblau);
-
 }
 
 .bottomRight::-webkit-scrollbar {
     display: none;
 }
-
 
 .section-start {
     display: none;
@@ -209,7 +207,8 @@ body {
     flex-direction: row;
     justify-content: end;
     gap: 12px;
-    margin-right: var(--padding);
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .iconsNav svg {
@@ -247,20 +246,12 @@ body {
     rotate: 90deg;
 }
 
-.topChevron, .bottomChevron {
-    display: flex;
-}
-
 .topChevron {
     grid-area: topNav;
-    justify-content: start;
-    align-items: center;
 }
 
 .bottomChevron {
     grid-area: botNav;
-    justify-content: end;
-    align-items: center;
 }
 
 .movieIframe {
@@ -405,14 +396,8 @@ button:hover {
         height: clamp(11.25rem, -0.0805rem + 23.6052vw, 25rem);
     }
 
-    .topChevron {
-        justify-content: center;
-        align-items: start;
-    }
-
-    .bottomChevron {
-        justify-content: center;
-        align-items: end;
+    .topChevron, .bottomChevron {
+        margin-left: 2vw;
     }
 
     .topChevron .chevron {
