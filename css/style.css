@@ -9,6 +9,12 @@
     --weiss: #ffffff;
     --senfgelb: #e9cb44;
     --rot: #cc0000;
+
+
+    --shake-chevron: shake-chevron 3.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1s infinite both;
+    --slide-in-chevron: slide-in-blurred 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    --slide-out-chevron: slide-out-blurred 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+
 }
 
 * {
@@ -110,6 +116,19 @@ body {
     position: relative;
 }
 
+/*.pages section:hover .topLeft {*/
+/*    height: 25%;*/
+/*    transition: height 2s linear;*/
+/*}*/
+/*.pages section:hover .bottomRight {*/
+/*    height: 75%;*/
+/*    transition: height 2s linear;*/
+/*}*/
+/*.pages section .topLeft:hover {*/
+/*    height: 50%;*/
+/*}*/
+
+
 .topLeft {
     display: grid;
     grid-template-columns: var(--padding-block) 1fr 1fr 1fr var(--padding-block);
@@ -206,6 +225,20 @@ body {
     cursor: pointer;
     rotate: 270deg;
 }
+.chevron use {
+    fill: white;
+}
+.chevron:hover use  {
+    fill: var(--senfgelb);
+}
+
+.chevron {
+    animation: var(--shake-chevron)
+}
+
+.chevron:hover {
+    animation-play-state:paused;
+}
 
 .topChevron .chevron {
     rotate: 90deg;
@@ -213,7 +246,6 @@ body {
 
 .topChevron, .bottomChevron {
     display: flex;
-    cursor: pointer;
 }
 
 .topChevron {
@@ -236,17 +268,19 @@ body {
     fill: var(--hellblau);
     cursor: pointer;
 }
+
 .svgMap:hover {
     fill: var(--mittelblau);
 }
+
 .svgMap.activeRegion {
     fill: var(--senfgelb);
 }
 
 button {
     border: 0;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     border-radius: 2rem;
     background-color: var(--mittelblau);
     color: var(--dunkelblau);
@@ -256,16 +290,18 @@ button {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-button:focus{
+
+button:focus {
     border: none;
     outline: none;
 }
+
 button:hover {
     background-color: var(--senfgelb);
 }
 
 .movie .bottomRightContent p {
-    padding-block:  min(2vw + 1rem, 1rem); ;
+    padding-block: min(2vw + 1rem, 1rem);;
 }
 
 .centerDiv {
@@ -277,6 +313,8 @@ button:hover {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
 }
 
+
+
 @media screen and (min-width: 768px) {
     .pages section {
         display: flex;
@@ -287,6 +325,7 @@ button:hover {
         height: 100%;
         width: 50vw;
     }
+
     .bottomRight {
         padding-right: min(10vw + 1rem, 4rem);
     }
@@ -335,9 +374,6 @@ button:hover {
         grid-row-gap: 1rem;
     }
 
-    .section-start .bottomChevron:hover {
-        animation: shake-vertical 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    }
 
     .startTitle {
         grid-area: startTitle;
@@ -377,7 +413,6 @@ button:hover {
     .topChevron .chevron {
         rotate: 180deg;
         max-height: 30px;
-
     }
 
     .bottomChevron .chevron {
@@ -392,18 +427,78 @@ button:hover {
 
 }
 
-.shake-vertical {
-    animation: shake-vertical 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+.chevron-slide-in {
+    animation: var(--slide-in-chevron);
+}
+.chevron-slide-out {
+    animation: var(--slide-out-chevron);
 }
 
-@keyframes shake-vertical {
-    0%{
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(8px);
+@keyframes slide-in-blurred {
+    0% {
+        transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        transform-origin: 50% 100%;
+        filter: blur(40px);
+        opacity: 0;
     }
     100% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-out-blurred {
+    0% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        transform-origin: 50% 100%;
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
+/*@keyframes fly-in-chevron {*/
+/*    0%{*/
+/*        transform: translateY(50px);*/
+/*        opacity: 0;*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateY(0px);*/
+/*        opacity: 1;*/
+
+/*    }*/
+/*}*/
+/*@keyframes fly-out-chevron {*/
+/*    0% {*/
+/*        transform: translateY(0px);*/
+/*        opacity: 1;*/
+
+/*    }*/
+/*    100%{*/
+/*        transform: translateY(50px);*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+@keyframes shake-chevron {
+    0%, 30% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(8px);
+
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    60% {
+        transform: translateY(8px);
+    }
+    70%, 100% {
         transform: translateY(0px);
     }
 }

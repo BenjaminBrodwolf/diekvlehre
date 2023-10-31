@@ -87,12 +87,28 @@ const setTransforms = (element, direction) => {
     element.style.msTransform = translateDirection(direction);
 }
 
+const chevrons = document.querySelectorAll('.chevron');
+const slideChevron = ({
+    in: () => {
+        chevrons.forEach(c => c.classList.add('chevron-slide-in'));
+        setTimeout(() => {
+            chevrons.forEach(c => c.classList.remove('chevron-slide-in'))
+        }, 1100)
+    },
+    out: () => {
+        chevrons.forEach(c => c.classList.add('chevron-slide-out'));
+        setTimeout(() => {
+            chevrons.forEach(c => c.classList.remove('chevron-slide-out'))
+        }, 800)
+    }
+})
 
 const transformSplitSections = (activeSection, nextSection, direction, nextSectionId) => {
     if (animationActive) {
         return
     }
     animationActive = true;
+    slideChevron.out()
     setActiveNavClass(nextSectionId);
 
     new Promise((resolve, reject) => {
@@ -112,7 +128,7 @@ const transformSplitSections = (activeSection, nextSection, direction, nextSecti
         function handleAnimationEnd(event) {
             event.stopPropagation();
             animationActive = false;
-
+            slideChevron.in()
             resolve('Animation ended');
         }
 
@@ -125,6 +141,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
         return
     }
     animationActive = true;
+    slideChevron.out()
     setActiveNavClass(nextSectionId);
 
     if (direction === 'up') { // when UP means activeSection is StartSection
@@ -144,6 +161,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             function handleAnimationEnd(event) {
                 event.stopPropagation();
                 animationActive = false;
+                slideChevron.in()
                 resolve('Animation ended');
             }
 
@@ -166,6 +184,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             function handleAnimationEnd(event) {
                 event.stopPropagation();
                 animationActive = false;
+                slideChevron.in()
                 resolve('Animation ended');
             }
 
