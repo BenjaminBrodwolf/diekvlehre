@@ -81,7 +81,7 @@ header .hamburger {
 }
 
 .hamburger .hamburger-lines {
-    height: 20px;
+    height: 16px;
     width: 28px;
     position: absolute;
     top: 20px;
@@ -127,7 +127,7 @@ header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 }
 
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     header {
         --header-height: 50px;
     }
