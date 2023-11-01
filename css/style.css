@@ -53,17 +53,16 @@ h1 {
 
 h2 {
     font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
-    font-size: clamp(1.5rem, 0.676rem + 1.7167vw, 2.5rem);
+    font-size: clamp(1.25rem, 0.8486rem + 1.8349vw, 2.5rem);
 }
-
 h3 {
     font-family: Montserrat-Regular, Montserrat, sans-serif;
-    font-size: clamp(1.175rem, 0.5179rem + 1.369vw, 1.75rem);
+    font-size: clamp(1.175rem, 0.9904rem + 0.844vw, 1.75rem);
 }
 
 h4 {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
-    font-size: clamp(1rem, 0.7143rem + 0.5952vw, 1.25rem);
+    font-size: clamp(1rem, 0.9197rem + 0.367vw, 1.25rem);
 }
 
 
@@ -111,31 +110,31 @@ body {
 .topLeft,
 .bottomRight {
     overflow: hidden;
-    height: 50%;
     padding: var(--padding-block);;
     position: relative;
 }
 
 /* Explizit only Mobile */
 @media screen and (max-width: 768px) {
-    .pages section:hover .topLeft {
-        height: 25%;
-        transition: height 2s linear;
-    }
+    /*.pages section:hover .topLeft {*/
+    /*    height: 25%;*/
+    /*    transition: height 2s linear;*/
+    /*}*/
 
-    .pages section:hover .bottomRight {
-        height: 75%;
-        transition: height 2s linear;
-    }
+    /*.pages section:hover .bottomRight {*/
+    /*    height: 75%;*/
+    /*    transition: height 2s linear;*/
+    /*}*/
 
-    .pages section .topLeft:hover {
-        height: 50%;
-    }
+    /*.pages section .topLeft:hover {*/
+    /*    height: 50%;*/
+    /*}*/
 }
 
 .topLeft {
+    height: 25%;
     display: grid;
-    grid-template-columns: var(--padding-block) 1fr 1fr 1fr var(--padding-block);
+    grid-template-columns: 3rem 1fr 1fr 1fr 3rem;
     grid-template-rows: var(--padding-block) 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
      '.       .        icons  icons   icons '
@@ -150,6 +149,7 @@ body {
 
 
 .bottomRight {
+    height: 75%;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
