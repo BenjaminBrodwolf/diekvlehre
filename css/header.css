@@ -14,7 +14,7 @@ header {
 }
 
 header .header-logo {
-    width: 200px;
+    width: clamp(10rem, 8.3974rem + 8.547vw, 12.5rem);
     height: 100%;
     margin-left: 1rem;
     display: grid;
