@@ -19,34 +19,50 @@
     <div class="header-logo">
         <img alt="SpedLogSwiss" src="./icons/logo.svg">
     </div>
-    <div class="header-nav header-id-0 header-start active" onclick="jumpTo(0)">START</div>
-    <div class="header-nav header-id-1 header-application" onclick="jumpTo(1)">BEWERBUNG</div>
-    <div class="header-nav header-id-2 header-education" onclick="jumpTo(2)">AUSBILDUNG</div>
-    <div class="header-nav header-id-3 header-movie" onclick="jumpTo(3)">MOVIE</div>
-    <div class="header-nav header-id-4 header-contact" onclick="jumpTo(4)">KONTAKT</div>
-    <div class="header-languages">
-        <span class="langDE" data-lang="de">DE</span> |
-        <span class="langFR" data-lang="fr">FR</span> |
-        <span class="langIT" data-lang="it">IT</span>
+    <div class="header-navs-area">
+        <div class="header-nav header-id-0 header-start active" >  ">START</div>
+        <div class="header-nav header-id-1 header-application"  >  ">BEWERBUNG</div>
+        <div class="header-nav header-id-2 header-education"    >  ">AUSBILDUNG</div>
+        <div class="header-nav header-id-3 header-movie"        >  ">MOVIE</div>
+        <div class="header-nav header-id-4 header-contact"      >  ">KONTAKT</div>
     </div>
-    <div class="hamburger">
-        <input class="checkbox" id="" name="" type="checkbox"/>
-        <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
+
+
+        <div class="header-languages">
+            <span class="langDE" data-lang="de">DE</span> |
+            <span class="langFR" data-lang="fr">FR</span> |
+            <span class="langIT" data-lang="it">IT</span>
         </div>
-        <div class="sidebar">
-            <img alt="SpedLogSwiss" src="./icons/logo.svg">
-            <p>Elisabethenstrasse 44<br>4051 Basel</p>
-            <p>+41 61 205 98 00<br>+41 61 205 98 01</p>
-            <a href="mailto:office@spedlogswiss.com">office@spedlogswiss.com</a>
-<!--            <div style="display: flex;align-items: center; gap:1rem;margin-top: 1rem">-->
-<!--                <img alt="WhatsAppIcon" height="25" src="./icons/Whatsapp_Icon.svg" width="25">-->
-<!--                <span>Chatte mit uns!</span>-->
-<!--            </div>-->
+        <div class="hamburger">
+            <input class="checkbox" id="" name="" type="checkbox"/>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="sidebar">
+                <div class="mobileSidebarMenu">
+                    <div class="sidebar-nav header-id-1 active">BEWERBUNG</div>
+                    <div class="sidebar-nav header-id-2">AUSBILDUNG</div>
+                    <div class="sidebar-nav header-id-3">MOVIE</div>
+                    <div class="sidebar-nav header-id-4">KONTAK</div>
+                    <hr>
+                </div>
+                <img alt="SpedLogSwiss" src="./icons/logo.svg">
+                <p>Elisabethenstrasse 44<br>4051 Basel</p>
+                <p>+41 61 205 98 00<br>+41 61 205 98 01</p>
+                <a href="mailto:office@spedlogswiss.com">office@spedlogswiss.com</a>
+                <div style="display: flex;align-items: center; gap:1rem;">
+                    <a href=""> <img alt="linkedin" height="25" src="./icons/linkedin.svg" width="25"> </a>
+                    <a href=""> <img alt="youTube" height="25" src="./icons/youTube.svg" width="25"> </a>
+                    <a href=""> <img alt="Facebook" height="25" src="./icons/facebook.svg" width="25"> </a>
+                    <a href=""> <img alt="Instagram" height="25" src="./icons/insta.svg" width="25"> </a>
+                </div>
+                <hr/>
+                <a style="margin-bottom: 2rem" href="">Datenschutzerklärung</a>
+                <a href="">Impressum</a>
+            </div>
         </div>
-    </div>
 
 </header>
 
@@ -54,7 +70,7 @@
     <section class="contact" data-page-id="4">
         <div class="topLeft">
             <div class="topChevron" onclick="nextTo(prevDirection())">
-                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
                     <use href="#svgChevronDown"/>
                 </svg>
             </div>
@@ -79,11 +95,7 @@
             </div>
             <div class="bottomText"><h4>Lorem ipsum......</h4>
             </div>
-            <div class="bottomChevron" onclick="nextTo(nextDirection())">
-                <svg class="chevron" viewBox="0 0 63.8 24.7">
-                    <use href="#svgChevronDown"/>
-                </svg>
-            </div>
+
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
@@ -105,7 +117,7 @@
     <section class="movie" data-page-id="3">
         <div class="topLeft">
             <div class="topChevron" onclick="nextTo(prevDirection())">
-                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
                     <use href="#svgChevronDown"/>
                 </svg>
             </div>
@@ -206,8 +218,8 @@
 
     <section class="application" data-page-id="1">
         <div class="topLeft">
-            <div class="topChevron" onclick="nextTo(prevDirection())">
-                <svg class="chevron"  viewBox="0 0 63.8 24.7">
+            <div class="topChevron hideMeOnMobile" onclick="nextTo(prevDirection())">
+                <svg class="chevron" viewBox="0 0 63.8 24.7">
                     <use href="#svgChevronDown"/>
                 </svg>
             </div>
@@ -246,7 +258,7 @@
                 <h3>SPEDLOGSWISS bildet in vier Ausbildungsregionen ihren Branchennachwuchs aus. </h3>
                 <h4>Detaillierte Informationen finden Sie auf den Websites der Regionen
                     oder unserer Lehrstellenbörse.</h4>
-                <hr style="border-top: dotted 1px; border-color: var(--hellblau)"/>
+                <hr/>
                 <p>Wähle Deine Region</p>
 
                 <svg viewBox="0 0 752 466">
@@ -597,7 +609,8 @@
     </g>
 </svg>
 
-<svg style="display:none;" viewBox="0 0 63.8 24.7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="display:none;" viewBox="0 0 63.8 24.7" xmlns="http://www.w3.org/2000/svg"
+>
     <g id="svgChevronDown">
         <path d="M31.9,24.7c-0.2,0-0.4-0.1-0.6-0.2L0.4,1.8C0,1.5-0.1,0.9,0.2,0.4c0.3-0.4,1-0.5,1.4-0.2l30.3,22.3L62.3,0.2
 			c0.4-0.3,1.1-0.2,1.4,0.2c0.3,0.4,0.2,1.1-0.2,1.4L32.5,24.5C32.3,24.6,32.1,24.7,31.9,24.7z"/>

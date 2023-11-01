@@ -72,8 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
     cursor: pointer;
-    margin-block: 1rem;
+    margin-block: 0.175rem;
     color: var(--dunkelblau);
+    display: inline-block;
 }
 
 body {
@@ -315,9 +316,14 @@ button:hover {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
 }
 
+.hideMeOnMobile {
+    display: none;
+}
 
 @media (min-width: 768px) {
-
+    .hideMeOnMobile {
+        display: unset;
+    }
 
     .pages section {
         display: flex;
@@ -498,4 +504,12 @@ button:hover {
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
     }
+}
+
+hr {
+    margin-bottom: 1rem;
+    border-style: dotted none none;
+    border-width: 2px;
+    border-color: var(--hellblau);
+    display: block; width: 100%;
 }

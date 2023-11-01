@@ -1,6 +1,5 @@
 const mobileBreakpoint = 768;
-const loopSection = false;
-
+let loopSection = false;
 
 const isMobile = () => window.innerWidth < mobileBreakpoint;
 const nextDirection = () => isMobile() ? 'right' : 'up';
@@ -26,10 +25,15 @@ const directionOpposite = direction => ({
     down: 'up',
 })[direction];
 const setActiveNavClass = sectionId => {
-    document.querySelectorAll('header .header-nav')
+    document.querySelectorAll('.header-nav, .sidebar-nav')
         .forEach(nav => nav.classList.remove('active'));
-    document.querySelector(`.header-id-${sectionId}`).classList.add('active')
+    document.querySelectorAll(`.header-id-${sectionId}`).forEach(h => h.classList.add('active'));
 }
+document.querySelectorAll('.header-nav, .sidebar-nav')
+    .forEach((nav, index) => {
+        const sectionId = index >= 5 ? ++index % 5 : index;
+        nav.addEventListener('click', () => jumpTo(sectionId))
+    })
 
 const nextTo = (direction) => {
     const sections = isMobile() ? getSectionNodesMobile() : getSectionNodesDesktop();
@@ -238,8 +242,8 @@ const getArrowKeyDirection = (keyCode) =>
     ({
         ArrowLeft: 'left',
         ArrowRight: 'right',
-        ArrowUp: 'up',
-        ArrowDown: 'down'
+        ArrowUp: 'down',
+        ArrowDown: 'up'
     })[keyCode];
 
 document.addEventListener('keydown', event => {

@@ -7,13 +7,26 @@ header {
     width: 100vw;
     height: var(--header-height);
     background: var(--weiss);
+    color: var(--dunkelblau);
+    display: grid;
+    grid-template-columns: 200px 1fr 4fr 1fr 80px 10px 60px;
+    grid-template-areas:
+     'logo  .  headerNav  . lang  .  hamburger';
+    grid-column-gap: 8px;
+    place-content: center;
+}
+
+.header-navs-area {
+    grid-area: headerNav;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 2vw;
 }
 
-header .header-logo {
+.header-logo {
+    grid-area: logo;
     width: clamp(10rem, 8.3974rem + 8.547vw, 12.5rem);
     height: 100%;
     margin-left: 1rem;
@@ -25,9 +38,32 @@ header .header-nav {
     display: none;
 }
 
-.header-languages span {
-    cursor: pointer;
+.header-nav, .sidebar-nav {
+    font-family: Montserrat-Regular, Montserrat, sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in;
 }
+
+.header-nav.active, .sidebar-nav.active {
+    color: var(--rot);
+    font-family: Montserrat-Bold, Montserrat, sans-serif;
+}
+
+.header-nav:hover, .sidebar-nav:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.header-languages {
+    grid-area: lang;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 80px;
+}
+
 .header-languages .activeLang {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
     font-weight: bold;
@@ -48,22 +84,32 @@ header .header-nav {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
     padding: 1.5rem;
     color: var(--dunkelblau);
+
 }
 
 .sidebar * {
     white-space: nowrap;
 }
 
-header .hamburger input[type="checkbox"]:checked ~ .sidebar {
-    transform: translateX(0);
+.mobileSidebarMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 12px;
 }
+
 
 /* Hamburger */
 header .hamburger {
+    grid-area: hamburger;
     display: block;
     position: relative;
     height: 60px;
     width: 60px;
+}
+
+header .hamburger input[type="checkbox"]:checked ~ .sidebar {
+    transform: translateX(0);
 }
 
 .hamburger .checkbox {
@@ -82,8 +128,6 @@ header .hamburger {
     top: 22px;
     height: 18px;
     width: 22px;
-
-
     position: absolute;
     right: 20px;
     z-index: 2;
@@ -135,26 +179,18 @@ header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 
     header .header-nav {
         display: inline-block;
-        color: var(--hellblau);
-        font-family: Montserrat-Regular, Montserrat, sans-serif;
-        letter-spacing: 1px;
-        transition: all 0.4s ease-in;
+        grid-area: headerNav;
     }
 
-    header .header-nav.active {
-        color: var(--rot);
-        font-family: Montserrat-Bold, Montserrat, sans-serif;
-    }
-
-    header .header-nav:hover {
-        cursor: pointer;
-        font-weight: bolder;
-    }
 
     .hamburger .hamburger-lines {
         height: 24px;
         width: 32px;
         top: 22px;
+    }
+
+    .mobileSidebarMenu {
+        display: none;
     }
 
 }
