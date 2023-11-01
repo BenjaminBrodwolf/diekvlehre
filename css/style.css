@@ -112,7 +112,7 @@ body {
     overflow: hidden;
     position: relative;
     height: 50%;
-    transition: height 1s linear;
+    transition: height 0.7s ease-in-out;
 }
 
 /* Explizit only Mobile */

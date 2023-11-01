@@ -263,7 +263,7 @@ const touchTopLeftMobile = (event) => {
 }
 
 const touchBottomRightMobile = (event) => {
-    event.preventDefault()
+    // event.preventDefault()
 
     if (isMobile()){
         console.log('bottom' )
@@ -276,9 +276,9 @@ const touchBottomRightMobile = (event) => {
 
 
 topLeftElements().forEach(topLeft =>
-    topLeft.addEventListener('click', touchTopLeftMobile));
+    topLeft.addEventListener('touchstart', touchTopLeftMobile));
 bottomRightElements().forEach(bottomRight =>
-    bottomRight.addEventListener('click', touchBottomRightMobile));
+    bottomRight.addEventListener('touchstart', touchBottomRightMobile));
 
 const init = () => {
     // placingSections()
