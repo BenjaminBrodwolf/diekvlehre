@@ -34,30 +34,6 @@ header .header-nav {
 }
 
 
-@media screen and (min-width: 768px) {
-    header {
-        --header-height: 50px;
-    }
-
-    header .header-nav {
-        display: inline-block;
-        color: var(--hellblau);
-        font-family: Montserrat-Regular, Montserrat, sans-serif;
-        letter-spacing: 1px;
-        transition: all 0.4s ease-in;
-    }
-
-    header .header-nav.active {
-        color: var(--rot);
-        font-family: Montserrat-Bold, Montserrat, sans-serif;
-    }
-
-    header .header-nav:hover {
-        cursor: pointer;
-        font-weight: bolder;
-    }
-}
-
 
 /* ---- Sidebar ---- */
 .sidebar {
@@ -105,10 +81,10 @@ header .hamburger {
 }
 
 .hamburger .hamburger-lines {
-    height: 26px;
-    width: 32px;
+    height: 20px;
+    width: 28px;
     position: absolute;
-    top: 17px;
+    top: 20px;
     right: 20px;
     z-index: 2;
     display: flex;
@@ -148,4 +124,35 @@ header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
 
 header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg);
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        --header-height: 50px;
+    }
+
+    header .header-nav {
+        display: inline-block;
+        color: var(--hellblau);
+        font-family: Montserrat-Regular, Montserrat, sans-serif;
+        letter-spacing: 1px;
+        transition: all 0.4s ease-in;
+    }
+
+    header .header-nav.active {
+        color: var(--rot);
+        font-family: Montserrat-Bold, Montserrat, sans-serif;
+    }
+
+    header .header-nav:hover {
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    .hamburger .hamburger-lines {
+        height: 26px;
+        width: 32px;
+        top: 17px;
+    }
+
 }
