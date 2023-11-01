@@ -339,14 +339,6 @@ button:hover {
         padding-right: min(10vw + 1rem, 4rem);
     }
 
-    .prevChevron {
-        background: no-repeat url("../icons/chevron-up.svg");
-    }
-
-    .nextChevron {
-        background: no-repeat url("../icons/chevron-down.svg");
-    }
-
     .bottomRightContent {
         max-width: 720px;
     }
@@ -511,5 +503,22 @@ hr {
     border-style: dotted none none;
     border-width: 2px;
     border-color: var(--hellblau);
-    display: block; width: 100%;
+    display: block;
+    width: 100%;
+}
+
+.social-media {
+    margin-block: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-media svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--dunkelblau)
+}
+.bottomRightContent  .social-media svg {
+    fill: white;
 }
