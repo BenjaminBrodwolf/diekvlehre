@@ -116,18 +116,22 @@ body {
     position: relative;
 }
 
-/*.pages section:hover .topLeft {*/
-/*    height: 25%;*/
-/*    transition: height 2s linear;*/
-/*}*/
-/*.pages section:hover .bottomRight {*/
-/*    height: 75%;*/
-/*    transition: height 2s linear;*/
-/*}*/
-/*.pages section .topLeft:hover {*/
-/*    height: 50%;*/
-/*}*/
+/* Explizit only Mobile */
+@media screen and (max-width: 768px) {
+    .pages section:hover .topLeft {
+        height: 25%;
+        transition: height 2s linear;
+    }
 
+    .pages section:hover .bottomRight {
+        height: 75%;
+        transition: height 2s linear;
+    }
+
+    .pages section .topLeft:hover {
+        height: 50%;
+    }
+}
 
 .topLeft {
     display: grid;
