@@ -280,6 +280,17 @@ topLeftElements().forEach(topLeft =>
 bottomRightElements().forEach(bottomRight =>
     bottomRight.addEventListener('touchstart', touchBottomRightMobile));
 
+new ResizeObserver(entries => {
+    const screenWidth = entries[0].contentRect.width;
+    if (screenWidth >= mobileBreakpoint) {
+        topLeftElements().forEach(e =>     e.style.setProperty('height', '100%'));
+        bottomRightElements().forEach(e => e.style.setProperty('height', '100%'));
+    } else {
+        topLeftElements().forEach(e =>     e.style.setProperty('height', '50%'))
+        bottomRightElements().forEach(e => e.style.setProperty('height', '50%'))
+    }
+}).observe(document.body)
+
 const init = () => {
     // placingSections()
 }

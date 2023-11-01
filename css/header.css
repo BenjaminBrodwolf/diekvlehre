@@ -35,6 +35,10 @@ header .header-nav {
 
 
 @media screen and (min-width: 768px) {
+    header {
+        --header-height: 50px;
+    }
+
     header .header-nav {
         display: inline-block;
         color: var(--hellblau);

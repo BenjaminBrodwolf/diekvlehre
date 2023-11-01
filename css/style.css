@@ -1,6 +1,6 @@
 :root {
     --mobile-breakpoint: 768px;
-    --header-height: 50px;
+    --header-height: 30px;
     --padding: min(2vw + 1rem, 4rem);
 
     --dunkelblau: #245a74;
@@ -10,11 +10,9 @@
     --senfgelb: #e9cb44;
     --rot: #cc0000;
 
-
     --shake-chevron: shake-chevron 3.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1s infinite both;
     --slide-in-chevron: slide-in-blurred 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     --slide-out-chevron: slide-out-blurred 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-
 }
 
 * {
@@ -141,8 +139,8 @@ body {
      'topNav  .        .       .      botNav'
      '.       .        .       .      .     '
      '.       topText  topText .     .      '
-     '.       topText  topText .     .      ';
-'.       .        .       .     .      ';
+     '.       topText  topText .     .      '
+     '.       .        .       .     .      ';
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -319,7 +317,9 @@ button:hover {
 }
 
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
+
+
     .pages section {
         display: flex;
     }
