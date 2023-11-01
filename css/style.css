@@ -477,28 +477,6 @@ button:hover {
     }
 }
 
-/*@keyframes fly-in-chevron {*/
-/*    0%{*/
-/*        transform: translateY(50px);*/
-/*        opacity: 0;*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateY(0px);*/
-/*        opacity: 1;*/
-
-/*    }*/
-/*}*/
-/*@keyframes fly-out-chevron {*/
-/*    0% {*/
-/*        transform: translateY(0px);*/
-/*        opacity: 1;*/
-
-/*    }*/
-/*    100%{*/
-/*        transform: translateY(50px);*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
 @keyframes shake-chevron {
     0%, 30% {
         -webkit-transform: translateY(0);

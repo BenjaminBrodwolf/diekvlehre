@@ -29,11 +29,9 @@ header .header-nav {
     cursor: pointer;
 }
 .header-languages .activeLang {
-    font-family: Montserrat-Bold, Montserrat,sans-serif;
+    font-family: Montserrat-Bold, Montserrat, sans-serif;
     font-weight: bold;
 }
-
-
 
 /* ---- Sidebar ---- */
 .sidebar {
@@ -71,9 +69,9 @@ header .hamburger {
 .hamburger .checkbox {
     position: absolute;
     display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
+    height: 40px;
+    width: 50px;
+    top: 15px;
     right: 20px;
     z-index: 5;
     opacity: 0;
@@ -81,15 +79,18 @@ header .hamburger {
 }
 
 .hamburger .hamburger-lines {
-    height: 16px;
-    width: 28px;
+    top: 22px;
+    height: 18px;
+    width: 22px;
+
+
     position: absolute;
-    top: 20px;
     right: 20px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .hamburger .hamburger-lines .line {
@@ -149,10 +150,11 @@ header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         cursor: pointer;
         font-weight: bolder;
     }
+
     .hamburger .hamburger-lines {
-        height: 26px;
+        height: 24px;
         width: 32px;
-        top: 17px;
+        top: 22px;
     }
 
 }
