@@ -249,12 +249,15 @@ document.addEventListener('keydown', event => {
             ? nextTo(nextDirection())
             : nextTo(prevDirection())
     }
+});
+
+document.querySelectorAll('.iconsNav').forEach((navs) => {
+    for (let i = 0; i < navs.children.length; i++) {
+        navs.children[i].addEventListener('click', () => jumpTo(i))
+    }
 })
 
 const touchTopLeftMobile = (event) => {
-    event.preventDefault()
-
-
     if (isMobile()){
         console.log('top')
         topLeftElements().forEach(e => e.style.height = '50%');
@@ -263,8 +266,6 @@ const touchTopLeftMobile = (event) => {
 }
 
 const touchBottomRightMobile = (event) => {
-    // event.preventDefault()
-
     if (isMobile()){
         console.log('bottom' )
         topLeftElements().forEach(e => e.style.height = '25%');
@@ -273,7 +274,6 @@ const touchBottomRightMobile = (event) => {
 
     }
 }
-
 
 topLeftElements().forEach(topLeft =>
     topLeft.addEventListener('touchstart', touchTopLeftMobile));

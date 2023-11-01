@@ -53,6 +53,7 @@ h2 {
     font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
     font-size: clamp(1.25rem, 0.8486rem + 1.8349vw, 2.5rem);
 }
+
 h3 {
     font-family: Montserrat-Regular, Montserrat, sans-serif;
     font-size: clamp(1.175rem, 0.9904rem + 0.844vw, 1.75rem);
@@ -131,7 +132,7 @@ body {
 .topLeft {
     display: grid;
     grid-template-columns: var(--padding) 1fr 1fr 1fr var(--padding);
-    grid-template-rows: var(--padding) 1fr 1fr 1fr 1fr 1fr 1fr var(--padding);
+    grid-template-rows: var(--padding) 1fr 1fr 1fr 1fr 1fr 1fr 5%;
     grid-template-areas:
      '.       .        icons   icons  icons  '
      '.       .        .       .      .      '
@@ -215,6 +216,11 @@ body {
     width: clamp(2rem, 1.9286rem + 1.1905vw, 3rem);
 }
 
+.iconsNav svg:hover {
+    fill: var(--senfgelb);
+    cursor: pointer;
+}
+
 .iconsNav .iconStart {
     display: none;
 }
@@ -227,9 +233,11 @@ body {
     cursor: pointer;
     rotate: 270deg;
 }
+
 .chevron use {
     fill: white;
 }
+
 .chevron:hover use {
     fill: var(--senfgelb);
 }
