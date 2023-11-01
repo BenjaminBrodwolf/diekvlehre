@@ -111,6 +111,8 @@ body {
 .bottomRight {
     overflow: hidden;
     position: relative;
+    height: 50%;
+    transition: height 1s linear;
 }
 
 /* Explizit only Mobile */
@@ -119,19 +121,16 @@ body {
     /*    height: 25%;*/
     /*    transition: height 2s linear;*/
     /*}*/
-
     /*.pages section:hover .bottomRight {*/
     /*    height: 75%;*/
     /*    transition: height 2s linear;*/
     /*}*/
-
     /*.pages section .topLeft:hover {*/
     /*    height: 50%;*/
     /*}*/
 }
 
 .topLeft {
-    height: 25%;
     display: grid;
     grid-template-columns: 3rem 1fr 1fr 1fr 3rem;
     grid-template-rows: var(--padding) 1fr 1fr 1fr 1fr 1fr 1fr var(--padding);
@@ -143,14 +142,13 @@ body {
      '.       .        .       .      .     '
      '.       topText  topText .     .      '
      '.       topText  topText .     .      ';
-     '.       .        .       .     .      ';
+'.       .        .       .     .      ';
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
 
 .bottomRight {
-    height: 75%;
     padding: var(--padding);
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -235,7 +233,7 @@ body {
 .chevron use {
     fill: white;
 }
-.chevron:hover use  {
+.chevron:hover use {
     fill: var(--senfgelb);
 }
 
@@ -244,7 +242,7 @@ body {
 }
 
 .chevron:hover {
-    animation-play-state:paused;
+    animation-play-state: paused;
 }
 
 .topChevron .chevron {
@@ -321,7 +319,6 @@ button:hover {
 }
 
 
-
 @media screen and (min-width: 768px) {
     .pages section {
         display: flex;
@@ -355,12 +352,12 @@ button:hover {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: var(--padding) 2fr 3fr 1fr 1fr var(--padding);
         grid-template-areas:
-     '.       .        topNav  . .'
-     'topText  topText .       . .'
-     '.       .        .       . .'
-     'icons   .        .       . .'
+     '.       .        topNav  .       .'
+     'topText  topText .       .       .'
+     '.       .        .       .       .'
+     'icons   .        .       .       .'
      'icons   botText  botText botText .'
-     'icons   .        botNav  . .';
+     'icons   .        botNav  .       .';
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
@@ -436,40 +433,57 @@ button:hover {
 }
 
 .chevron-slide-in {
+    -webkit-animation: var(--slide-in-chevron);
     animation: var(--slide-in-chevron);
 }
+
 .chevron-slide-out {
+    -webkit-animation: var(--slide-out-chevron);
     animation: var(--slide-out-chevron);
 }
 
 @keyframes slide-in-blurred {
     0% {
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
         transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
         transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
         filter: blur(40px);
         opacity: 0;
     }
     100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
         transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
         filter: blur(0);
         opacity: 1;
     }
 }
+
 @keyframes slide-out-blurred {
     0% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
         transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
         filter: blur(0);
         opacity: 1;
     }
     100% {
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
         transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
         transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
         filter: blur(40px);
         opacity: 0;
     }
 }
+
 /*@keyframes fly-in-chevron {*/
 /*    0%{*/
 /*        transform: translateY(50px);*/
@@ -494,19 +508,23 @@ button:hover {
 /*}*/
 @keyframes shake-chevron {
     0%, 30% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     40% {
+        -webkit-transform: translateY(8px);
         transform: translateY(8px);
-
     }
     50% {
+        -webkit-transform: translateY(-3px);
         transform: translateY(-3px);
     }
     60% {
+        -webkit-transform: translateY(8px);
         transform: translateY(8px);
     }
     70%, 100% {
+        -webkit-transform: translateY(0px);
         transform: translateY(0px);
     }
 }

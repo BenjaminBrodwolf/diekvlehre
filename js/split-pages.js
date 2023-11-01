@@ -222,12 +222,13 @@ const handleTouchMove = (evt) => {
         ? setTimeout(() => nextTo(nextDirection()))
         : setTimeout(() => nextTo(prevDirection()));
     xDown = null;
-};
+}
 
-document.querySelectorAll('.pages .topLeft')
-    .forEach(topLeft => topLeft.addEventListener('touchstart', handleTouchStart, false));
-document.querySelectorAll('.pages .topLeft')
-    .forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, false));
+const topLeftElements = () => document.querySelectorAll('.pages .topLeft');
+const bottomRightElements = () => document.querySelectorAll('.pages .bottomRight');
+
+topLeftElements().forEach(topLeft => topLeft.addEventListener('touchstart', handleTouchStart, false));
+topLeftElements().forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, false));
 const checkScrollDirection = (evt) =>
     nextTo(evt.deltaY > 0 ? nextDirection() : prevDirection());
 document.querySelectorAll('.pages .topLeft, .start-content')
@@ -249,6 +250,35 @@ document.addEventListener('keydown', event => {
             : nextTo(prevDirection())
     }
 })
+
+const touchTopLeftMobile = (event) => {
+    event.preventDefault()
+
+
+    if (isMobile()){
+        console.log('top')
+        topLeftElements().forEach(e => e.style.height = '50%');
+        bottomRightElements().forEach(e => e.style.height = '50%');
+    }
+}
+
+const touchBottomRightMobile = (event) => {
+    event.preventDefault()
+
+    if (isMobile()){
+        console.log('bottom' )
+        topLeftElements().forEach(e => e.style.height = '25%');
+        bottomRightElements().forEach(e => e.style.height = '75%');
+
+
+    }
+}
+
+
+topLeftElements().forEach(topLeft =>
+    topLeft.addEventListener('click', touchTopLeftMobile));
+bottomRightElements().forEach(bottomRight =>
+    bottomRight.addEventListener('click', touchBottomRightMobile));
 
 const init = () => {
     // placingSections()
