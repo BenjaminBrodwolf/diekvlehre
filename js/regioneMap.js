@@ -14,7 +14,7 @@ regions.forEach(reg => document.querySelector(`#svgMap${reg}`).addEventListener(
         document.querySelector(`.map${reg}`).classList.add('activeRegion')
         regionTitle.textContent = getRegionName(reg);
         renderTable(reg);
-        parentScrollElement.scrollTo({top: 500, behavior: 'smooth'})
+        //parentScrollElement.scrollTo({top: 500, behavior: 'smooth'})
     }
 ))
 
@@ -30,13 +30,13 @@ const sortAlphabetic = (a, b) => {
 
 const tableRow = document.querySelector('tbody.row');
 const renderTable = reg => {
-    console.log(reg)
     const jsonArray = getRegionJson(reg).sort(sortAlphabetic);
     tableRow.innerHTML = "";
     jsonArray.forEach(({Firma, Ort, Internet, Yousty}) => {
         const rowElement = document.createElement('tr');
         if (Yousty || Internet) {
-            rowElement.addEventListener('click', () => window.open(Yousty || Internet, "_blank"));
+            rowElement.addEventListener('click', () =>
+                window.open(Yousty || Internet, "_blank"));
         }
         rowElement.innerHTML = `<td>${Firma}</td><td>${Ort}</td>`
         tableRow.prepend(rowElement)
