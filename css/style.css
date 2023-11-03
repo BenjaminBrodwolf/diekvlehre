@@ -54,7 +54,7 @@ td:last-child {
     border-width: 0 0 1px 1px;
 }
 
-.row tr:hover {
+tbody.row tr:hover td {
     cursor: pointer;
     color: var(--dunkelblau);
     background-color: var(--senfgelb);

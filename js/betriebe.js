@@ -3,7 +3,7 @@ export const getRegionJson = reg => ({
     'Tessin': TESSIN,
     'Romandie': ROMANDIE,
     'OS': OSTSCHWEIZ
-})[reg] || NSW;
+})[reg];
 
 export const TESSIN = [];
 export const ROMANDIE = [];
@@ -17,7 +17,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.hartrodt.com",
+        Internet: "http://hartrodt.com",
         Yousty: ""
     },
     {
@@ -28,7 +28,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.abacus-shipping.ch",
+        Internet: "http://abacus-shipping.ch",
         Yousty: ""
     },
     {
@@ -39,7 +39,7 @@ export const NSW = [
         Kontaktperson: "Sabrina Rolli",
         Telefon: "061/337 43 37",
         Mail: "sabrina.rolli@fiege.com",
-        Internet: "www.aitworldwide.com",
+        Internet: "http://aitworldwide.com",
         Yousty: ""
     },
     {
@@ -50,8 +50,8 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.atlanticforwarding.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
+        Internet: "http://atlanticforwarding.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
         Firma: "Ausbildungsverbund SPEDLOGSWISS Nordwestschweiz",
@@ -61,7 +61,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.abvnws.ch",
+        Internet: "http://abvnws.ch",
         Yousty: ""
     },
     {
@@ -72,7 +72,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.balimpex.ch",
+        Internet: "http://balimpex.ch",
         Yousty: ""
     },
     {
@@ -83,7 +83,7 @@ export const NSW = [
         Kontaktperson: "Sabrina Gränacher",
         Telefon: "062/767 67 55",
         Mail: "sabrina.graenacher@bertschi.com",
-        Internet: "www.bertschi.com",
+        Internet: "http://bertschi.com",
         Yousty: ""
     },
     {
@@ -94,7 +94,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.birsterminal.ch",
+        Internet: "http://birsterminal.ch",
         Yousty: ""
     },
     {
@@ -105,7 +105,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.bps-spedition.ch",
+        Internet: "http://bps-spedition.ch",
         Yousty: ""
     },
     {
@@ -116,7 +116,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.btg-suisse.ch",
+        Internet: "http://btg-suisse.ch",
         Yousty: ""
     },
     {
@@ -127,7 +127,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.camiontransport.ch",
+        Internet: "http://camiontransport.ch",
         Yousty: ""
     },
     {
@@ -138,7 +138,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.4plcs.com",
+        Internet: "http://4plcs.com",
         Yousty: ""
     },
     {
@@ -149,7 +149,7 @@ export const NSW = [
         Kontaktperson: "Monica Nuno",
         Telefon: "061/315 12 21",
         Mail: "monica.nuno@dachser.com",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         Yousty: ""
     },
     {
@@ -160,7 +160,7 @@ export const NSW = [
         Kontaktperson: "Sabrina Stauffer",
         Telefon: "032/389 02 21",
         Mail: "sabrina.stauffer@dachser.com",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         Yousty: ""
     },
     {
@@ -171,7 +171,7 @@ export const NSW = [
         Kontaktperson: "Vanessa Palumbo",
         Telefon: "061/716 16 02",
         Mail: "vanessa.palumbo@dachser.com",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         Yousty: ""
     },
     {
@@ -182,7 +182,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.danser.ch",
+        Internet: "http://danser.ch",
         Yousty: ""
     },
     {
@@ -193,8 +193,8 @@ export const NSW = [
         Kontaktperson: "Nadia Vogt",
         Telefon: "061/315 95 20",
         Mail: "nadia.vogt@dhl.com",
-        Internet: "www.dhl.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12625267-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-dhl-logistics-schweiz-ag"
+        Internet: "http://dhl.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12625267-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-dhl-logistics-schweiz-ag"
     },
     {
         Firma: "DSV Air + Sea AG",
@@ -204,8 +204,8 @@ export const NSW = [
         Kontaktperson: "Silke Meier",
         Telefon: "061/337 48 51",
         Mail: "silke.meier@ch.dsv.com",
-        Internet: "www.dsv.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
+        Internet: "http://dsv.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
     },
     {
         Firma: "DSV Air + Sea AG",
@@ -215,8 +215,8 @@ export const NSW = [
         Kontaktperson: "Patricia Russo",
         Telefon: "044/829 40 52",
         Mail: "patricia.russo@dsv.com",
-        Internet: "www.dsv.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
+        Internet: "http://dsv.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
     },
     {
         Firma: "DSV Logistics SA",
@@ -226,7 +226,7 @@ export const NSW = [
         Kontaktperson: "Salome Huber",
         Telefon: "061/690 73 92",
         Mail: "salome.huber@dsv.com",
-        Internet: "www.dsv.com",
+        Internet: "http://dsv.com",
         Yousty: ""
     },
     {
@@ -237,7 +237,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.emc-partner.com",
+        Internet: "http://emc-partner.com",
         Yousty: ""
     },
     {
@@ -248,7 +248,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.eurosped.ch",
+        Internet: "http://eurosped.ch",
         Yousty: ""
     },
     {
@@ -259,7 +259,7 @@ export const NSW = [
         Kontaktperson: "Cornelia Rappo",
         Telefon: "062/561 24 05",
         Mail: "cornelia.rappo@fedex.com",
-        Internet: "www.tntswisspost.ch",
+        Internet: "http://tntswisspost.ch",
         Yousty: ""
     },
     {
@@ -270,7 +270,7 @@ export const NSW = [
         Kontaktperson: "Sabrina Rolli",
         Telefon: "061/337 43 37",
         Mail: "sabrina.rolli@fiege.com",
-        Internet: "www.fiege.ch",
+        Internet: "http://fiege.ch",
         Yousty: ""
     },
     {
@@ -281,7 +281,7 @@ export const NSW = [
         Kontaktperson: "Cathy Dusé",
         Telefon: "061/287 95 64",
         Mail: "c.duse@frachtag-bs.ch",
-        Internet: "www.frachtag.ch",
+        Internet: "http://frachtag.ch",
         Yousty: ""
     },
     {
@@ -292,7 +292,7 @@ export const NSW = [
         Kontaktperson: "Christof Lützelschwab",
         Telefon: "061/690 66 52",
         Mail: "christof.luetzelschwab@froede.com",
-        Internet: "www.froede.ch",
+        Internet: "http://froede.ch",
         Yousty: ""
     },
     {
@@ -303,7 +303,7 @@ export const NSW = [
         Kontaktperson: "Rupen Elmayan",
         Telefon: "061/826 94 44",
         Mail: "relmayan@ft-logistics.ch",
-        Internet: "www.ft-logistics.ch",
+        Internet: "http://ft-logistics.ch",
         Yousty: ""
     },
     {
@@ -314,8 +314,8 @@ export const NSW = [
         Kontaktperson: "Emel Alkan",
         Telefon: "058/458 50 48",
         Mail: "emel.alkan@gw-world.com",
-        Internet: "www.gw-world.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/1360-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-gebrueder-weiss-ag"
+        Internet: "http://gw-world.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/1360-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-gebrueder-weiss-ag"
     },
     {
         Firma: "Geisseler Cargo Logistik AG",
@@ -325,7 +325,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.geisseler.ch",
+        Internet: "http://geisseler.ch",
         Yousty: ""
     },
     {
@@ -336,7 +336,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.general-transport.com",
+        Internet: "http://general-transport.com",
         Yousty: ""
     },
     {
@@ -347,7 +347,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.hlcl.com",
+        Internet: "http://hlcl.com",
         Yousty: ""
     },
     {
@@ -358,7 +358,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.intraloghermes.ch",
+        Internet: "http://intraloghermes.ch",
         Yousty: ""
     },
     {
@@ -369,7 +369,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.its-transport.ch",
+        Internet: "http://its-transport.ch",
         Yousty: ""
     },
     {
@@ -380,7 +380,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.jas.com",
+        Internet: "http://jas.com",
         Yousty: ""
     },
     {
@@ -391,7 +391,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.kghcustoms.com",
+        Internet: "http://kghcustoms.com",
         Yousty: ""
     },
     {
@@ -402,8 +402,8 @@ export const NSW = [
         Kontaktperson: "Philip Weinmann",
         Telefon: "061/465 66 35",
         Mail: "philip.weinmann@kuehne-nagel.com",
-        Internet: "www.kuehne-nagel.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10690489-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-moehlin-ag-kuehne-nagel-ag"
+        Internet: "http://kuehne-nagel.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/10690489-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-moehlin-ag-kuehne-nagel-ag"
     },
     {
         Firma: "Lagerhäuser Aarau AG",
@@ -413,7 +413,7 @@ export const NSW = [
         Kontaktperson: "Anja Woellner",
         Telefon: "062/885 32 87",
         Mail: "a.woellner@la-aarau.ch",
-        Internet: "www.la-aarau.ch",
+        Internet: "http://la-aarau.ch",
         Yousty: ""
     },
     {
@@ -424,8 +424,8 @@ export const NSW = [
         Kontaktperson: "Alain Tanner",
         Telefon: "061/284 72 92",
         Mail: "alain.tanner@lamprecht.ch",
-        Internet: "www.lamprecht.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8832388-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-lamprecht-transport-ag"
+        Internet: "http://lamprecht.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/8832388-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-lamprecht-transport-ag"
     },
     {
         Firma: "M&M Militzer & Münch AG",
@@ -435,7 +435,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.mumnet.com",
+        Internet: "http://mumnet.com",
         Yousty: ""
     },
     {
@@ -446,8 +446,8 @@ export const NSW = [
         Kontaktperson: "Martine Sanchez",
         Telefon: "058/677 95 20",
         Mail: "martine.sanchez@mrspedag.com",
-        Internet: "www.mrspedag.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12666851-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-muttenz-bl-m-r-spedag-group-ag?uid=2389062"
+        Internet: "http://mrspedag.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12666851-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-muttenz-bl-m-r-spedag-group-ag?uid=2389062"
     },
     {
         Firma: "MSC Mediterranean Shipping Agency AG",
@@ -457,8 +457,8 @@ export const NSW = [
         Kontaktperson: "Suzy Monnier",
         Telefon: "061/555 65 13",
         Mail: "suzy.monnier@msc.com",
-        Internet: "www.mscgva.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8849933-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-msc-mediterranean-shipping-agency-ag"
+        Internet: "http://mscgva.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/8849933-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-msc-mediterranean-shipping-agency-ag"
     },
     {
         Firma: "Müller-Gysin AG",
@@ -468,7 +468,7 @@ export const NSW = [
         Kontaktperson: "Anita Cavelti",
         Telefon: "061/337 61 11",
         Mail: "anita.cavelti@muellergysin.ch",
-        Internet: "www.muellergysin.ch",
+        Internet: "http://muellergysin.ch",
         Yousty: ""
     },
     {
@@ -479,7 +479,7 @@ export const NSW = [
         Kontaktperson: "Franziska Melillo",
         Telefon: "061/337 31 69",
         Mail: "franziska.melillo@nauta.ch",
-        Internet: "www.nauta.ch",
+        Internet: "http://nauta.ch",
         Yousty: ""
     },
     {
@@ -490,7 +490,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.nordtransport.ch",
+        Internet: "http://nordtransport.ch",
         Yousty: ""
     },
     {
@@ -501,7 +501,7 @@ export const NSW = [
         Kontaktperson: "Demian Ingold",
         Telefon: "061/690 90 84",
         Mail: "d.ingold@otto-schmidt.ch",
-        Internet: "www.otto-schmidt.ch",
+        Internet: "http://otto-schmidt.ch",
         Yousty: ""
     },
     {
@@ -512,7 +512,7 @@ export const NSW = [
         Kontaktperson: "Hedi Grieshaber",
         Telefon: "061/404 44 42",
         Mail: "hgrieshaber@pesa.global",
-        Internet: "www.pesa.global",
+        Internet: "http://pesa.global",
         Yousty: ""
     },
     {
@@ -523,7 +523,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.post.ch",
+        Internet: "http://post.ch",
         Yousty: ""
     },
     {
@@ -534,8 +534,8 @@ export const NSW = [
         Kontaktperson: "Alexandra Hermkes",
         Telefon: "061/639 34 90",
         Mail: "alexandra.hermkes@ch.rhenus.com",
-        Internet: "www.rhenus.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10057282-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-rhenus-alpina-ag"
+        Internet: "http://rhenus.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/10057282-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-rhenus-alpina-ag"
     },
     {
         Firma: "Sara Transporte AG",
@@ -545,7 +545,7 @@ export const NSW = [
         Kontaktperson: "Nehar Alijovi",
         Telefon: "056/282 11 81",
         Mail: "Nehar.Alijovi@sara-transporte.ch",
-        Internet: "www.sara-transporte.ch",
+        Internet: "http://sara-transporte.ch",
         Yousty: ""
     },
     {
@@ -556,7 +556,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.savinodelbene.com",
+        Internet: "http://savinodelbene.com",
         Yousty: ""
     },
     {
@@ -567,8 +567,8 @@ export const NSW = [
         Kontaktperson: "Sabrina Köpke\nStefan Simmen",
         Telefon: "058/589 52 32\n058/589 53 62",
         Mail: "sabrina.koepke@dbschenker.com  stefan.simmen@dbschenker.com",
-        Internet: "www.dbschenker.com/ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/9553028-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schenker-schweiz-ag"
+        Internet: "http://dbschenker.com/ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/9553028-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schenker-schweiz-ag"
     },
     {
         Firma: "Schenker Schweiz AG",
@@ -578,7 +578,7 @@ export const NSW = [
         Kontaktperson: "Diana Manco",
         Telefon: "058/589 50 70",
         Mail: "diana.manco@dbschenker.com",
-        Internet: "www.dbschenker.com/ch",
+        Internet: "http://dbschenker.com/ch",
         Yousty: ""
     },
     {
@@ -589,8 +589,8 @@ export const NSW = [
         Kontaktperson: "Miriam Ziltener",
         Telefon: "061/365 96 76",
         Mail: "mziltener@schneider-transport.com",
-        Internet: "www.schneider-transport.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12628233-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schneider-cie-ag"
+        Internet: "http://schneider-transport.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12628233-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schneider-cie-ag"
     },
     {
         Firma: "Streck Transport AG",
@@ -600,7 +600,7 @@ export const NSW = [
         Kontaktperson: "Hendrik Caspar",
         Telefon: "061/855 11 01",
         Mail: "hendrik.caspar@streck.ch",
-        Internet: "www.streck.ch",
+        Internet: "http://streck.ch",
         Yousty: ""
     },
     {
@@ -611,7 +611,7 @@ export const NSW = [
         Kontaktperson: "Agnes Jütte",
         Telefon: "061/319 55 06",
         Mail: "a.juette@tmbs.ch",
-        Internet: "www.transmaritime.ch",
+        Internet: "http://transmaritime.ch",
         Yousty: ""
     },
     {
@@ -622,8 +622,8 @@ export const NSW = [
         Kontaktperson: "Daniela Moscatiello",
         Telefon: "061/337 49 43",
         Mail: "moscatiello.daniela@transfreight.ch",
-        Internet: "www.transfreight.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12675575-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-transfreight-ag?uid=2393104"
+        Internet: "http://transfreight.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12675575-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-transfreight-ag?uid=2393104"
     },
     {
         Firma: "TS Transport-Service AG",
@@ -633,7 +633,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.transport-service.ch",
+        Internet: "http://transport-service.ch",
         Yousty: ""
     },
     {
@@ -644,7 +644,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.ultra-brag.ch",
+        Internet: "http://ultra-brag.ch",
         Yousty: ""
     },
     {
@@ -655,7 +655,7 @@ export const NSW = [
         Kontaktperson: "Gunhild Wolf",
         Telefon: "061/815 90 98",
         Mail: "guni.wolf@vector-logistics.ch",
-        Internet: "www.vector-logistics.ch",
+        Internet: "http://vector-logistics.ch",
         Yousty: ""
     },
     {
@@ -666,7 +666,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.vl-verzollunglogistik.ch",
+        Internet: "http://vl-verzollunglogistik.ch",
         Yousty: ""
     },
     {
@@ -677,7 +677,7 @@ export const NSW = [
         Kontaktperson: "Mohamed Kobeissi",
         Telefon: "062/849 46 46",
         Mail: "m.k@water-side.ch",
-        Internet: "www.waterside.ch",
+        Internet: "http://waterside.ch",
         Yousty: ""
     },
     {
@@ -688,7 +688,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.worldcourier.com",
+        Internet: "http://worldcourier.com",
         Yousty: ""
     },
     {
@@ -699,8 +699,8 @@ export const NSW = [
         Kontaktperson: "Franziska Vosseler",
         Telefon: "061/818 53 36",
         Mail: "franziska.vosseler@ziegler.ch",
-        Internet: "www.ziegler.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8873510-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-ziegler-schweiz-ag"
+        Internet: "http://ziegler.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/8873510-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-ziegler-schweiz-ag"
     },
     {
         Firma: "Zoll-Flex GmbH",
@@ -710,7 +710,7 @@ export const NSW = [
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.zoll-flex.ch",
+        Internet: "http://zoll-flex.ch",
         Yousty: ""
     }
 ]
@@ -723,8 +723,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Laura Bättig",
         Telefon: "043 411 48 05",
         Mail: "laura.baettig@bollore.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12673369-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-zh-bollore-logistics-suisse-sa?uid=2361963",
-        Internet: "www.bollore.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12673369-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-zh-bollore-logistics-suisse-sa?uid=2361963",
+        Internet: "http://bollore.com",
         PLZ: "8050"
     },
     {
@@ -735,7 +735,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 305 04 04",
         Mail: "brocks@bps-spedition.ch",
         Yousty: "",
-        Internet: "www.bps-spedition.ch",
+        Internet: "http://bps-spedition.ch",
         PLZ: "8422"
     },
     {
@@ -746,7 +746,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 866 31 36",
         Mail: "sandro.naegeli@cargocare.ch",
         Yousty: "",
-        Internet: "www.cargocare.ch",
+        Internet: "http://cargocare.ch",
         PLZ: "8303"
     },
     {
@@ -757,7 +757,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 547 01 00",
         Mail: "florian.funke@cevalogistics.com",
         Yousty: "",
-        Internet: "www.cevalogistics.com",
+        Internet: "http://cevalogistics.com",
         PLZ: "8302"
     },
     {
@@ -768,7 +768,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 816 01 00",
         Mail: "patrick.leuenberger@clg.ch",
         Yousty: "",
-        Internet: "www.clg.ch",
+        Internet: "http://clg.ch",
         PLZ: "8058"
     },
     {
@@ -779,7 +779,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 807 44 41",
         Mail: "corinne.binder@commodity.ch",
         Yousty: "",
-        Internet: "www.commodity.ch",
+        Internet: "http://commodity.ch",
         PLZ: "8832"
     },
     {
@@ -790,7 +790,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 872 11 35",
         Mail: "waltraud.slamanig@dachser.com",
         Yousty: "",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         PLZ: "8105"
     },
     {
@@ -801,7 +801,7 @@ export const OSTSCHWEIZ = [
         Telefon: "061 716 16 02",
         Mail: "vanessa.palumbo@dachser.com",
         Yousty: "",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         PLZ: "8152"
     },
     {
@@ -811,8 +811,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Nadia Vogt",
         Telefon: "061 315 95 20",
         Mail: "nadia.vogt@dhl.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12625268-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-dhl-logistics-schweiz-ag",
-        Internet: "www.dhl.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12625268-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-dhl-logistics-schweiz-ag",
+        Internet: "http://dhl.com",
         PLZ: "8302"
     },
     {
@@ -823,7 +823,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 829 40 52",
         Mail: "patricia.russo@dsv.com",
         Yousty: "",
-        Internet: "www.dsv.com",
+        Internet: "http://dsv.com",
         PLZ: "8152"
     },
     {
@@ -834,7 +834,7 @@ export const OSTSCHWEIZ = [
         Telefon: "061 337 43 51",
         Mail: "sabrina.rolli@fiege.com",
         Yousty: "",
-        Internet: "www.fiege.com",
+        Internet: "http://fiege.com",
         PLZ: "8180"
     },
     {
@@ -845,7 +845,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 809 99 34",
         Mail: "selina.taiana@fms-logistics.com",
         Yousty: "",
-        Internet: "www.fms-logistics.com",
+        Internet: "http://fms-logistics.com",
         PLZ: "8152"
     },
     {
@@ -855,8 +855,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Sandra Staub",
         Telefon: "044 308 91 91",
         Mail: "sandra.staub@frachtag-zh.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10032803-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-wallisellen-8304-zh-fracht-ag-zuerich",
-        Internet: "www.frachtag-zh.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/10032803-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-wallisellen-8304-zh-fracht-ag-zuerich",
+        Internet: "http://frachtag-zh.ch",
         PLZ: "8304"
     },
     {
@@ -867,7 +867,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 804 80 40",
         Mail: "mp@fasttrans.ch",
         Yousty: "",
-        Internet: "www.fasttrans.ch",
+        Internet: "http://fasttrans.ch",
         PLZ: "8058"
     },
     {
@@ -878,7 +878,7 @@ export const OSTSCHWEIZ = [
         Telefon: "058 458 51 72",
         Mail: "betuel.acar@gw-world.com",
         Yousty: "",
-        Internet: "www.gw-world.com",
+        Internet: "http://gw-world.com",
         PLZ: "8153"
     },
     {
@@ -889,7 +889,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 824 54 11",
         Mail: "isabella.bodin@general-transport.com",
         Yousty: "",
-        Internet: "www.general-transport.com",
+        Internet: "http://general-transport.com",
         PLZ: "8152"
     },
     {
@@ -900,7 +900,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 815 80 03",
         Mail: "saumya.thavaseelan@hellmann.com",
         Yousty: "",
-        Internet: "www.hellmann.com",
+        Internet: "http://hellmann.com",
         PLZ: "8302"
     },
     {
@@ -911,7 +911,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 501 36 11",
         Mail: "ykummer@intralog.ch",
         Yousty: "",
-        Internet: "www.intralog.ch",
+        Internet: "http://intralog.ch",
         PLZ: "8302"
     },
     {
@@ -922,7 +922,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 815 80 50",
         Mail: "ramona.meli@jas.com",
         Yousty: "",
-        Internet: "www.jas.com",
+        Internet: "http://jas.com",
         PLZ: "8302"
     },
     {
@@ -933,7 +933,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 838 44 85",
         Mail: "sandra.kasier@kwe.com",
         Yousty: "",
-        Internet: "www.kwe.com",
+        Internet: "http://kwe.com",
         PLZ: "8303"
     },
     {
@@ -944,7 +944,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 866 81 48",
         Mail: "nedzad.hukic@kuehne-nagel.com",
         Yousty: "",
-        Internet: "www.kuehne-nagel.com",
+        Internet: "http://kuehne-nagel.com",
         PLZ: "8152"
     },
     {
@@ -954,8 +954,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Maria del Sol Roldan",
         Telefon: "044 866 21 52",
         Mail: "mariadelsol.roldan@lamprecht.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12468974-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-embrach-zh-lamprecht-transport-ag",
-        Internet: "www.lamprecht.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12468974-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-embrach-zh-lamprecht-transport-ag",
+        Internet: "http://lamprecht.ch",
         PLZ: "8424"
     },
     {
@@ -966,7 +966,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 816 50 93",
         Mail: "stefanie.weber@lamprecht.ch",
         Yousty: "",
-        Internet: "www.lamprecht.ch",
+        Internet: "http://lamprecht.ch",
         PLZ: "8058"
     },
     {
@@ -977,7 +977,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 488 92 70",
         Mail: "charline.ruchet@int.loomis.com",
         Yousty: "",
-        Internet: "www.int.loomis.com",
+        Internet: "http://int.loomis.com",
         PLZ: "8302"
     },
     {
@@ -988,7 +988,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 266 21 21",
         Mail: "mbrunner@cargogate.com",
         Yousty: "",
-        Internet: "www.cargogate.com",
+        Internet: "http://cargogate.com",
         PLZ: "8303"
     },
     {
@@ -998,8 +998,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Rasa Puišytė-Rückert",
         Telefon: "044 818 79 35",
         Mail: "r.puisyte@natco.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12390060-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-ruemlang-zh-natco-ag",
-        Internet: "www.natco.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12390060-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-ruemlang-zh-natco-ag",
+        Internet: "http://natco.ch",
         PLZ: "8153"
     },
     {
@@ -1010,7 +1010,7 @@ export const OSTSCHWEIZ = [
         Telefon: "061 337 31 69",
         Mail: "franziska.melillo@nauta.ch",
         Yousty: "",
-        Internet: "www.nauta.ch",
+        Internet: "http://nauta.ch",
         PLZ: "8422"
     },
     {
@@ -1021,7 +1021,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 838 50 73",
         Mail: "viviane.haldimann@neeur.com",
         Yousty: "",
-        Internet: "www.neeur.com",
+        Internet: "http://neeur.com",
         PLZ: "8303"
     },
     {
@@ -1031,8 +1031,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Miriam Ziltener",
         Telefon: "061 365 96 76",
         Mail: "mziltener@schneider-transport.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12628243-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-nova-traffic-ltd",
-        Internet: "www.schneider-transport.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12628243-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-nova-traffic-ltd",
+        Internet: "http://schneider-transport.ch",
         PLZ: "8302"
     },
     {
@@ -1043,7 +1043,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 262 46 03",
         Mail: "selin.taniyan@optimo-logistics.com",
         Yousty: "",
-        Internet: "www.optimo-logistics.com",
+        Internet: "http://optimo-logistics.com",
         PLZ: "8404"
     },
     {
@@ -1053,8 +1053,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Alessandra Juchli",
         Telefon: "058 856 94 24",
         Mail: "alessandra.juchli@ch.rhenus.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12671863-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-flughafen-zh-rhenus-alpina-ag",
-        Internet: "www.ch.rhenus.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12671863-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-flughafen-zh-rhenus-alpina-ag",
+        Internet: "http://ch.rhenus.com",
         PLZ: "8058"
     },
     {
@@ -1065,7 +1065,7 @@ export const OSTSCHWEIZ = [
         Telefon: "043 816 31 18",
         Mail: "h.lips@ruwaspeed.ch",
         Yousty: "",
-        Internet: "www.ruwaspeed.ch",
+        Internet: "http://ruwaspeed.ch",
         PLZ: "8058"
     },
     {
@@ -1075,8 +1075,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Tina Anchora",
         Telefon: "058 589 50 55",
         Mail: "tina.anchora@dbschenker.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/65-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zuerich-zh-schenker-schweiz-ag",
-        Internet: "www.dbschenker.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/65-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zuerich-zh-schenker-schweiz-ag",
+        Internet: "http://dbschenker.com",
         PLZ: "8048"
     },
     {
@@ -1086,8 +1086,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Nathalie Fischer",
         Telefon: "044 800 17 35",
         Mail: "nfischer@schneider-transport.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12628237-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-schneider-cie-ltd",
-        Internet: "www.schneider-transport.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12628237-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kloten-zh-schneider-cie-ltd",
+        Internet: "http://schneider-transport.com",
         PLZ: "8302"
     },
     {
@@ -1098,7 +1098,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 405 27 16",
         Mail: "vrusso@schneider-transport.com",
         Yousty: "",
-        Internet: "www.schneider-transport.com",
+        Internet: "http://schneider-transport.com",
         PLZ: "8048"
     },
     {
@@ -1108,8 +1108,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Linda Schlatter",
         Telefon: "044 866 20 38",
         Mail: "linda.schlatter@streck.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12667744-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zh-streck-transport-ag?uid=2357820",
-        Internet: "www.streck.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12667744-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zh-streck-transport-ag?uid=2357820",
+        Internet: "http://streck.ch",
         PLZ: "8422"
     },
     {
@@ -1119,8 +1119,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Sue Pfyl",
         Telefon: "044 804 20 14",
         Mail: "s.pfyl@tbunique.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658350-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-zh-tibbett-britten-unique-ag?uid=2359194",
-        Internet: "www.tbunique.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12658350-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-zuerich-zh-tibbett-britten-unique-ag?uid=2359194",
+        Internet: "http://tbunique.ch",
         PLZ: "8058"
     },
     {
@@ -1131,7 +1131,7 @@ export const OSTSCHWEIZ = [
         Telefon: "071 747 33 82",
         Mail: "sven.nickel@tisa.ch",
         Yousty: "",
-        Internet: "www.tisa.ch",
+        Internet: "http://tisa.ch",
         PLZ: "8424"
     },
     {
@@ -1142,7 +1142,7 @@ export const OSTSCHWEIZ = [
         Telefon: "044 866 28 21",
         Mail: "eugen.volkart@transsped.ch",
         Yousty: "",
-        Internet: "www.transsped.ch",
+        Internet: "http://transsped.ch",
         PLZ: "8424"
     },
     {
@@ -1152,8 +1152,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Melanie Müller",
         Telefon: "044 444 12 56",
         Mail: "melanie.müller@welti-furrer.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10898668-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-dielsdorf-zh-welti-furrer-ag",
-        Internet: "www.welti-furrer.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/10898668-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-dielsdorf-zh-welti-furrer-ag",
+        Internet: "http://welti-furrer.ch",
         PLZ: "8157"
     },
     {
@@ -1164,7 +1164,7 @@ export const OSTSCHWEIZ = [
         Telefon: "061 815 53 36",
         Mail: "franziska.vosseler@ziegler.ch",
         Yousty: "",
-        Internet: "www.ziegler.ch",
+        Internet: "http://ziegler.ch",
         PLZ: "8953"
     },
     {
@@ -1174,30 +1174,30 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Michael Bär",
         Telefon: "071 677 01 03",
         Mail: "michael.baer@translogzoll.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658354-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kreuzlingen-tg-baer-zollagentur-schweiz-gmbh?uid=2367682",
-        Internet: "www.translogzoll.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12658354-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kreuzlingen-tg-baer-zollagentur-schweiz-gmbh?uid=2367682",
+        Internet: "http://translogzoll.ch",
         PLZ: "8280"
     },
     {
         Firma: "Dachser Spedition AG Air & Sea",
         Adresse: "Rorschacherstrasse 290 / Postfach 333",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Frau Vanessa Palumbo",
         Telefon: "061 716 16 02",
         Mail: "vanessa.palumbo@dachser.com",
         Yousty: "",
-        Internet: "www.dachser.com",
+        Internet: "http://dachser.com",
         PLZ: "9019"
     },
     {
-        Firma: "",
+        Firma: "DHL Logistics (Schweiz) AG",
         Adresse: "Heldaustrasse 66",
         Ort: "Buchs",
         Kontaktperson: "Frau Franziska Rupf-Lohr",
         Telefon: "081 755 12 98",
         Mail: "franziska.rupf-lohr@dhl.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12625269-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-buchs-sg-dhl-logistics-schweiz-ag",
-        Internet: "www.dhl.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12625269-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-buchs-sg-dhl-logistics-schweiz-ag",
+        Internet: "http://dhl.com",
         PLZ: "9470"
     },
     {
@@ -1207,8 +1207,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Patricia Russo",
         Telefon: "044 829 40 52",
         Mail: "patricia.russo@dsv.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/65-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zuerich-zh-schenker-schweiz-ag",
-        Internet: "www.dsv.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/65-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pfungen-zuerich-zh-schenker-schweiz-ag",
+        Internet: "http://dsv.com",
         PLZ: "9016"
     },
     {
@@ -1218,41 +1218,41 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Dusanka Geldmacher",
         Telefon: "058 458 54 05",
         Mail: "dusanka.geldmacher@gw-world.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/1359-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-altenrhein-sg-gebrueder-weiss-ag",
-        Internet: "www.gw-world.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/1359-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-altenrhein-sg-gebrueder-weiss-ag",
+        Internet: "http://gw-world.com",
         PLZ: "9423"
     },
     {
         Firma: "Hoco International AG",
         Adresse: "Piccardstrasse 13",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Antonio Fiorenza",
         Telefon: "071 313 91 41",
         Mail: "antonio.fiorenza@hoco-int.ch",
         Yousty: "",
-        Internet: "www.hoco-int.ch",
+        Internet: "http://hoco-int.ch",
         PLZ: "9015"
     },
     {
         Firma: "JCL Logistics Switzerland AG",
         Adresse: "Neugrütstrasse 3",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Frau Sabrina Rohden",
         Telefon: "071 747 43 27",
         Mail: "sabrina.rhoden@jcl-logistics.com",
         Yousty: "",
-        Internet: "www.jcl-logistics.com",
+        Internet: "http://jcl-logistics.com",
         PLZ: "9430"
     },
     {
         Firma: "Lamprecht Transport AG",
         Adresse: "Oberstrasse 149",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Markus Keller",
         Telefon: "071 272 13 53",
         Mail: "markus.keller@lamprecht.ch",
         Yousty: "",
-        Internet: "www.lamprecht.ch",
+        Internet: "http://lamprecht.ch",
         PLZ: "9001"
     },
     {
@@ -1262,8 +1262,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Franziska Greim-Schaad",
         Telefon: "071 677 22 30",
         Mail: "franziska.greim-schaad@lebert.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12634501-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kreuzlingen-tg-lebert-ag",
-        Internet: "www.lebert.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12634501-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kreuzlingen-tg-lebert-ag",
+        Internet: "http://lebert.com",
         PLZ: "8280"
     },
     {
@@ -1273,8 +1273,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Peter Schmitz",
         Telefon: "071 466 72 54",
         Mail: "psc@ntgroad.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658353-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-romanshorn-tg-ntg-road-ag?uid=2391242",
-        Internet: "www.ntgroad.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12658353-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-romanshorn-tg-ntg-road-ag?uid=2391242",
+        Internet: "http://ntgroad.com",
         PLZ: "8590"
     },
     {
@@ -1285,7 +1285,7 @@ export const OSTSCHWEIZ = [
         Telefon: "071 246 00 67",
         Mail: "alex@seilo.ch",
         Yousty: "",
-        Internet: "www.seilo.ch",
+        Internet: "http://seilo.ch",
         PLZ: "9000"
     },
     {
@@ -1295,8 +1295,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Jeannine Merten",
         Telefon: "071 747 66 00",
         Mail: "jeannine.merten@sieber.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12648226-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-berneck-sg-sieber-transport-ag",
-        Internet: "www.sieber.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12648226-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-berneck-sg-sieber-transport-ag",
+        Internet: "http://sieber.ch",
         PLZ: "9442"
     },
     {
@@ -1306,8 +1306,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Dieter Fiel",
         Telefon: "071 747 33 75",
         Mail: "dieter.fiel@tisa.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12617133-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-widnau-sg-tisa-speditions-ag",
-        Internet: "www.tisa.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12617133-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-widnau-sg-tisa-speditions-ag",
+        Internet: "http://tisa.ch",
         PLZ: "9443"
     },
     {
@@ -1318,7 +1318,7 @@ export const OSTSCHWEIZ = [
         Telefon: "071 677 60 90",
         Mail: "daria.ammann@tralog.ch",
         Yousty: "",
-        Internet: "www.tralog.ch",
+        Internet: "http://tralog.ch",
         PLZ: "8082"
     },
     {
@@ -1329,18 +1329,18 @@ export const OSTSCHWEIZ = [
         Telefon: "071 733 77 02",
         Mail: "marcel.butscher@worldofgreen.ch",
         Yousty: "",
-        Internet: "www.worldofgreen.ch",
+        Internet: "http://worldofgreen.ch",
         PLZ: "9444"
     },
     {
         Firma: "Ziegler Schweiz AG",
         Adresse: "Bionstrasse 5",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Angelo Melillo",
         Telefon: "071 311 13 63",
         Mail: "angelo.melillo@ziegler.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/9439513-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-st-gallen-sg-ziegler-schweiz-ag",
-        Internet: "www.ziegler.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/9439513-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-st-gallen-sg-ziegler-schweiz-ag",
+        Internet: "http://ziegler.ch",
         PLZ: "9015"
     },
     {
@@ -1351,7 +1351,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 649 24 24",
         Mail: "mehmet.ferreira@balimbex.ch",
         Yousty: "",
-        Internet: "www.balimbex.ch",
+        Internet: "http://balimbex.ch",
         PLZ: "8240"
     },
     {
@@ -1361,8 +1361,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Valid Karisik",
         Telefon: "052 644 01 77",
         Mail: "valid.karisik@dsv.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12665619-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-dsv-logistics-sa?uid=2360380",
-        Internet: "www.dsv.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12665619-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-dsv-logistics-sa?uid=2360380",
+        Internet: "http://dsv.com",
         PLZ: "8207"
     },
     {
@@ -1373,7 +1373,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 644 19 42",
         Mail: "rena.geoklyilmaz@hocosped.ch",
         Yousty: "",
-        Internet: "www.hocosped.ch",
+        Internet: "http://hocosped.ch",
         PLZ: "8200"
     },
     {
@@ -1384,7 +1384,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 644 80 07",
         Mail: "deborah.wagner@holenstein-transport.ch",
         Yousty: "",
-        Internet: "www.holenstein-transport.ch",
+        Internet: "http://holenstein-transport.ch",
         PLZ: "8207"
     },
     {
@@ -1395,7 +1395,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 645 31 14",
         Mail: "pascal.baumgartner @jcl-logistics.com",
         Yousty: "",
-        Internet: "www.jcl-logistics.com",
+        Internet: "http://jcl-logistics.com",
         PLZ: "8240"
     },
     {
@@ -1405,8 +1405,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Simone Durban",
         Telefon: "052 644 50 85",
         Mail: "simone.durban@kuehne-nagel.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/3846898-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-opfikon-zh-kuehne-nagel-ag",
-        Internet: "www.kuehne-nagel.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/3846898-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-opfikon-zh-kuehne-nagel-ag",
+        Internet: "http://kuehne-nagel.com",
         PLZ: "8240"
     },
     {
@@ -1417,7 +1417,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 742 80 73",
         Mail: "stu@lamprecht.ch",
         Yousty: "",
-        Internet: "www.lamprecht.ch",
+        Internet: "http://lamprecht.ch",
         PLZ: "8262"
     },
     {
@@ -1428,7 +1428,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 645 40 17",
         Mail: "c.landolt@log-ag.swiss",
         Yousty: "",
-        Internet: "www.log-ag.swiss",
+        Internet: "http://log-ag.swiss",
         PLZ: "8223"
     },
     {
@@ -1438,8 +1438,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Birgit Häringer",
         Telefon: "058 677 18 29",
         Mail: "birgit.haeringer@mrspedag.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12665636-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-m-r-spedag-group-ag?uid=2362352",
-        Internet: "www.mrspedag.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12665636-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-m-r-spedag-group-ag?uid=2362352",
+        Internet: "http://mrspedag.com",
         PLZ: "8207"
     },
     {
@@ -1449,8 +1449,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Herr Norman Ragg",
         Telefon: "052 569 36 84",
         Mail: "norman.ragg@ch.rhenus.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12671865-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-rhenus-alpina-ag",
-        Internet: "www.ch.rhenus.com",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12671865-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-schaffhausen-sh-rhenus-alpina-ag",
+        Internet: "http://ch.rhenus.com",
         PLZ: "8207"
     },
     {
@@ -1461,7 +1461,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 644 00 61",
         Mail: "ruefli@sg-spedition.ch",
         Yousty: "",
-        Internet: "www.sg-spedition.ch",
+        Internet: "http://sg-spedition.ch",
         PLZ: "8222"
     },
     {
@@ -1472,7 +1472,7 @@ export const OSTSCHWEIZ = [
         Telefon: "052 645 03 10",
         Mail: "n.grin@spedifa.ch",
         Yousty: "",
-        Internet: "www.spedifa.ch",
+        Internet: "http://spedifa.ch",
         PLZ: "8240"
     },
     {
@@ -1482,8 +1482,8 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Jessica Flubacher",
         Telefon: "052 551 06 77",
         Mail: "j.flubacher@tli-translog.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12665632-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-thayngen-sh-tli-translog-transport-ag?uid=2365603",
-        Internet: "www.tli-translog.ch",
+        Yousty: "https://http://yousty.ch/de-CH/lehrstellen/profile/12665632-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-thayngen-sh-tli-translog-transport-ag?uid=2365603",
+        Internet: "http://tli-translog.ch",
         PLZ: "8240"
     }
 ]
