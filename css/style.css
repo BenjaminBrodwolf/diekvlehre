@@ -19,6 +19,47 @@
     box-sizing: border-box;
 }
 
+.border-lb {
+    border: 1px solid #ccc;
+    border-width: 0 0 1px 1px;
+}
+
+table {
+    border-spacing: unset;
+    width: 100%;
+    color: var(--hellblau);
+}
+
+
+th, td {
+    padding: 8px 8px 8px 0;
+    border: 1px solid var(--hellblau);
+
+    text-align: left;
+    border-collapse: collapse;
+}
+th {
+    border-width: 0 0 1px 0;
+    font-weight: bold;
+    font-size: clamp(1.125rem, 0.9197rem + 0.367vw, 1.25rem);
+    font-family: Montserrat-Bold, Montserrat, sans-serif;
+}
+
+td:first-child {
+    border-width: 0 0 1px 0;
+}
+
+td:last-child {
+    padding-left: 8px;
+    border-width: 0 0 1px 1px;
+}
+
+.row tr:hover {
+    cursor: pointer;
+    color: var(--dunkelblau);
+    background-color: var(--senfgelb);
+}
+
 @font-face {
     font-family: 'Montserrat-Bold';
     src: url('../font/Montserrat-Bold.woff2') format('woff2');
@@ -67,6 +108,11 @@ h4 {
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
+}
+
+p {
+    line-height: 1.5rem;
+    word-spacing: 1px;
 }
 
 a {
@@ -308,6 +354,7 @@ button:hover {
 }
 
 .centerDiv {
+    margin-top: 1rem;
     display: grid;
     place-content: center;
 }
@@ -519,6 +566,7 @@ hr {
     height: 30px;
     fill: var(--dunkelblau)
 }
-.bottomRightContent  .social-media svg {
+
+.bottomRightContent .social-media svg {
     fill: white;
 }

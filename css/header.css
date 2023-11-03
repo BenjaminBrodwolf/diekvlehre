@@ -98,6 +98,7 @@ header .header-nav {
 .header-languages .activeLang {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
     font-weight: bold;
+    color: var(--rot);
 }
 
 /* ---- Sidebar ---- */
