@@ -9,16 +9,18 @@ export const getRegionName = reg => ({
 
 const parentScrollElement = document.querySelector('[data-page-id="1"] .bottomRight');
 const regionTitle = document.querySelector('.selectedRegion');
-regions.forEach(reg => document.querySelector(`#svgMap${reg}`).addEventListener('click', () => {
+regions.forEach(reg =>
+    document.querySelector(`#svgMap${reg}`).addEventListener('click', () => {
         svgMaps.forEach(map => map.classList.remove('activeRegion'))
         document.querySelector(`.map${reg}`).classList.add('activeRegion')
         regionTitle.textContent = getRegionName(reg);
         renderTable(reg);
+        renderLocationDropdownOptions(reg);
         //parentScrollElement.scrollTo({top: 500, behavior: 'smooth'})
     }
 ))
 
-const sortAlphabetic = (a, b) => {
+const sortByFirma = (a, b) => {
     if (a.Firma > b.Firma) {
         return -1;
     }
@@ -29,8 +31,11 @@ const sortAlphabetic = (a, b) => {
 }
 
 const tableRow = document.querySelector('tbody.row');
-const renderTable = reg => {
-    const jsonArray = getRegionJson(reg).sort(sortAlphabetic);
+const renderTable = (region, locationFilter) => {
+    let jsonArray = getRegionJson(region).sort(sortByFirma);
+    if (locationFilter) {
+        jsonArray = jsonArray.filter(o => o.Ort === locationFilter);
+    }
     tableRow.innerHTML = "";
     jsonArray.forEach(({Firma, Ort, Internet, Yousty}) => {
         const rowElement = document.createElement('tr');
@@ -41,6 +46,33 @@ const renderTable = reg => {
         rowElement.innerHTML = `<td>${Firma}</td><td>${Ort}</td>`
         tableRow.prepend(rowElement)
     })
-
 }
 
+const generateOption = (reg, location) => {
+    const option = document.createElement('div');
+    option.textContent = location;
+    option.addEventListener('click', () => renderTable(reg, location));
+    return option;
+}
+
+const locationDropdown = document.querySelector('.location_dropdown');
+const locationOptions = locationDropdown.querySelector('.location_options');
+locationDropdown.addEventListener('click', () => locationDropdown.classList.toggle('active'));
+const renderLocationDropdownOptions = reg => {
+    const jsonArray = getRegionJson(reg);
+    const locations = [...new Set(jsonArray.map(b => b.Ort))].sort();
+    locationOptions.innerHTML = "";
+
+    const allOption = document.createElement('div');
+    allOption.textContent = '→ Alle Anzeigen';
+    allOption.addEventListener('click', () => renderTable(reg));
+    locationOptions.append(allOption);
+
+    locations.forEach(location => {
+        const option = document.createElement('div');
+        option.textContent = location;
+        option.addEventListener('click', () => renderTable(reg, location));
+        locationOptions.append(option);
+    })
+
+}
