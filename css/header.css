@@ -34,6 +34,7 @@ header {
 }
 
 .header-bewerb-dich {
+    min-width: 200px;
     cursor: pointer;
     font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
     color: var(--rot);
