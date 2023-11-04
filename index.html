@@ -13,9 +13,7 @@
     <script src="js/betriebe.js" type="module"></script>
 </head>
 
-<body>
-
-
+<body data-active-page-id="">
 <header>
     <div class="header-logo">
         <div class="turnaround">
@@ -89,8 +87,8 @@
     </div>
 
 </header>
-
 <main class="pages">
+
     <section class="contact" data-page-id="4">
         <div class="topLeft">
             <div class="topChevron" onclick="nextTo(prevDirection())">
@@ -186,7 +184,8 @@
                     <use href="#svgKontakt"/>
                 </svg>
             </div>
-            <div class="bottomText"><h4>Wir überzeugen dich auch visuell.</h4>
+            <div class="bottomText"><h4>Schau dir unseren Film mit 7 guten Gründen für deine Ausbildung bei einem
+                Speditions- und Logistikunternehmen an.</h4>
             </div>
             <div class="bottomChevron" onclick="nextTo(nextDirection())">
                 <svg class="chevron" viewBox="0 0 63.8 24.7">
@@ -196,7 +195,7 @@
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
-                <h2>Film</h2>
+                <h2>Wir überzeugen dich auch visuell.</h2>
                 <p>Du suchst noch ein paar Argumente. In diesem kleinen Film erfährst du alles, was du hierzu wissen
                     musst – und sammelst in jeder Sekunde
                     noch mehr gute Gründe für deine Ausbildung in der Speditions- und Logistikbranche.
@@ -212,7 +211,7 @@
 
 
                 <div class="centerDiv">
-                    <button type="button">JETZT BEWERBEN!</button>
+                    <button onclick="jumpTo(1)" type="button">JETZT BEWERBEN!</button>
                 </div>
             </div>
         </div>
@@ -463,8 +462,19 @@
             </div>
         </div>
     </section>
+
 </main>
 
+<div class="pageTopChevron" onclick="nextTo(prevDirection())">
+    <svg class="chevron" viewBox="0 0 63.8 24.7">
+        <use href="#svgChevronDown"/>
+    </svg>
+</div>
+<div class="pageBottomChevron" onclick="nextTo(nextDirection())">
+    <svg class="chevron" viewBox="0 0 63.8 24.7">
+        <use href="#svgChevronDown"/>
+    </svg>
+</div>
 <footer></footer>
 
 <svg style="display: none" viewBox="0 0 55.26 55.5" xmlns="http://www.w3.org/2000/svg">

@@ -107,6 +107,8 @@ const slideChevron = ({
     }
 })
 
+const setActivePageIdToBody = id => document.body.dataset.activePageId = id.toString();
+
 const transformSplitSections = (activeSection, nextSection, direction, nextSectionId) => {
     if (animationActive) {
         return
@@ -114,6 +116,7 @@ const transformSplitSections = (activeSection, nextSection, direction, nextSecti
     animationActive = true;
     slideChevron.out()
     setActiveNavClass(nextSectionId);
+    setActivePageIdToBody(nextSectionId);
 
     new Promise((resolve, reject) => {
         moveSectionInFrontDom(nextSection)
@@ -147,6 +150,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
     animationActive = true;
     slideChevron.out()
     setActiveNavClass(nextSectionId);
+    setActivePageIdToBody(nextSectionId);
 
     if (direction === 'up') { // when UP means activeSection is StartSection
         new Promise((resolve, reject) => {
@@ -195,7 +199,6 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             nextSection.addEventListener('transitionend', handleAnimationEnd, {once: true});
         });
     }
-
 }
 
 const moveSectionInFrontDom = (nextSection) => {
@@ -296,6 +299,6 @@ new ResizeObserver(entries => {
 }).observe(document.body)
 
 const init = () => {
-    // placingSections()
+    document.body.dataset.activePageId = isMobile() ? '1' : '0';
 }
 init()
