@@ -16,7 +16,9 @@ regions.forEach(reg =>
         regionTitle.textContent = getRegionName(reg);
         renderTable(reg);
         renderLocationDropdownOptions(reg);
-        //parentScrollElement.scrollTo({top: 500, behavior: 'smooth'})
+        setTimeout(() =>
+        parentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
+        );
     }
 ))
 

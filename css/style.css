@@ -451,6 +451,7 @@ td:first-child {
 td:last-child {
     padding-left: 8px;
     border-width: 0 0 1px 1px;
+    min-width: 100px;
 }
 
 tbody.row tr:hover td {
@@ -685,13 +686,13 @@ tbody.row tr:hover td {
 .pageTopChevron {
     left: calc(50% - 28px);
     rotate: 270deg;
-    top: calc(var(--header-height) + 40px);
+    top: calc(var(--header-height) + 35px);
 }
 
 .pageBottomChevron {
     left: calc(50% - 31px);
     rotate: 90deg;
-    bottom: 40px;
+    bottom: 20px;
 }
 
 @media (min-width: 768px) {
