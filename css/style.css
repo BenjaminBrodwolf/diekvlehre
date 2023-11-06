@@ -460,13 +460,10 @@ tbody.row tr:hover td {
     background-color: var(--senfgelb);
 }
 
-
-
 .location_dropdown {
     position: relative;
     height: 20px;
     color: var(--dunkelblau);
-
 }
 
 .location_dropdown::before {
