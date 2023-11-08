@@ -11,16 +11,17 @@ const parentScrollElement = document.querySelector('[data-page-id="1"] .bottomRi
 const regionTitle = document.querySelector('.selectedRegion');
 regions.forEach(reg =>
     document.querySelector(`#svgMap${reg}`).addEventListener('click', () => {
-        svgMaps.forEach(map => map.classList.remove('activeRegion'))
-        document.querySelector(`.map${reg}`).classList.add('activeRegion')
-        regionTitle.textContent = getRegionName(reg);
-        renderTable(reg);
-        renderLocationDropdownOptions(reg);
-        setTimeout(() =>
-        parentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
-        );
-    }
-))
+            (hiddenTable => hiddenTable ? hiddenTable.classList.remove('hidden') : '')(document.querySelector('table.hidden'));
+            svgMaps.forEach(map => map.classList.remove('activeRegion'))
+            document.querySelector(`.map${reg}`).classList.add('activeRegion')
+            regionTitle.textContent = getRegionName(reg);
+            renderTable(reg);
+            renderLocationDropdownOptions(reg);
+            setTimeout(() =>
+                parentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
+            );
+        }
+    ))
 
 const sortByFirma = (a, b) => {
     if (a.Firma > b.Firma) {
@@ -52,13 +53,6 @@ const renderTable = (region, locationFilter) => {
         rowElement.innerHTML = `<td>${Firma}</td><td>${Ort}</td>`
         tableRow.prepend(rowElement)
     })
-}
-
-const generateOption = (reg, location) => {
-    const option = document.createElement('div');
-    option.textContent = location;
-    option.addEventListener('click', () => renderTable(reg, location));
-    return option;
 }
 
 const locationDropdown = document.querySelector('.location_dropdown');

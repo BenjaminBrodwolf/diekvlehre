@@ -46,7 +46,7 @@ header {
 
 .turnaround {
     transition-delay: 3s;
-    transition: .8s ;
+    transition: .8s;
     transform-style: preserve-3d;
     position: relative;
     height: 100%;
@@ -54,14 +54,18 @@ header {
 
 .front,
 .back {
-    backface-visibility: hidden ;
+    backface-visibility: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     display: grid;
     align-content: center;
 }
-.front { z-index: 2; }
+
+.front {
+    z-index: 2;
+}
+
 .back {
     transform: rotateY(180deg);
     z-index: 1;
@@ -93,7 +97,6 @@ header .header-nav {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
     width: 80px;
 }
 
@@ -220,7 +223,7 @@ header .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     .hamburger .hamburger-lines {
         height: 24px;
         width: 32px;
-        top: 22px;
+        top: 18px;
     }
 
     .mobileSidebarMenu {

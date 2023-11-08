@@ -67,6 +67,10 @@
     background-image: url(../img/bewerbung.webp);
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .contact .topLeft {
     background-image: url(../img/kontakt.webp);
 }
@@ -178,6 +182,7 @@ button:hover {
 
 .selectedRegion {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
+    color: var(--hellblau);
 }
 
 .hideMeOnMobile {
@@ -360,10 +365,10 @@ tbody.row tr:hover td {
     width: 8px;
     height: 8px;
     border: 1px solid var(--dunkelblau);
-    border-top: 1px solid var(--hellblau);
-    border-right: 1px solid var(--hellblau);
+    border-top: 1px solid   white;
+    border-right: 1px solid white;
     transform: rotate(-45deg);
-    transition: 0.5s;
+    transition: 0.2s;
     pointer-events: none;
 }
 
@@ -382,13 +387,14 @@ tbody.row tr:hover td {
     outline: none;
     padding-left: 10px;
     border: 1px solid var(--hellblau);
+    background: white;
 }
 
 .location_options {
     position: absolute;
     top: 23px;
     width: 100%;
-    background: var(--hellblau);
+    background: white;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     display: none;
@@ -417,10 +423,6 @@ tbody.row tr:hover td {
 
 ::-ms-input-placeholder { /* Edge 12 -18 */
     color: var(--dunkelblau);
-}
-
-.location_text-box {
-    background: var(--hellblau);
 }
 
 /* ------ AUSBILDUNG -------*/
