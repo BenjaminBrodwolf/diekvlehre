@@ -552,8 +552,6 @@ tbody.row tr:hover td {
 }
 
 /* ------ FILM -------*/
-
-
 .movieIframe {
     height: 50vw;
 }
@@ -561,7 +559,7 @@ tbody.row tr:hover td {
 /* >>>>> DESKTOP */
 
 .nextChevron, .prevChevron {
-    top: 50%;
+    top: calc(50% + 6px);
     width: 40px;
     position: absolute;
 }
