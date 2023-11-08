@@ -234,12 +234,12 @@ const handleTouchMove = (evt) => {
 const topLeftElements = () => document.querySelectorAll('.pages .topLeft');
 const bottomRightElements = () => document.querySelectorAll('.pages .bottomRight');
 
-topLeftElements().forEach(topLeft => topLeft.addEventListener('touchstart', handleTouchStart, false));
-topLeftElements().forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, false));
+topLeftElements().forEach(topLeft => topLeft.addEventListener('touchstart', handleTouchStart, {passive: true}));
+topLeftElements().forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, {passive: true}));
 const checkScrollDirection = (evt) =>
     nextTo(evt.deltaY > 0 ? nextDirection() : prevDirection());
 document.querySelectorAll('.pages .topLeft, .start-content')
-    .forEach(topLeft => topLeft.addEventListener('wheel', checkScrollDirection, false));
+    .forEach(topLeft => topLeft.addEventListener('wheel', checkScrollDirection, {passive: true}));
 
 const getArrowKeyDirection = (keyCode) =>
     ({
@@ -283,9 +283,9 @@ const touchBottomRightMobile = (event) => {
 }
 
 topLeftElements().forEach(topLeft =>
-    topLeft.addEventListener('touchstart', touchTopLeftMobile));
+    topLeft.addEventListener('touchstart', touchTopLeftMobile, {passive: true}));
 bottomRightElements().forEach(bottomRight =>
-    bottomRight.addEventListener('touchstart', touchBottomRightMobile));
+    bottomRight.addEventListener('touchstart', touchBottomRightMobile, {passive: true}));
 
 new ResizeObserver(entries => {
     const screenWidth = entries[0].contentRect.width;
