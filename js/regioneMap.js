@@ -39,11 +39,15 @@ const renderTable = (region, locationFilter) => {
         jsonArray = jsonArray.filter(o => o.Ort === locationFilter);
     }
     tableRow.innerHTML = "";
-    jsonArray.forEach(({Firma, Ort, Internet, Yousty}) => {
+    jsonArray.forEach(({Firma, Ort, Mail, Yousty}) => {
         const rowElement = document.createElement('tr');
-        if (Yousty || Internet) {
+        if (Yousty) {
             rowElement.addEventListener('click', () =>
-                window.open(Yousty || Internet, "_blank"));
+                window.open(Yousty, "_blank"));
+        } else if (Mail) {
+            rowElement.addEventListener('click', () => {
+                window.open('mailto:' + Mail, "_blank");
+            });
         }
         rowElement.innerHTML = `<td>${Firma}</td><td>${Ort}</td>`
         tableRow.prepend(rowElement)
