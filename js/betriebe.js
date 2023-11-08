@@ -6,7 +6,272 @@ export const getRegionJson = reg => ({
 })[reg];
 
 export const TESSIN = [];
-export const ROMANDIE = [];
+export const ROMANDIE = [
+    {
+        Firma: "Agence Fret Cargo SA",
+        PLZ: "1215",
+        Ort: "Genève",
+        Telefon: "+41 22 798 68 00",
+        Mail: "david@fretcargo.com",
+        Yousty: ""
+    },
+    {
+        Firma: "ATM Global Logistics SA",
+        PLZ: "2322",
+        Ort: "La Chaux-de-Fonds",
+        Telefon: "+41 32 925 98 02",
+        Mail: "se.cdf@atmgl.com",
+        Yousty: ""
+    },
+    {
+        Firma: "BELGLOBE GmbH",
+        PLZ: "1580",
+        Ort: "Avenches",
+        Telefon: "+41 26 409 76 80",
+        Mail: "csansonnens@belglobe.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Bolloré Logistics Suisse SA",
+        PLZ: "1217",
+        Ort: "Meyrin",
+        Telefon: "+41 22 592 06 60",
+        Mail: "eric.berclaz@bollore.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Dachser Expédition SA",
+        PLZ: "1033",
+        Ort: "Cheseaux-sur-Lausanne",
+        Telefon: "+41 21 867 14 00",
+        Mail: "anita.olivier@dachser.com",
+        Yousty: ""
+    },
+    {
+        Firma: "DHL Logistics (Schweiz) AG",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 32 529 06 15",
+        Mail: "carole.lautenschlaeger@dhl.com",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12625270-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-genf-flughafen-5-ge-dhl-logistics-schweiz-ag"
+    },
+    {
+        Firma: "DSV Air & Sea AG - Genf",
+        PLZ: "1217",
+        Ort: "Meyrin",
+        Telefon: "+41 22 795 77 23",
+        Mail: "ariane.quero@ch.dsv.com",
+        Yousty: ""
+    },
+    {
+        Firma: "DSV Logistics SA",
+        PLZ: "1920",
+        Ort: "Martigny",
+        Telefon: "+41 27 720 48 00",
+        Mail: "thomas.nater@dsv.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Duperrex Frères SA",
+        PLZ: "1144",
+        Ort: "Ballens",
+        Telefon: "+41 21 809 91 90",
+        Mail: "alexandre.buache@duperrex.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Expedions Sarl",
+        PLZ: "1212",
+        Ort: "Lançy",
+        Telefon: "+41 22 342 38 63",
+        Mail: "info@expedions.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Fracht SA",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 22 798 66 88",
+        Mail: "s.dekrahe@frachtsa-ge.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Gefco Suisse SA",
+        PLZ: "1227",
+        Ort: "Carouge",
+        Telefon: "+41 79 355 30 01",
+        Mail: "hubert.pascal-moussellard@gefco.net",
+        Yousty: ""
+    },
+    {
+        Firma: "Gondrand International SA",
+        PLZ: "1227",
+        Ort: "Carouge",
+        Telefon: "+41 22 304 89 27",
+        Mail: "pierre-yves.gay@gondrand-logistics.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Jena Logistics Consulting Sàrl",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 22 788 43 42",
+        Mail: "uj@jenalogistics.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "NTG Gondrand Customs AG",
+        PLZ: "1373",
+        Ort: "Chavornay",
+        Telefon: "+41 79 571 39 71",
+        Mail: "pga@ntggondrand.com",
+        Yousty: ""
+    },
+    {
+        Firma: "NV Log SA",
+        PLZ: "1242",
+        Ort: "Satigny",
+        Telefon: "+41 22 577 47 47",
+        Mail: "thierry.moreno@nvlogistics.com",
+        Yousty: ""
+    },
+    {
+        Firma: "PESA Port-Franc & Entrepôts de Lausanne- Chavornay SA",
+        PLZ: "1373",
+        Ort: "Chavornay",
+        Telefon: "+41 24 442 99 11",
+        Mail: "hr@pesa.global",
+        Yousty: ""
+    },
+    {
+        Firma: "Planzer Transport SA",
+        PLZ: "1305",
+        Ort: "Penthalaz",
+        Telefon: "+41 22 308 90 12",
+        Mail: "sdematteis@planzer.ch",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/11149072-kaufmann-frau-kv-efz-dienstleistung-und-administration-da-penthalaz-vd-planzer-transport-ag"
+    },
+    {
+        Firma: "Ports Francs et Entrepôts de Genève SA",
+        PLZ: "1211",
+        Ort: "Genève",
+        Telefon: "+41 22 307 07 07",
+        Mail: "g.epars@gva-freeports.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Ritschard SA",
+        PLZ: "1217",
+        Ort: "Meyrin",
+        Telefon: "+41 22 827 76 40",
+        Mail: "viret@ritschard.ch",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12521185-kaufmann-frau-kv-efz-meyrin-ge-ritschard-sa"
+    },
+    {
+        Firma: "Rodolphe Haller SA",
+        PLZ: "1227",
+        Ort: "Genève",
+        Telefon: "+41 79 449 22 94",
+        Mail: "a.boettge@rodolphehaller.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Safram SA",
+        PLZ: "1242",
+        Ort: "Satigny",
+        Telefon: "+41 22 827 03 91",
+        Mail: "georges-eric.ruys@safram.com",
+        Yousty: ""
+    },
+    {
+        Firma: "SATI TRANSPOrtS SA",
+        PLZ: "1211",
+        Ort: "Genève 26",
+        Telefon: "+41 22 827 01 60",
+        Mail: "sati@sati.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "SBX Logistics AG",
+        PLZ: "2013",
+        Ort: "Colombier",
+        Telefon: "+41 32 519 10 22",
+        Mail: "gabriel@sbxlogistics.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Schenker Switzerland Ltd",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 58 589 50 90",
+        Mail: "marcel.wyss@dbschenker.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Schneider + Cie SA",
+        PLZ: "1242",
+        Ort: "Satigny",
+        Telefon: "+41 22 989 10 72",
+        Mail: "ptanari@schneider-transport.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Schneider Transports SA",
+        PLZ: "1122",
+        Ort: "Romanel/Morges",
+        Telefon: "+41 21 869 09 10",
+        Mail: "y.schlaefli@schneidersa.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "SEV Société des entrepôts de Vevey",
+        PLZ: "1800",
+        Ort: "Vevey",
+        Telefon: "+41 21 925 37 89",
+        Mail: "d.pache@sevpf.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Somatra SA",
+        PLZ: "1211",
+        Ort: "Genève",
+        Telefon: "+41 22 827 38 52",
+        Mail: "analia.esteves@somatra.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Transit'Air SA",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 22 929 62 09",
+        Mail: "denis.pasquier@transitair.ch",
+        Yousty: ""
+    },
+    {
+        Firma: "Trémail Logistics SA",
+        PLZ: "2400",
+        Ort: "Le Locle",
+        Telefon: "+41 32 933 98 83",
+        Mail: "Philippe.Maurer@tremail.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Ulix Swiss SA",
+        PLZ: "2017",
+        Ort: "Boudry",
+        Telefon: "+41 32 737 73 12",
+        Mail: "operations.ch@ulixgroup.com",
+        Yousty: ""
+    },
+    {
+        Firma: "Ziegler (Schweiz) AG succ GE",
+        PLZ: "1211",
+        Ort: "Genève aéroport 5",
+        Telefon: "+41 22 717 87 90",
+        Mail: "camille.parent@ziegler.ch",
+        Yousty: ""
+    }
+]
 
 export const NSW = [
     {
