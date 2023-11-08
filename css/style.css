@@ -660,8 +660,8 @@ tbody.row tr:hover td {
 
 
     .startVideo{
-        grid-row: 1 / 4;
-        grid-column: 1 / 6;
+        grid-row: 1 / 5;
+        grid-column: 1 / 7;
         pointer-events:none;
     }
     video {
