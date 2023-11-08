@@ -29,14 +29,10 @@
 .topLeft {
     display: grid;
     grid-template-columns: var(--padding) 1fr 1fr 1fr var(--padding);
-    grid-template-rows: var(--padding) 1fr 1fr 1fr 1fr 1fr 1fr 5%;
+    grid-template-rows: var(--padding) 1fr 1fr 5%;
     grid-template-areas:
      '.       .        icons   icons  icons  '
      '.       .        .       .      .      '
-     '.       .        .       .      .      '
-     'topNav  .        .       .      botNav '
-     '.       .        .       .      .      '
-     '.       topText  topText .      .      '
      '.       topText  topText .      .      '
      '.       .        .       .      .      ';
     grid-column-gap: 0px;
@@ -139,24 +135,13 @@
 }
 
 .chevron {
-    animation: var(--shake-chevron)
+    animation: var(--shake-chevron);
 }
 
 .chevron:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
 }
 
-.topChevron .chevron {
-    rotate: 90deg;
-}
-
-.topChevron {
-    grid-area: topNav;
-}
-
-.bottomChevron {
-    grid-area: botNav;
-}
 
 button {
     border: 0;
@@ -424,6 +409,7 @@ tbody.row tr:hover td {
 .location_dropdown .location_options div:hover {
     background: var(--senfgelb);
 }
+
 ::placeholder {
     color: var(--dunkelblau);
     opacity: 1; /* Firefox */
@@ -540,7 +526,7 @@ tbody.row tr:hover td {
     background: var(--dunkelblau);
     overflow: hidden;
     transition: all 0.35s ease-in-out;
-    color: var(--mittelblau);
+    color: white;
 }
 
 .eduContent h4 {
@@ -574,33 +560,66 @@ tbody.row tr:hover td {
 
 /* >>>>> DESKTOP */
 
-.pageBottomChevron, .pageTopChevron {
-    display: none;
-    width: 60px;
+.nextChevron, .prevChevron {
+    top: 50%;
+    width: 40px;
     position: absolute;
 }
 
-.pageTopChevron {
-    left: calc(50% - 28px);
-    rotate: 270deg;
-    top: calc(var(--header-height) + 35px);
+.prevChevron {
+    left: 5px;
+    rotate: 180deg;
 }
 
-.pageBottomChevron {
-    left: calc(50% - 31px);
-    rotate: 90deg;
-    bottom: 20px;
+.nextChevron {
+    right: 5px;
 }
+
+body[data-active-page-id='1'] .prevChevron,
+body[data-active-page-id='4'] .nextChevron {
+    display: none;
+}
+
 
 @media (min-width: 768px) {
-    body[data-active-page-id='1'] .pageTopChevron,
-    body[data-active-page-id='2'] .pageTopChevron,
-    body[data-active-page-id='3'] .pageTopChevron,
-    body[data-active-page-id='4'] .pageTopChevron,
-    body[data-active-page-id='1'] .pageBottomChevron,
-    body[data-active-page-id='2'] .pageBottomChevron,
-    body[data-active-page-id='3'] .pageBottomChevron {
+    body[data-active-page-id='0'] .prevChevron {
+        display: none;
+    }
+
+    body[data-active-page-id='0'] .nextChevron {
+        width: 100px;
+        bottom: var(--padding);
+    }
+
+    body[data-active-page-id='0'] .nextChevron .chevron {
+        animation: var(--shake-chevron)
+    }
+
+    body[data-active-page-id='1'] .prevChevron,
+    body[data-active-page-id='2'] .prevChevron,
+    body[data-active-page-id='3'] .prevChevron,
+    body[data-active-page-id='4'] .prevChevron,
+    body[data-active-page-id='1'] .nextChevron,
+    body[data-active-page-id='2'] .nextChevron,
+    body[data-active-page-id='3'] .nextChevron {
         display: block;
+    }
+
+    .prevChevron, .nextChevron {
+        width: 60px;
+    }
+
+    .prevChevron {
+        left: calc(50% - 28px);
+        rotate: 270deg;
+        top: calc(var(--header-height) + 35px);
+    }
+
+    .nextChevron {
+        top: unset;
+        left: calc(50% - 31px);
+        rotate: 90deg;
+        bottom: 20px;
     }
 
     .hideMeOnMobile {
@@ -652,23 +671,23 @@ tbody.row tr:hover td {
         grid-template-areas:
      '. icons   .  .  . .'
      '. icons   startTitle  startTitle startTitle .'
-     '. icons   .           botNav     .          .';
-     '. .       .           .          .          .';
+     '. icons   .           .          .          .';
+    '. .       .           .          .          .';
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
     }
 
-
-    .startVideo{
+    .startVideo {
         grid-row: 1 / 5;
         grid-column: 1 / 7;
-        pointer-events:none;
+        pointer-events: none;
     }
+
     video {
         object-fit: cover;
         height: 100%;
         width: 100%;
-        pointer-events:none;
+        pointer-events: none;
 
     }
 
@@ -676,13 +695,16 @@ tbody.row tr:hover td {
         grid-area: startTitle;
         z-index: 1;
     }
+
     .start-content .iconsNav {
         z-index: 1;
     }
+
     .start-content .chevron {
         width: 7vw;
         max-width: 100px;
     }
+
     .iconsNav {
         flex-direction: column;
         gap: 16px;
@@ -703,21 +725,6 @@ tbody.row tr:hover td {
     .movieIframe {
         height: clamp(11.25rem, -0.0805rem + 23.6052vw, 25rem);
     }
-
-    .topChevron, .bottomChevron {
-        margin-left: 2vw;
-        max-height: 30px;
-
-    }
-
-    .topChevron .chevron {
-        rotate: 180deg;
-    }
-
-    .bottomChevron .chevron {
-        rotate: 0deg;
-    }
-
 
 
 }
