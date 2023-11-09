@@ -564,6 +564,7 @@ tbody.row tr:hover td {
     top: calc(50% + 6px);
     width: 40px;
     position: absolute;
+    transition: top 0.7s ease-out;
 }
 
 .prevChevron {
@@ -573,6 +574,12 @@ tbody.row tr:hover td {
 
 .nextChevron {
     right: 5px;
+}
+
+.chevronTopPosition .nextChevron,
+.chevronTopPosition .prevChevron {
+    top: calc(25% + 15px);
+    transition: top 0.7s ease-out;
 }
 
 body[data-active-page-id='1'] .prevChevron,

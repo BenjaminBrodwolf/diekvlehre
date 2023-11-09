@@ -29,10 +29,15 @@ const setActiveNavClass = sectionId => {
         .forEach(nav => nav.classList.remove('active'));
     document.querySelectorAll(`.header-id-${sectionId}`).forEach(h => h.classList.add('active'));
 }
+const sidebarCheckbox = document.querySelector('.hamburger .checkbox');
 document.querySelectorAll('.header-nav, .sidebar-nav')
     .forEach((nav, index) => {
         const sectionId = index >= 5 ? ++index % 5 : index;
-        nav.addEventListener('click', () => jumpTo(sectionId))
+        nav.addEventListener('click', () => {
+            sidebarCheckbox.checked = false;
+            jumpTo(sectionId);
+        });
+
     })
 
 const nextTo = (direction) => {
@@ -234,8 +239,10 @@ const handleTouchMove = (evt) => {
 const topLeftElements = () => document.querySelectorAll('.pages .topLeft');
 const bottomRightElements = () => document.querySelectorAll('.pages .bottomRight');
 
-topLeftElements().forEach(topLeft => topLeft.addEventListener('touchstart', handleTouchStart, {passive: true}));
-topLeftElements().forEach(topLeft => topLeft.addEventListener('touchmove', handleTouchMove, {passive: true}));
+topLeftElements().forEach(topLeft =>
+    topLeft.addEventListener('touchstart', handleTouchStart, {passive: true}));
+topLeftElements().forEach(topLeft =>
+    topLeft.addEventListener('touchmove', handleTouchMove, {passive: true}));
 const checkScrollDirection = (evt) =>
     nextTo(evt.deltaY > 0 ? nextDirection() : prevDirection());
 document.querySelectorAll('.pages .topLeft, .start-content')
@@ -263,22 +270,21 @@ document.querySelectorAll('.iconsNav').forEach((navs) => {
         navs.children[i].addEventListener('click', () => jumpTo(i))
     }
 })
-
+const nextChevron = document.querySelector('.nextChevron');
+const prevChevron = document.querySelector('.prevChevron');
 const touchTopLeftMobile = (event) => {
     if (isMobile()){
-        console.log('top')
         topLeftElements().forEach(e => e.style.height = '50%');
         bottomRightElements().forEach(e => e.style.height = '50%');
+        document.body.classList.remove('chevronTopPosition')
     }
 }
 
 const touchBottomRightMobile = (event) => {
     if (isMobile()){
-        console.log('bottom' )
         topLeftElements().forEach(e => e.style.height = '25%');
         bottomRightElements().forEach(e => e.style.height = '75%');
-
-
+        document.body.classList.add('chevronTopPosition')
     }
 }
 
