@@ -32,16 +32,16 @@
                 <img alt="SpedLogSwiss Logo" height="20" src="./img/logo.svg" width="200">
             </div>
             <div class="back" onclick="jumpTo(1)">
-                <div class="header-bewerb-dich">BEWIRB DICH JETZT!</div>
+                <div class="header-bewerb-dich" data-i18n="bewirb_dich_jetzt">BEWIRB DICH JETZT!</div>
             </div>
         </div>
     </div>
     <div class="header-navs-area">
-        <div class="header-nav header-id-0 header-start active">START</div>
-        <div class="header-nav header-id-1 header-application">BEWERBUNG</div>
-        <div class="header-nav header-id-2 header-education">AUSBILDUNG</div>
-        <div class="header-nav header-id-3 header-movie">FILM</div>
-        <div class="header-nav header-id-4 header-contact">KONTAKT</div>
+        <div class="header-nav header-id-0 header-start active" data-i18n="start">START</div>
+        <div class="header-nav header-id-1 header-application" data-i18n="bewerbung">BEWERBUNG</div>
+        <div class="header-nav header-id-2 header-education" data-i18n="ausbildung">AUSBILDUNG</div>
+        <div class="header-nav header-id-3 header-movie" data-i18n="film">FILM</div>
+        <div class="header-nav header-id-4 header-contact" data-i18n="kontakt">KONTAKT</div>
     </div>
 
 
@@ -59,10 +59,10 @@
         </div>
         <div class="sidebar">
             <div class="mobileSidebarMenu">
-                <div class="sidebar-nav header-id-1 active">BEWERBUNG</div>
-                <div class="sidebar-nav header-id-2">AUSBILDUNG</div>
-                <div class="sidebar-nav header-id-3">FILM</div>
-                <div class="sidebar-nav header-id-4">KONTAKT</div>
+                <div class="sidebar-nav header-id-1 active" data-i18n="bewerbung">BEWERBUNG</div>
+                <div class="sidebar-nav header-id-2" data-i18n="ausbildung">AUSBILDUNG</div>
+                <div class="sidebar-nav header-id-3" data-i18n="film">FILM</div>
+                <div class="sidebar-nav header-id-4" data-i18n="kontakt">KONTAKT</div>
                 <hr>
             </div>
             <img alt="SpedLogSwiss Logo" height="20" src="./img/logo.svg" width="200">
@@ -92,7 +92,7 @@
                 </a>
             </div>
             <hr/>
-            <a href="datenschutz.html" style="margin-bottom: 0.75rem" target="_blank">Datenschutzerklärung</a><br>
+            <a data-i18n="datenschutz" href="datenschutz.html" style="margin-bottom: 0.75rem" target="_blank">Datenschutzerklärung</a><br>
             <a href="impressum.html" target="_blank">Impressum</a>
         </div>
     </div>
@@ -102,7 +102,7 @@
 
     <section class="contact" data-page-id="4">
         <div class="topLeft">
-            <div class="topText"><h2>Du hast Fragen? Transportier sie zu uns.</h2>
+            <div class="topText"><h2 data-i18n="contact.left.headline">Du hast Fragen? Transportier sie zu uns.</h2>
             </div>
             <div class="iconsNav">
                 <svg class="iconStart" viewBox="0 0 55.26 55.5">
@@ -122,26 +122,25 @@
                 </svg>
             </div>
             <div class="bottomText">
-                <h4>Dir ist noch nicht alles ganz klar? Im Frachter deiner Gedanken gibt es noch
-                    Unsicherheiten? Dann nimm doch einfach Kontakt zu uns auf und wir beantworten dir alle Fragen rund
-                    um
-                    die Branche und deine Ausbildung.
+                <h4 data-i18n="contact.left.subline">Dir ist noch nicht alles ganz klar? Im Frachter deiner Gedanken
+                    gibt es noch Unsicherheiten? Dann nimm doch einfach Kontakt zu uns auf und wir beantworten dir alle
+                    Fragen rund um die Branche und deine Ausbildung.
                 </h4>
             </div>
 
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
-                <h2>Unsere Kontaktdaten für all deine Anliegen.</h2>
-                <p>Du erreichst uns telefonisch unter<br>
+                <h2 data-i18n="contact.right.headline">Unsere Kontaktdaten für all deine Anliegen.</h2>
+                <p><span data-i18n="contact.right.tel">Du erreichst uns telefonisch unter</span><br>
                     <span style="font-family: Montserrat-Bold, Montserrat, sans-serif">+41 61 205 98 00</span></p>
 
-                <p>Schreib uns vielleicht eine Mail?<br>
+                <p><span data-i18n="contact.right.mail">Schreib uns vielleicht eine Mail?</span><br>
                     An <a href="mailto:grundbildung@spedlogswiss.com"
                           style="color: white; font-family: Montserrat-Bold, Montserrat, sans-serif">grundbildung@spedlogswiss.com</a>
                 </p>
 
-                <p>Oder besuche uns auf einer unserer Social Media-Kanäle:</p>
+                <p data-i18n="contact.right.social_media">Oder besuche uns auf einer unserer Social Media-Kanäle:</p>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/company/spedlogswiss/" target="_blank">
                         <svg viewBox="0 0 27.65 27.65">
@@ -170,7 +169,7 @@
 
     <section class="movie" data-page-id="3">
         <div class="topLeft">
-            <div class="topText"><h2>Du magst es bewegt? Fahr unseren Film ab.</h2>
+            <div class="topText"><h2 data-i18n="movie.left.headline">Du magst es bewegt? Fahr unseren Film ab.</h2>
             </div>
             <div class="iconsNav">
                 <svg class="iconStart" viewBox="0 0 55.26 55.5">
@@ -190,21 +189,21 @@
                 </svg>
             </div>
             <div class="bottomText">
-                <h4>Schau dir unseren Film mit 7 guten Gründen für deine Ausbildung bei einem
-                    Speditions- und Logistikunternehmen an.
+                <h4 data-i18n="movie.left.subline">Schau dir unseren Film mit 7 guten Gründen für deine Ausbildung bei
+                    einem Speditions- und Logistikunternehmen an.
                 </h4>
             </div>
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
-                <h2>Wir überzeugen dich auch visuell.</h2>
-                <h3>Suchst du noch ein paar Argumente für eine Ausbildung voll guter Connections? </h3>
+                <h2 data-i18n="movie.right.headline">Wir überzeugen dich auch visuell.</h2>
+                <h3 data-i18n="movie.right.subline">Suchst du noch ein paar Argumente für eine Ausbildung voll guter
+                    Connections? </h3>
                 <hr/>
-                <p style="margin-bottom: 0">In diesem kleinen Film erfährst du alles, was du hierzu wissen musst – und sammelst in jeder Sekunde
-                    noch mehr gute Gründe für deine Ausbildung in der Speditions- und Logistikbranche.
-
-                </p>
-                   <div style="margin-bottom: 0.5rem"><i >3, 2, 1 … Film ab!</i>   </div>
+                <p data-i18n="movie.right.copy" style="margin-bottom: 0">In diesem kleinen Film erfährst du alles, was
+                    du hierzu wissen musst – und sammelst in jeder Sekunde noch mehr gute Gründe für deine Ausbildung in
+                    der Speditions- und Logistikbranche.</p>
+                <div style="margin-bottom: 0.5rem"><i data-i18n="movie.right.start">3, 2, 1 … Film ab!</i></div>
                 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
                         class="movieIframe"
@@ -213,7 +212,7 @@
                         title="Spedlogswiss - 7 Gute Gründe für eine Lehre als Speditionskauffrau/mann"
                         width="100%"></iframe>
                 <div class="centerDiv">
-                    <button onclick="jumpTo(1)" type="button">JETZT BEWERBEN!</button>
+                    <button data-i18n="jetzt_bewerben" onclick="jumpTo(1)" type="button">JETZT BEWERBEN!</button>
                 </div>
             </div>
         </div>
@@ -221,7 +220,8 @@
 
     <section class="education" data-page-id="2">
         <div class="topLeft">
-            <div class="topText"><h2>Deine Ausbildung? Vollgepackt mit Inhalten.</h2>
+            <div class="topText">
+                <h2 data-i18n="education.left.headline">Deine Ausbildung? Vollgepackt mit Inhalten.</h2>
             </div>
             <div class="iconsNav">
                 <svg class="iconStart" viewBox="0 0 55.26 55.5">
@@ -240,17 +240,19 @@
                     <use href="#svgKontakt"/>
                 </svg>
             </div>
-            <div class="bottomText"><h4>Entdecke deine Möglichkeiten in der Speditions- und Logistikbranche mit einer
-                kaufmännischen Ausbildung.</h4>
+            <div class="bottomText">
+                <h4 data-i18n="education.left.subline">Entdecke deine Möglichkeiten in der Speditions- und
+                    Logistikbranche mit einer kaufmännischen Ausbildung.</h4>
             </div>
 
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
-                <h2>Drei Möglichkeiten für deine Zukunft.</h2>
-                <h3>Wie möchtest du die Welt bewegen?</h3>
+                <h2 data-i18n="education.right.headline">Drei Möglichkeiten für deine Zukunft.</h2>
+                <h3 data-i18n="education.right.subline">Wie möchtest du die Welt bewegen?</h3>
                 <hr/>
-                <p>In der Speditions- und Logistikbranche unterscheidet man zwischen drei unterschiedlichen möglichen
+                <p data-i18n="education.right.copy">In der Speditions- und Logistikbranche unterscheidet man zwischen
+                    drei unterschiedlichen möglichen
                     Ausbildungsberufen. Welche Ausbildung perfekt zu dir passt und was alles Teil der Ausbildungen ist,
                     kannst du hier lesen. So viel sei gesagt – da rollen jede Menge Möglichkeiten auf dich zu!</p>
 
@@ -261,10 +263,9 @@
                                 <use href="#svgBuilding1"/>
                             </svg>
                         </div>
-
                         <div class="educationTitle">
-                            <p>In Kontakt mit der ganzen Welt – die Ausbildung Kaufmann*frau Internationale
-                                Speditionslogistik EFZ
+                            <p data-i18n="education.efz.headline">In Kontakt mit der ganzen Welt – die Ausbildung
+                                Kaufmann*frau Internationale Speditionslogistik EFZ
                             </p>
                         </div>
                         <div class="educationBtn">
@@ -278,11 +279,11 @@
                                 <use href="#svgBuilding2"/>
                             </svg>
                         </div>
-
                         <div class="educationTitle">
-                            <p>Das Fundament für deine Karriere – die Grundbildung Kaufmann*frau EBA</p>
+                            <p data-i18n="education.eba.headline">
+                                Das Fundament für deine Karriere – die Grundbildung Kaufmann*frau EBA
+                            </p>
                         </div>
-
                         <div class="educationBtn">
                             <button type="button">EBA</button>
                         </div>
@@ -294,9 +295,10 @@
                                 <use href="#svgBuilding3"/>
                             </svg>
                         </div>
-
                         <div class="educationTitle">
-                            <p>Praktisch gebildet – der Branchenabschluss für Mittelschulabsolvent*innen BAM</p>
+                            <p data-i18n="education.bam.headline">
+                                Praktisch gebildet – der Branchenabschluss für Mittelschulabsolvent*innen BAM
+                            </p>
                         </div>
                         <div class="educationBtn">
                             <button type="button">BAM</button>
@@ -305,49 +307,46 @@
                 </div>
 
                 <div class="efzContent eduContent">
-                    <h4>Was?</h4>
-                    <p>Sorg dafür, dass Waren von A nach B kommen: In deiner Ausbildung als Kaufmann*frau Internationale
+                    <h4 data-i18n="was">Was?</h4>
+                    <p data-i18n="education.efz.was">Sorg dafür, dass Waren von A nach B kommen: In deiner Ausbildung
+                        als Kaufmann*frau Internationale
                         Speditionslogistik EFZ planst und organisierst du im direkten Austausch mit Kund*innen
                         Transportlösungen – so kommen Güter aus aller Welt sicher, pünktlich und effizient ans Ziel.
                         Ausserdem lernst du viel über die Wirtschaft in den jeweiligen Ländern, die Zollvorschriften
                         sowie die Im- und Exportvorschriften der Schweiz.</p>
-                    <h4>Wie lange?</h4>
-                    <p>Nach drei Jahren schliesst du mit einem eidgenössischen Fähigkeitszeugnis (EFZ) ab.</p>
-                    <h4>Du bringst mit:</h4>
+                    <h4 data-i18n="wie_lange">Wie lange?</h4>
+                    <p data-i18n="education.efz.wie_lange">Nach drei Jahren schliesst du mit einem eidgenössischen
+                        Fähigkeitszeugnis (EFZ) ab.</p>
+                    <h4 data-i18n="education.efz.bringts_mit.0">Du bringst mit:</h4>
                     <ul>
-                        <li>Interesse an kaufmännischen Arbeiten</li>
-                        <li>Freude an Zahlen, Computerarbeit und Organisationstalent</li>
-                        <li>Geografiekenntnisse, Sprachtalent, Kontaktfreude</li>
+                        <li><span data-i18n="education.efz.bringts_mit.1">Interesse an kaufmännischen Arbeiten</span>
+                        </li>
+                        <li><span data-i18n="education.efz.bringts_mit.2">Freude an Zahlen, Computerarbeit undOrganisationstalent </span>
+                        </li>
+                        <li>
+                            <span data-i18n="education.efz.bringts_mit.3">Geografiekenntnisse, Sprachtalent, Kontaktfreude</span>
+                        </li>
                     </ul>
                 </div>
+
                 <div class="ebaContent eduContent">
-                    <h4>Was?</h4>
-                    <p>In deiner beruflichen Grundbildung Kaufmann*frau EBA absolvierst du deine Ausbildung über die
-                        Branche D&A (Dienstleistung & Administration), während du in einem Speditionsunternehmen tätig
-                        bist. Im Anschluss daran hast du beispielsweise die Möglichkeit, deine Ausbildung mit einer
-                        verkürzten Lehre (2 Jahre) als Kaufmann*frau EFZ fortzusetzen oder eine Weiterbildung in
-                        Richtung Zollwesen zu machen.
+                    <h4 data-i18n="was">Was?</h4>
+                    <p data-i18n="education.eba.was">In deiner beruflichen Grundbildung Kaufmann*frau EBA absolvierst du deine Ausbildung über die Branche D&A (Dienstleistung & Administration), während du in einem Speditionsunternehmen tätig bist. Im Anschluss daran hast du beispielsweise die Möglichkeit, deine Ausbildung mit einer verkürzten Lehre (2 Jahre) als Kaufmann*frau EFZ fortzusetzen oder eine Weiterbildung in Richtung Zollwesen zu machen.
                     </p>
-                    <h4>Wie lange?</h4>
-                    <p>Nach zwei Jahren schliesst du mit einem eidgenössischen Berufsattest (EBA) ab.
+                    <h4 data-i18n="wie_lange">Wie lange?</h4>
+                    <p data-i18n="education.eba.wie_lange">Nach zwei Jahren schliesst du mit einem eidgenössischen
+                        Berufsattest (EBA) ab.
                     </p>
-                    <h4>Gut zu wissen!
-                    </h4>
-                    <p>
-                        Für Lernende in der gesamten Deutschschweiz bietet die SPEDLOGSWISS Nordwestschweiz in Basel
-                        Branchenkunde an. Hier besichtigst du die entsprechenden Plattformen und erhalten von
-                        Fachreferent*innen eine Einführung.
+                    <h4 data-i18n="gut_zu_wissen">Gut zu wissen!</h4>
+                    <p data-i18n="education.eba.gut_zu_wissen">Für Lernende in der gesamten Deutschschweiz bietet die SPEDLOGSWISS Nordwestschweiz in Basel Branchenkunde an. Hier besichtigst du die entsprechenden Plattformen und erhalten von Fachreferent*innen eine Einführung.
                     </p>
                 </div>
                 <div class="bamContent eduContent">
-                    <h4>Was?</h4>
-                    <p>BAM ist die Abkürzung für Branchenabschluss für Mittelschulabsolvent*innen. In Zusammenarbeit mit
-                        den drei Wirtschafts- und Handelsmittelschulen bieten wir in der Region Nordwestschweiz hierzu
-                        Praktikumsplätze an.
+                    <h4 data-i18n="was">Was?</h4>
+                    <p data-i18n="education.bam.was">BAM ist die Abkürzung für Branchenabschluss für Mittelschulabsolvent*innen. In Zusammenarbeit mit den drei Wirtschafts- und Handelsmittelschulen bieten wir in der Region Nordwestschweiz hierzu Praktikumsplätze an.
                     </p>
-                    <h4>Wie lange?</h4>
-                    <p>Nach einem 18-monatigen Praktikum in der Speditionsbranche schliesst du mit einem eidgenössischen
-                        Fähigkeitszeugnis (EFZ) sowie einem Branchendiplom ab.
+                    <h4 data-i18n="wie_lange">Wie lange?</h4>
+                    <p data-i18n="education.bam.wie_lange">Nach einem 18-monatigen Praktikum in der Speditionsbranche schliesst du mit einem eidgenössischen Fähigkeitszeugnis (EFZ) sowie einem Branchendiplom ab.
                     </p>
                 </div>
             </div>
@@ -357,7 +356,7 @@
     <section class="application" data-page-id="1">
         <div class="topLeft">
             <div class="topText">
-                <h2>Bewirb dich, wo immer du willst.</h2>
+                <h2 data-i18n="application.left.headline">Bewirb dich, wo immer du willst.</h2>
             </div>
             <div class="iconsNav">
                 <svg class="iconStart" viewBox="0 0 55.26 55.5">
@@ -376,17 +375,19 @@
                     <use href="#svgKontakt"/>
                 </svg>
             </div>
-            <div class="bottomText"><h4>Finde deine Lehrstelle in der passenden Region und bewirb dich im Anschluss
+            <div class="bottomText"><h4 data-i18n="application.left.subline">Finde deine Lehrstelle in der passenden
+                Region und bewirb dich im Anschluss
                 direkt.</h4>
             </div>
 
         </div>
         <div class="bottomRight">
             <div class="bottomRightContent">
-                <h2>Wähle zwischen vier Regionen.</h2>
-                <h3>Eine Ausbildung finden – ganz egal, wo du bist?</h3>
+                <h2 data-i18n="application.right.headline">Wähle zwischen vier Regionen.</h2>
+                <h3 data-i18n="application.right.subline">Eine Ausbildung finden – ganz egal, wo du bist?</h3>
                 <hr/>
-                <p>In den vier Ausbildungsregionen in der Schweiz findet sich garantiert auch ein grossartiges
+                <p data-i18n="application.right.copy">In den vier Ausbildungsregionen in der Schweiz findet sich
+                    garantiert auch ein grossartiges
                     Unternehmen in deiner Nähe oder an deinem Wunsch-Wohnort. Wähle eine Region aus und finde so den
                     Arbeitgeber, bei dem du deine Ausbildung machen wirst.</p>
 
@@ -400,11 +401,11 @@
                 </h3>
                 <table class="hidden">
                     <tbody>
-                    <tr>
-                        <th>Firma</th>
-                        <th>
+                    <tr></th>
+                        <th><span data-i18n="application.right.firma">Firma</span><th>
                             <div class="location_dropdown">
-                                <input class="location_text-box" placeholder="Ort" readonly type="text">
+                                <input class="location_text-box" data-i18n="application.right.ort" placeholder="Ort"
+                                       readonly type="text">
                                 <div class="location_options">
                                 </div>
                             </div>
@@ -427,8 +428,8 @@
                 </video>
             </div>
             <div class="startTitle">
-                <h1 data-i18n="start.title">Mach weltweite Connections.</h1>
-                <h3 data-i18n="start.subtitle">Starte jetzt deine Karriere als Kaufmann*frau EFZ Internationale
+                <h1 data-i18n="start.headline">Mach weltweite Connections.</h1>
+                <h3 data-i18n="start.subline">Starte jetzt deine Karriere als Kaufmann*frau EFZ Internationale
                     Speditionslogistik.</h3>
             </div>
             <div class="iconsNav">
@@ -450,7 +451,6 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <div class="prevChevron" onclick="nextTo(prevDirection())">

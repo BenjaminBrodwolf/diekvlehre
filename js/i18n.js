@@ -53,3 +53,11 @@ langElement.forEach(langEle => langEle.addEventListener('click', () => {
 ))
 
 document.querySelector(`[data-lang="${pageLanguage}"]`).classList.add(activeLangClass);
+
+
+// const initLangsByElements = [...elements].map(e => ({
+//     key: e.dataset.i18n,
+//     de: e.innerText.replace(/(\r\n|\n|\r)/gm," ").replace(/\s+/g, ' '),
+//     fr: "",
+//     it: ""
+// }))
