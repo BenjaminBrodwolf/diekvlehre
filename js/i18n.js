@@ -207,7 +207,7 @@ export const i18n =
         },
         "contact.right.mail": {
             de: "Schreib uns vielleicht eine Mail?",
-            fr: "Envoyez-nous un message à l'adresse e-mail grundbildung@spedlogswiss.com",
+            fr: "Envoyez-nous un message à l'adresse e-mail?",
             it: "Vuoi scriverci una mail?"
         },
         "contact.right.social_media": {
