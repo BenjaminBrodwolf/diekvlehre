@@ -1,10 +1,7 @@
-let turnaroundToggle = false;
 const turnaroundElement = document.querySelector('.turnaround');
 setInterval(() => {
-    turnaroundElement.style.transform = turnaroundToggle ? 'rotateY(0deg)' : 'rotateY(180deg)';
-    turnaroundToggle = !turnaroundToggle;
+    turnaroundElement.classList.toggle('turnaround-logo');
 }, 3000)
-
 
 const eduParents = document.querySelectorAll('.efz, .eba, .bam');
 const buttons = document.querySelectorAll('.educationChoices button');

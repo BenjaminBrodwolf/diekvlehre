@@ -31,17 +31,7 @@ header {
     height: 100%;
     margin-left: 1rem;
     perspective: 1500px;
-}
-
-.header-bewerb-dich {
-    min-width: 200px;
-    cursor: pointer;
-    font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
-    color: var(--rot);
-}
-
-.turnaround-logo {
-    transform: rotateY(180deg); /* Beim Mouse-Over wird die Szene umgedreht */
+    position: relative;
 }
 
 .turnaround {
@@ -60,15 +50,31 @@ header {
     height: 100%;
     display: grid;
     align-content: center;
+    transition-duration: 600ms;
 }
 
 .front {
     z-index: 2;
+    transform: none;
 }
 
 .back {
     transform: rotateY(180deg);
     z-index: 1;
+}
+
+.header-bewerb-dich {
+    min-width: 200px;
+    cursor: pointer;
+    font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
+    color: var(--rot);
+}
+
+.turnaround-logo .front {
+    transform: rotateY(180deg);
+}
+.turnaround-logo .back {
+    transform: none;
 }
 
 header .header-nav {
