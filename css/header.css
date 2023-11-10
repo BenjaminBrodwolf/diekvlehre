@@ -79,7 +79,6 @@ header {
 
 header .header-nav {
     display: none;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
@@ -87,6 +86,7 @@ header .header-nav {
     font-family: Montserrat-Regular, Montserrat, sans-serif;
     letter-spacing: 1px;
     transition: all 0.4s ease-in;
+    text-transform: uppercase;
 }
 
 .header-nav.active, .sidebar-nav.active {
