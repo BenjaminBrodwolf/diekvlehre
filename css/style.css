@@ -29,7 +29,7 @@
 .topLeft {
     display: grid;
     grid-template-columns: var(--padding) 1fr 1fr 1fr var(--padding);
-    grid-template-rows: var(--padding) 1fr 1fr 5%;
+    grid-template-rows: var(--padding) 1fr 1fr 5fr;
     grid-template-areas:
      '.       .        icons   icons  icons  '
      '.       .        .       .      .      '
