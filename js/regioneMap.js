@@ -9,19 +9,21 @@ export const getRegionName = reg => ({
 
 const parentScrollElement = document.querySelector('[data-page-id="1"] .bottomRight');
 const regionTitle = document.querySelector('.selectedRegion');
-regions.forEach(reg =>
-    document.querySelector(`#svgMap${reg}`).addEventListener('click', () => {
-            (hiddenTable => hiddenTable ? hiddenTable.classList.remove('hidden') : '')(document.querySelector('table.hidden'));
-            svgMaps.forEach(map => map.classList.remove('activeRegion'))
-            document.querySelector(`.map${reg}`).classList.add('activeRegion')
-            regionTitle.textContent = getRegionName(reg);
-            renderTable(reg);
-            renderLocationDropdownOptions(reg);
-            setTimeout(() =>
-                parentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
-            );
-        }
-    ))
+regions.forEach(reg => {
+    document.querySelector(`.map${reg}`)
+        .addEventListener('click', () => {
+                (hiddenTable => hiddenTable ? hiddenTable.classList.remove('hidden') : '')(document.querySelector('table.hidden'));
+                svgMaps.forEach(map => map.classList.remove('activeRegion'));
+                document.querySelector(`.map${reg}`).classList.add('activeRegion');
+                regionTitle.textContent = getRegionName(reg);
+                renderTable(reg);
+                renderLocationDropdownOptions(reg);
+                setTimeout(() =>
+                    parentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
+                );
+            }
+        )
+})
 
 const sortByFirma = (a, b) => {
     if (a.Firma > b.Firma) {

@@ -365,7 +365,7 @@ tbody.row tr:hover td {
     width: 8px;
     height: 8px;
     border: 1px solid var(--dunkelblau);
-    border-top: 1px solid   white;
+    border-top: 1px solid white;
     border-right: 1px solid white;
     transform: rotate(-45deg);
     transition: 0.2s;
@@ -678,7 +678,7 @@ body[data-active-page-id='4'] .nextChevron {
         grid-template-areas:
      '. icons   .  .  . .'
      '. icons   startTitle  startTitle startTitle .'
-     '. icons   .           .          .          .';
+     '. icons   .           .          .          .'
     '. .       .           .          .          .';
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;

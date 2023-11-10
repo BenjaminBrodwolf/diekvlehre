@@ -270,8 +270,7 @@ document.querySelectorAll('.iconsNav').forEach((navs) => {
         navs.children[i].addEventListener('click', () => jumpTo(i))
     }
 })
-const nextChevron = document.querySelector('.nextChevron');
-const prevChevron = document.querySelector('.prevChevron');
+
 const touchTopLeftMobile = (event) => {
     if (isMobile()){
         topLeftElements().forEach(e => e.style.height = '50%');
