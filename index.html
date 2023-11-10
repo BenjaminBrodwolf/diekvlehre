@@ -12,6 +12,7 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
+    <script src="js/i18n.js" type="module"></script>
     <script src="js/betriebe.js" type="module"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M51DR51S5K"></script>
     <script> window.dataLayer = window.dataLayer || [];
@@ -45,7 +46,7 @@
     </div>
 
 
-    <div class="header-languages" style="display: none">
+    <div class="header-languages">
         <span class="langDE" data-lang="de">DE</span> |
         <span class="langFR" data-lang="fr">FR</span> |
         <span class="langIT" data-lang="it">IT</span>
@@ -269,7 +270,7 @@
                             </p>
                         </div>
                         <div class="educationBtn">
-                            <button type="button">EFZ</button>
+                            <button type="button"><span data-i18n="education.efz">EFZ</span></button>
                         </div>
                     </div>
                     <div class="vl1"></div>
@@ -285,7 +286,7 @@
                             </p>
                         </div>
                         <div class="educationBtn">
-                            <button type="button">EBA</button>
+                            <button type="button"><span data-i18n="education.eba">EBA</span></button>
                         </div>
                     </div>
                     <div class="vl2"></div>
@@ -301,7 +302,7 @@
                             </p>
                         </div>
                         <div class="educationBtn">
-                            <button type="button">BAM</button>
+                            <button type="button"><span data-i18n="education.bam">BAM</span></button>
                         </div>
                     </div>
                 </div>
@@ -914,6 +915,6 @@
 </body>
 <script src="js/split-pages.js"></script>
 <script src="js/main.js"></script>
-<script src="js/i18n.js"></script>
+<script src="js/translation.js" type="module"></script>
 <script src="js/regioneMap.js" type="module"></script>
 </html>

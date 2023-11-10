@@ -1,0 +1,56 @@
+import {i18n} from "./i18n.js";
+
+const availableLocales = ['de', 'fr', 'it'];
+const defaultLanguage = 'de'
+
+const navigatorLanguage = (window.navigator.userLanguage || window.navigator.language).substring(0, 2);
+export let pageLanguage = defaultLanguage;
+if (availableLocales.includes(navigatorLanguage)) {
+    pageLanguage = navigatorLanguage;
+}
+
+export const getTranslation = (key) => i18n[key][pageLanguage];
+
+const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+
+const translate = () => {
+    // const json = locales[pageLanguage];
+    elementsToTranslate.forEach((element, index) => {
+        const key = element.getAttribute('data-i18n');
+        if (key === "application.right.ort") {
+            element.placeholder = getTranslation(key);
+        } else {
+            element.textContent = getTranslation(key);
+        }
+    });
+}
+const changeLanguage = language => {
+    if (language === pageLanguage) return;
+    pageLanguage = language;
+    translate()
+}
+
+if (pageLanguage !== defaultLanguage) {
+    translate()
+}
+
+const activeLangClass = 'activeLang';
+
+const langElement = document.querySelectorAll('.header-languages span');
+langElement.forEach(langEle => langEle.addEventListener('click', () => {
+        langElement.forEach(l => l.classList.remove(activeLangClass))
+        langEle.classList.add(activeLangClass);
+        changeLanguage(langEle.dataset.lang);
+    }
+))
+
+document.querySelector(`[data-lang="${pageLanguage}"]`).classList.add(activeLangClass);
+
+
+// const initLangsByElements = [...elements].map(e => ({
+//     key: e.dataset.i18n,
+//     de: e.innerText.replace(/(\r\n|\n|\r)/gm," ").replace(/\s+/g, ' '),
+//     fr: "",
+//     it: ""
+// }))
+

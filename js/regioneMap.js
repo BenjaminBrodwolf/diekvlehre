@@ -1,4 +1,5 @@
 import {getRegionJson} from "./betriebe.js";
+import {getTranslation} from "./translation.js";
 
 const svgMaps = document.querySelectorAll('.svgMap');
 const regions = ['Tessin', 'Romandie', 'OS', 'NWS'];
@@ -66,7 +67,7 @@ const renderLocationDropdownOptions = reg => {
     locationOptions.innerHTML = "";
 
     const allOption = document.createElement('div');
-    allOption.textContent = '→ Alle Anzeigen';
+    allOption.textContent = '→ ' + getTranslation('show_all');
     allOption.addEventListener('click', () => renderTable(reg));
     locationOptions.append(allOption);
 

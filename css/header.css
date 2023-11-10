@@ -79,6 +79,8 @@ header {
 
 header .header-nav {
     display: none;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .header-nav, .sidebar-nav {
@@ -104,6 +106,11 @@ header .header-nav {
     justify-content: space-around;
     align-items: center;
     width: 80px;
+    cursor: pointer;
+}
+
+.header-languages span{
+    padding-inline: 5px;
 }
 
 .header-languages .activeLang {
