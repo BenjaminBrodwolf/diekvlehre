@@ -556,6 +556,12 @@ tbody.row tr:hover td {
 /* ------ FILM -------*/
 .movieIframe {
     height: 50vw;
+    display: none;
+}
+:lang(de) .movieDE,
+:lang(fr) .movieFR,
+:lang(it) .movieIT {
+    display: block;
 }
 
 /* >>>>> DESKTOP */

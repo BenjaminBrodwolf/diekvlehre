@@ -94,11 +94,6 @@ header .header-nav {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
 }
 
-.header-nav:hover, .sidebar-nav:hover {
-    cursor: pointer;
-    font-weight: bolder;
-}
-
 .header-languages {
     grid-area: lang;
     display: flex;
@@ -113,7 +108,9 @@ header .header-nav {
     padding-inline: 5px;
 }
 
-.header-languages .activeLang {
+:lang(de) .langDE,
+:lang(fr) .langFR,
+:lang(it) .langIT {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
     font-weight: bold;
     color: var(--rot);

@@ -34,18 +34,15 @@ if (pageLanguage !== defaultLanguage) {
     translate()
 }
 
-const activeLangClass = 'activeLang';
 
-const langElement = document.querySelectorAll('.header-languages span');
-langElement.forEach(langEle => langEle.addEventListener('click', () => {
-        langElement.forEach(l => l.classList.remove(activeLangClass))
-        langEle.classList.add(activeLangClass);
-        changeLanguage(langEle.dataset.lang);
-    }
-))
-
-document.querySelector(`[data-lang="${pageLanguage}"]`).classList.add(activeLangClass);
-
+const langElements = document.querySelectorAll('.header-languages span');
+langElements.forEach(langElement =>
+    langElement.addEventListener('click', () => {
+            const selectedLanguage = langElement.dataset.lang
+            changeLanguage(selectedLanguage);
+            document.documentElement.setAttribute("lang", selectedLanguage);
+        }
+    ))
 
 // const initLangsByElements = [...elements].map(e => ({
 //     key: e.dataset.i18n,
