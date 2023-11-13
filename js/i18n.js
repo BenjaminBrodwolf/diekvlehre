@@ -191,7 +191,7 @@ export const i18n =
             it: "Hai domande? Portale da noi."
         },
         "contact.left.subline": {
-            de: "Dir ist noch nicht alles ganz klar? Im Frachter deiner Gedanken gibt es noch Unsicherheiten? Dann nimm doch einfach Kontakt zu uns auf und wir beantworten dir alle Fragen rund um die Branche und deine Ausbildung. ",
+            de: "Dir ist noch nicht alles ganz klar? Im Frachter deiner Gedanken gibt es noch Unsicherheiten? Dann nimm doch einfach Kontakt mit uns auf und wir beantworten dir alle Fragen rund um die Branche und deine Ausbildung. ",
             fr: "Tout n'est pas encore clair pour vous ? Vous avez encore des doutes ? Alors contactez-nous et nous répondrons à toutes vos questions sur le secteur et votre formation.",
             it: "Non ti è ancora tutto chiaro? Hai ancora delle incertezze in mente? Allora contattaci e risponderemo a tutte le tue domande sul settore e sulla formazione."
         },
@@ -211,7 +211,7 @@ export const i18n =
             it: "Vuoi scriverci una mail?"
         },
         "contact.right.social_media": {
-            de: "Oder besuche uns auf einer unserer Social Media-Kanäle:",
+            de: "Oder besuche uns auf einem unserer Social Media-Kanäle:",
             fr: "Ou visitez-nous sur l'un de nos canaux de médias sociaux :",
             it: "Oppure vieni a trovarci su uno dei nostri canali social:"
         },

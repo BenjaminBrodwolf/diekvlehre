@@ -349,7 +349,7 @@ export const NSW = [
         Telefon: "062/767 67 55",
         Mail: "sabrina.graenacher@bertschi.com",
         Internet: "www.bertschi.com",
-        Yousty: ""
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10853267-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-duerrenaesch-ag-bertschi-ag-internationale-transporte"
     },
     {
         Firma: "Birsterminal AG",
@@ -415,7 +415,7 @@ export const NSW = [
         Telefon: "061/315 12 21",
         Mail: "monica.nuno@dachser.com",
         Internet: "www.dachser.com",
-        Yousty: ""
+        Yousty: "https://www.berufsberatung.ch/dyn/show/2937?lang=de&idx=20&id=2392474"
     },
     {
         Firma: "Dachser Spedition AG",
@@ -426,7 +426,7 @@ export const NSW = [
         Telefon: "032/389 02 21",
         Mail: "sabrina.stauffer@dachser.com",
         Internet: "www.dachser.com",
-        Yousty: ""
+        Yousty: "https://www.berufsberatung.ch/dyn/show/2937?lang=de&idx=20&id=2364105"
     },
     {
         Firma: "Dachser Spedition AG Air & Sea Logistics",
@@ -492,7 +492,7 @@ export const NSW = [
         Telefon: "061/690 73 92",
         Mail: "salome.huber@dsv.com",
         Internet: "www.dsv.com",
-        Yousty: ""
+        Yousty: "https://www.berufsberatung.ch/dyn/show/2937?lang=de&idx=20&id=2389428"
     },
     {
         Firma: "EMC Partner AG",
@@ -515,17 +515,6 @@ export const NSW = [
         Mail: "teamabv@spedlogswiss.com",
         Internet: "www.eurosped.ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
-    },
-    {
-        Firma: "FedEx Express Swiss Post GmbH",
-        Adresse: "Amsleracherweg 8",
-        PLZ: "5033",
-        Ort: "Buchs",
-        Kontaktperson: "Cornelia Rappo",
-        Telefon: "062/561 24 05",
-        Mail: "cornelia.rappo@fedex.com",
-        Internet: "www.tntswisspost.ch",
-        Yousty: ""
     },
     {
         Firma: "Fiege Logistik (Schweiz) AG",
@@ -759,28 +748,6 @@ export const NSW = [
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
-        Firma: "Otto Schmidt AG",
-        Adresse: "Dürrenhüberlstrasse 7",
-        PLZ: "4133",
-        Ort: "Pratteln",
-        Kontaktperson: "Demian Ingold",
-        Telefon: "061/690 90 84",
-        Mail: "d.ingold@otto-schmidt.ch",
-        Internet: "www.otto-schmidt.ch",
-        Yousty: ""
-    },
-    {
-        Firma: "PESA AG",
-        Adresse: "Salinenstrasse 59",
-        PLZ: "4133",
-        Ort: "Pratteln",
-        Kontaktperson: "Hedi Grieshaber",
-        Telefon: "061/404 44 42",
-        Mail: "hgrieshaber@pesa.global",
-        Internet: "www.pesa.global",
-        Yousty: ""
-    },
-    {
         Firma: "Post CH AG, PostLogistics AG",
         Adresse: "Post-Passage 11",
         PLZ: "4051",
@@ -980,723 +947,6 @@ export const NSW = [
     }
 ]
 
-// export const NSW = [
-//     {
-//         Firma: "a. hartrodt (Schweiz) AG",
-//         Adresse: "Hofackerstrasse 40A",
-//         PLZ: 4132,
-//         Ort: "Muttenz",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://hartrodt.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Abacus Shipping Ltd",
-//         Adresse: "Neuhausstrasse 1",
-//         PLZ: 4019,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://abacus-shipping.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "AIT Worldwide Logistics Switzerland AG",
-//         Adresse: "Genua-Strasse 11",
-//         PLZ: 4142,
-//         Ort: "Münchenstein",
-//         Kontaktperson: "Sabrina Rolli",
-//         Telefon: "061/337 43 37",
-//         Mail: "sabrina.rolli@fiege.com",
-//         Internet: "http://aitworldwide.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Atlantic Forwarding Ltd.",
-//         Adresse: "Grosspeteranlage 29",
-//         PLZ: 4052,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://atlanticforwarding.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
-//     },
-//     {
-//         Firma: "Ausbildungsverbund SPEDLOGSWISS Nordwestschweiz",
-//         Adresse: "Elisabethenstrasse 44",
-//         PLZ: 4002,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://abvnws.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Balimpex AG",
-//         Adresse: "Frohburgerstrasse 21",
-//         PLZ: 4132,
-//         Ort: "Muttenz",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://balimpex.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Bertschi AG",
-//         Adresse: "Hutmattstrasse 22",
-//         PLZ: 5724,
-//         Ort: "Dürrenäsch",
-//         Kontaktperson: "Sabrina Gränacher",
-//         Telefon: "062/767 67 55",
-//         Mail: "sabrina.graenacher@bertschi.com",
-//         Internet: "http://bertschi.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Birsterminal AG",
-//         Adresse: "Hafenstrasse 54",
-//         PLZ: 4127,
-//         Ort: "Birsfelden",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://birsterminal.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "BPS Speditions Service Basel AG",
-//         Adresse: "Dürrenhübelstrasse 7",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://bps-spedition.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "BTG Suisse AG",
-//         Adresse: "Salinenstrasse 61",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://btg-suisse.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Camion Transport AG",
-//         Adresse: "St. Jakobs-Strasse 228",
-//         PLZ: 4052,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://camiontransport.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Central Station AG",
-//         Adresse: "Rittergasse 35",
-//         PLZ: 4010,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://4plcs.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Dachser Spedition AG",
-//         Adresse: "Langenhagstrasse 6",
-//         PLZ: 4127,
-//         Ort: "Birsfelden",
-//         Kontaktperson: "Monica Nuno",
-//         Telefon: "061/315 12 21",
-//         Mail: "monica.nuno@dachser.com",
-//         Internet: "http://dachser.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Dachser Spedition AG",
-//         Adresse: "Südstrasse 33",
-//         PLZ: 3250,
-//         Ort: "Lyss",
-//         Kontaktperson: "Sabrina Stauffer",
-//         Telefon: "032/389 02 21",
-//         Mail: "sabrina.stauffer@dachser.com",
-//         Internet: "http://dachser.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Dachser Spedition AG Air & Sea Logistics",
-//         Adresse: "Sternenhofstrasse 15a",
-//         PLZ: 4153,
-//         Ort: "Reinach",
-//         Kontaktperson: "Vanessa Palumbo",
-//         Telefon: "061/716 16 02",
-//         Mail: "vanessa.palumbo@dachser.com",
-//         Internet: "http://dachser.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Danser Switzerland AG",
-//         Adresse: "Südquaistrasse 14",
-//         PLZ: 4057,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://danser.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "DHL Logistics (Schweiz) AG",
-//         Adresse: "St. Jakobsstrasse 222",
-//         PLZ: 4002,
-//         Ort: "Basel",
-//         Kontaktperson: "Nadia Vogt",
-//         Telefon: "061/315 95 20",
-//         Mail: "nadia.vogt@dhl.com",
-//         Internet: "http://dhl.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12625267-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-dhl-logistics-schweiz-ag"
-//     },
-//     {
-//         Firma: "DSV Air + Sea AG",
-//         Adresse: "Viaduktstrasse 42",
-//         PLZ: 4052,
-//         Ort: "Basel",
-//         Kontaktperson: "Silke Meier",
-//         Telefon: "061/337 48 51",
-//         Mail: "silke.meier@ch.dsv.com",
-//         Internet: "http://dsv.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
-//     },
-//     {
-//         Firma: "DSV Air + Sea AG",
-//         Adresse: "Industriering 17",
-//         PLZ: 3250,
-//         Ort: "Lyss",
-//         Kontaktperson: "Patricia Russo",
-//         Telefon: "044/829 40 52",
-//         Mail: "patricia.russo@dsv.com",
-//         Internet: "http://dsv.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12658351-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-dsv-air-sea-ag?uid=2392411"
-//     },
-//     {
-//         Firma: "DSV Logistics SA",
-//         Adresse: "Salinenstrasse 61",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Salome Huber",
-//         Telefon: "061/690 73 92",
-//         Mail: "salome.huber@dsv.com",
-//         Internet: "http://dsv.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "EMC Partner AG",
-//         Adresse: "Baselstrasse 160",
-//         PLZ: 4242,
-//         Ort: "Laufen",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://emc-partner.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Eurosped AG",
-//         Adresse: "Niderfeldstrasse 5",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://eurosped.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "FedEx Express Swiss Post GmbH",
-//         Adresse: "Amsleracherweg 8",
-//         PLZ: 5033,
-//         Ort: "Buchs",
-//         Kontaktperson: "Cornelia Rappo",
-//         Telefon: "062/561 24 05",
-//         Mail: "cornelia.rappo@fedex.com",
-//         Internet: "http://tntswisspost.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Fiege Logistik (Schweiz) AG",
-//         Adresse: "Genua-Strasse 11",
-//         PLZ: 4142,
-//         Ort: "Münchenstein",
-//         Kontaktperson: "Sabrina Rolli",
-//         Telefon: "061/337 43 37",
-//         Mail: "sabrina.rolli@fiege.com",
-//         Internet: "http://fiege.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Fracht AG",
-//         Adresse: "Birsigstrasse 79",
-//         PLZ: 4011,
-//         Ort: "Basel",
-//         Kontaktperson: "Cathy Dusé",
-//         Telefon: "061/287 95 64",
-//         Mail: "c.duse@frachtag-bs.ch",
-//         Internet: "http://frachtag.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Fröde Möbelspedition AG",
-//         Adresse: "Signalstrasse 101",
-//         PLZ: 4058,
-//         Ort: "Basel",
-//         Kontaktperson: "Christof Lützelschwab",
-//         Telefon: "061/690 66 52",
-//         Mail: "christof.luetzelschwab@froede.com",
-//         Internet: "http://froede.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "FT Logistics AG",
-//         Adresse: "Kästeliweg 6",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Rupen Elmayan",
-//         Telefon: "061/826 94 44",
-//         Mail: "relmayan@ft-logistics.ch",
-//         Internet: "http://ft-logistics.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Gebrüder Weiss AG",
-//         Adresse: "Dürrenhübelstrasse 4",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Emel Alkan",
-//         Telefon: "058/458 50 48",
-//         Mail: "emel.alkan@gw-world.com",
-//         Internet: "http://gw-world.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/1360-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-gebrueder-weiss-ag"
-//     },
-//     {
-//         Firma: "Geisseler Cargo Logistik AG",
-//         Adresse: "Im Wannenboden 8",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://geisseler.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "General Transport AG",
-//         Adresse: "St. Albanring 254",
-//         PLZ: 4052,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://general-transport.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Hapag-Lloyd (Schweiz) AG",
-//         Adresse: "Südquaistrasse 14",
-//         PLZ: 4057,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://hlcl.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "InTraLog Hermes AG",
-//         Adresse: "Niderfeldstrasse 5",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://intraloghermes.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "ITS International Transport and Shipping Ltd.",
-//         Adresse: "Christoph Merian Ring 29",
-//         PLZ: 4153,
-//         Ort: "Reinach",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://its-transport.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "JAS Forwarding SA",
-//         Adresse: "P.O. Box 32",
-//         PLZ: 4030,
-//         Ort: "Basel-Flughafen",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://jas.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "KGH Customs Services Schweiz AG",
-//         Adresse: "Salinenstrasse 63",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://kghcustoms.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Kühne & Nagel AG",
-//         Adresse: "Bäumlimattstrasse 12",
-//         PLZ: 4313,
-//         Ort: "Möhlin",
-//         Kontaktperson: "Philip Weinmann",
-//         Telefon: "061/465 66 35",
-//         Mail: "philip.weinmann@kuehne-nagel.com",
-//         Internet: "http://kuehne-nagel.ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/10690489-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-moehlin-ag-kuehne-nagel-ag"
-//     },
-//     {
-//         Firma: "Lagerhäuser Aarau AG",
-//         Adresse: "Aegerten 1",
-//         PLZ: 5503,
-//         Ort: "Schafisheim",
-//         Kontaktperson: "Anja Woellner",
-//         Telefon: "062/885 32 87",
-//         Mail: "a.woellner@la-aarau.ch",
-//         Internet: "http://la-aarau.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Lamprecht Transport AG",
-//         Adresse: "Peter Merian-Strasse 48",
-//         PLZ: 4002,
-//         Ort: "Basel",
-//         Kontaktperson: "Alain Tanner",
-//         Telefon: "061/284 72 92",
-//         Mail: "alain.tanner@lamprecht.ch",
-//         Internet: "http://lamprecht.ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/8832388-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-lamprecht-transport-ag"
-//     },
-//     {
-//         Firma: "M&M Militzer & Münch AG",
-//         Adresse: "Hofackerstrasse 77",
-//         PLZ: 4132,
-//         Ort: "Muttenz",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://mumnet.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "M+R Spedag Group AG",
-//         Adresse: "Kriegackerstrasse 91",
-//         PLZ: 4132,
-//         Ort: "Muttenz",
-//         Kontaktperson: "Martine Sanchez",
-//         Telefon: "058/677 95 20",
-//         Mail: "martine.sanchez@mrspedag.com",
-//         Internet: "http://mrspedag.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12666851-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-muttenz-bl-m-r-spedag-group-ag?uid=2389062"
-//     },
-//     {
-//         Firma: "MSC Mediterranean Shipping Agency AG",
-//         Adresse: "Steinentorstrasse 39",
-//         PLZ: 4002,
-//         Ort: "Basel",
-//         Kontaktperson: "Suzy Monnier",
-//         Telefon: "061/555 65 13",
-//         Mail: "suzy.monnier@msc.com",
-//         Internet: "http://mscgva.ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/8849933-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-msc-mediterranean-shipping-agency-ag"
-//     },
-//     {
-//         Firma: "Müller-Gysin AG",
-//         Adresse: "Barcelona-Strasse 8",
-//         PLZ: 4023,
-//         Ort: "Basel",
-//         Kontaktperson: "Anita Cavelti",
-//         Telefon: "061/337 61 11",
-//         Mail: "anita.cavelti@muellergysin.ch",
-//         Internet: "http://muellergysin.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Nauta SA",
-//         Adresse: "Grüssenhölzliweg 3",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Franziska Melillo",
-//         Telefon: "061/337 31 69",
-//         Mail: "franziska.melillo@nauta.ch",
-//         Internet: "http://nauta.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Nord Transport AG",
-//         Adresse: "Talstrasse 45b",
-//         PLZ: 4144,
-//         Ort: "Arlesheim",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://nordtransport.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Otto Schmidt AG",
-//         Adresse: "Dürrenhüberlstrasse 7",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Demian Ingold",
-//         Telefon: "061/690 90 84",
-//         Mail: "d.ingold@otto-schmidt.ch",
-//         Internet: "http://otto-schmidt.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "PESA AG",
-//         Adresse: "Salinenstrasse 59",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Hedi Grieshaber",
-//         Telefon: "061/404 44 42",
-//         Mail: "hgrieshaber@pesa.global",
-//         Internet: "http://pesa.global",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Post CH AG, PostLogistics AG",
-//         Adresse: "Post-Passage 11",
-//         PLZ: 4051,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://post.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Rhenus Alpina AG",
-//         Adresse: "Wiesendamm 4",
-//         PLZ: 4019,
-//         Ort: "Basel",
-//         Kontaktperson: "Alexandra Hermkes",
-//         Telefon: "061/639 34 90",
-//         Mail: "alexandra.hermkes@ch.rhenus.com",
-//         Internet: "http://rhenus.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/10057282-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-rhenus-alpina-ag"
-//     },
-//     {
-//         Firma: "Sara Transporte AG",
-//         Adresse: "Nägeliweg 2",
-//         PLZ: 5313,
-//         Ort: "Klingnau",
-//         Kontaktperson: "Nehar Alijovi",
-//         Telefon: "056/282 11 81",
-//         Mail: "Nehar.Alijovi@sara-transporte.ch",
-//         Internet: "http://sara-transporte.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Savino Del Bene AG",
-//         Adresse: "Hohenrainstrasse 10",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://savinodelbene.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Schenker Schweiz AG",
-//         Adresse: "Hardstrasse 11",
-//         PLZ: 5074,
-//         Ort: "Eiken",
-//         Kontaktperson: "Sabrina Köpke\nStefan Simmen",
-//         Telefon: "058/589 52 32\n058/589 53 62",
-//         Mail: "sabrina.koepke@dbschenker.com  stefan.simmen@dbschenker.com",
-//         Internet: "http://dbschenker.com/ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/9553028-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schenker-schweiz-ag"
-//     },
-//     {
-//         Firma: "Schenker Schweiz AG",
-//         Adresse: "Steigerhubelstrasse 3",
-//         PLZ: 3000,
-//         Ort: "Bern 5",
-//         Kontaktperson: "Diana Manco",
-//         Telefon: "058/589 50 70",
-//         Mail: "diana.manco@dbschenker.com",
-//         Internet: "http://dbschenker.com/ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Schneider & Cie. AG",
-//         Adresse: "Solothurnerstrasse 48",
-//         PLZ: 4002,
-//         Ort: "Basel",
-//         Kontaktperson: "Miriam Ziltener",
-//         Telefon: "061/365 96 76",
-//         Mail: "mziltener@schneider-transport.com",
-//         Internet: "http://schneider-transport.com",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12628233-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schneider-cie-ag"
-//     },
-//     {
-//         Firma: "Streck Transport AG",
-//         Adresse: "Industriestrasse 30",
-//         PLZ: 4313,
-//         Ort: "Möhlin",
-//         Kontaktperson: "Hendrik Caspar",
-//         Telefon: "061/855 11 01",
-//         Mail: "hendrik.caspar@streck.ch",
-//         Internet: "http://streck.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Trans Maritime AG",
-//         Adresse: "Rheinfelderstrasse 12",
-//         PLZ: 4127,
-//         Ort: "Birsfelden",
-//         Kontaktperson: "Agnes Jütte",
-//         Telefon: "061/319 55 06",
-//         Mail: "a.juette@tmbs.ch",
-//         Internet: "http://transmaritime.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Transfreight AG",
-//         Adresse: "Leimgrubenweg 6",
-//         PLZ: 4023,
-//         Ort: "Basel",
-//         Kontaktperson: "Daniela Moscatiello",
-//         Telefon: "061/337 49 43",
-//         Mail: "moscatiello.daniela@transfreight.ch",
-//         Internet: "http://transfreight.ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/12675575-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-transfreight-ag?uid=2393104"
-//     },
-//     {
-//         Firma: "TS Transport-Service AG",
-//         Adresse: "Mailand-Strasse 31",
-//         PLZ: 4053,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://transport-service.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Ultra-Brag AG",
-//         Adresse: "Südquaistrasse 55",
-//         PLZ: 4019,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://ultra-brag.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Vector Logistics AG",
-//         Adresse: "Lohagstrasse 14",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Gunhild Wolf",
-//         Telefon: "061/815 90 98",
-//         Mail: "guni.wolf@vector-logistics.ch",
-//         Internet: "http://vector-logistics.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "VL Verzollung & Logistik AG",
-//         Adresse: "St. Jakobs-Strasse 222",
-//         PLZ: 4020,
-//         Ort: "Basel",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://vl-verzollunglogistik.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Waterside Logistics",
-//         Adresse: "Bodenackerstrasse 39",
-//         PLZ: 4657,
-//         Ort: "Dulliken",
-//         Kontaktperson: "Mohamed Kobeissi",
-//         Telefon: "062/849 46 46",
-//         Mail: "m.k@water-side.ch",
-//         Internet: "http://waterside.ch",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "World Courier (Switzerland) SA",
-//         Adresse: "Cargo Terminal",
-//         PLZ: 4030,
-//         Ort: "Basel-Flughafen",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://worldcourier.com",
-//         Yousty: ""
-//     },
-//     {
-//         Firma: "Ziegler (Schweiz) AG",
-//         Adresse: "Netzibodenstrasse 23c",
-//         PLZ: 4133,
-//         Ort: "Pratteln",
-//         Kontaktperson: "Franziska Vosseler",
-//         Telefon: "061/818 53 36",
-//         Mail: "franziska.vosseler@ziegler.ch",
-//         Internet: "http://ziegler.ch",
-//         Yousty: "https://yousty.ch/de-CH/lehrstellen/profile/8873510-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-ziegler-schweiz-ag"
-//     },
-//     {
-//         Firma: "Zoll-Flex GmbH",
-//         Adresse: "Rüchligweg 101",
-//         PLZ: 4125,
-//         Ort: "Riehen",
-//         Kontaktperson: "Ausbildungsverbund",
-//         Telefon: "061/205 98 06",
-//         Mail: "teamabv@spedlogswiss.com",
-//         Internet: "http://zoll-flex.ch",
-//         Yousty: ""
-//     }
-// ]
-
-// const fix = OSTSCHWEIZ.map(o => {
-//     const [PLZ, Ort] = o.Ort.split(' ')
-//     console.log(PLZ)
-//     console.log(Ort)
-//     return {...o, PLZ, Ort}
-// })
-//
-// console.log(fix)
-
-
 export const OSTSCHWEIZ = [
     {
         Firma: "Bolloré Logistics Suisse SA",
@@ -1795,7 +1045,7 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Patricia Russo",
         Telefon: "044 829 40 52",
         Mail: "patricia.russo@dsv.com",
-        Yousty: "",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12662825-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-glattbrugg-zh-dsv-air-sea-ag?uid=2358464",
         PLZ: "8152"
     },
     {
@@ -2001,7 +1251,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "Rhenus Logistics AG",
         Adresse: "Fracht West, Postfach 387",
-        Ort: "Zürich",
+        Ort: "Zürich-Flughafen",
         Kontaktperson: "Frau Alessandra Juchli",
         Telefon: "058 856 94 24",
         Mail: "alessandra.juchli@ch.rhenus.com",
@@ -2121,7 +1371,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "Dachser Spedition AG Air & Sea",
         Adresse: "Rorschacherstrasse 290 / Postfach 333",
-        Ort: "St.",
+        Ort: "St.Margrethen",
         Kontaktperson: "Frau Vanessa Palumbo",
         Telefon: "061 716 16 02",
         Mail: "vanessa.palumbo@dachser.com",
@@ -2141,7 +1391,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "DSV Air & Sea AG",
         Adresse: "Schuppisstrasse 3",
-        Ort: "St.Gallen",
+        Ort: "Glattbrugg",
         Kontaktperson: "Frau Patricia Russo",
         Telefon: "044 829 40 52",
         Mail: "patricia.russo@dsv.com",
@@ -2161,7 +1411,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "Hoco International AG",
         Adresse: "Piccardstrasse 13",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Antonio Fiorenza",
         Telefon: "071 313 91 41",
         Mail: "antonio.fiorenza@hoco-int.ch",
@@ -2171,7 +1421,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "JCL Logistics Switzerland AG",
         Adresse: "Neugrütstrasse 3",
-        Ort: "St.",
+        Ort: "St.Margrethen",
         Kontaktperson: "Frau Sabrina Rohden",
         Telefon: "071 747 43 27",
         Mail: "sabrina.rhoden@jcl-logistics.com",
@@ -2181,11 +1431,11 @@ export const OSTSCHWEIZ = [
     {
         Firma: "Lamprecht Transport AG",
         Adresse: "Oberstrasse 149",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Markus Keller",
         Telefon: "071 272 13 53",
         Mail: "markus.keller@lamprecht.ch",
-        Yousty: "",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12468974-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-embrach-zh-lamprecht-transport-ag",
         PLZ: "9001"
     },
     {
@@ -2261,7 +1511,7 @@ export const OSTSCHWEIZ = [
     {
         Firma: "Ziegler Schweiz AG",
         Adresse: "Bionstrasse 5",
-        Ort: "St.",
+        Ort: "St.Gallen",
         Kontaktperson: "Herr Angelo Melillo",
         Telefon: "071 311 13 63",
         Mail: "angelo.melillo@ziegler.ch",
@@ -2335,7 +1585,7 @@ export const OSTSCHWEIZ = [
         Kontaktperson: "Frau Yvonne Stubbe",
         Telefon: "052 742 80 73",
         Mail: "stu@lamprecht.ch",
-        Yousty: "",
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12468974-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-embrach-zh-lamprecht-transport-ag",
         PLZ: "8262"
     },
     {

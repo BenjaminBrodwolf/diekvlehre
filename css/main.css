@@ -1,7 +1,7 @@
 :root {
     --mobile-breakpoint: 768px;
     --header-height: 30px;
-    --padding: min(5vw + 1rem, 3rem);
+    --padding: min(5vw + 1rem, 2rem);
 
     --dunkelblau: #245a74;
     --mittelblau: #5facbd;
@@ -59,11 +59,13 @@ h2 {
 h3 {
     font-family: Montserrat-Regular, Montserrat, sans-serif;
     font-size: clamp(1.175rem, 0.9904rem + 0.844vw, 1.75rem);
+    margin-bottom: 1rem;
 }
 
 h4 {
     font-family: Montserrat-Bold, Montserrat, sans-serif;
     font-size: clamp(1rem, 0.9197rem + 0.367vw, 1.25rem);
+    margin-bottom: 1rem;
 }
 
 

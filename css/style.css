@@ -568,7 +568,7 @@ tbody.row tr:hover td {
 
 .nextChevron, .prevChevron {
     top: calc(50% + 6px);
-    width: 40px;
+    width: 30px;
     position: absolute;
     transition: top 0.7s ease-out;
 }
@@ -619,18 +619,18 @@ body[data-active-page-id='4'] .nextChevron {
     }
 
     .prevChevron, .nextChevron {
-        width: 60px;
+        width: 50px;
     }
 
     .prevChevron {
-        left: calc(50% - 28px);
+        left: calc(50% - 23px);
         rotate: 270deg;
         top: calc(var(--header-height) + 35px);
     }
 
     .nextChevron {
         top: unset;
-        left: calc(50% - 31px);
+        left: calc(50% - 27px);
         rotate: 90deg;
         bottom: 20px;
     }
@@ -663,12 +663,12 @@ body[data-active-page-id='4'] .nextChevron {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: var(--padding) 2fr 3fr 1fr 1fr var(--padding);
         grid-template-areas:
+     'topText topText  topText        .       .'
      '.       .        .       .       .'
-     'topText  topText .       .       .'
      '.       .        .       .       .'
      'icons   .        .       .       .'
      'icons   botText  botText botText .'
-     'icons   .        .       .       .';
+     '.       .        .       .       .';
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
