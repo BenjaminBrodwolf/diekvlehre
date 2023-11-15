@@ -5,7 +5,44 @@ export const getRegionJson = reg => ({
     'OS': OSTSCHWEIZ
 })[reg];
 
-export const TESSIN = [];
+export const TESSIN = [
+    {
+        Firma: "Cippà Trasporti SA",
+        PLZ: "",
+        Ort: "Chiasso",
+        Telefon: "",
+        Mail: "erika.derudi@cippatrasporti.ch",
+        Yousty: ""
+    }, {
+        Firma: "DSV Logistics SA",
+        PLZ: "",
+        Ort: "Balerna",
+        Telefon: "",
+        Mail: "giovanni.forgione@ch.dsv.com",
+        Yousty: ""
+    }, {
+        Firma: "Schenker Svizzera SA",
+        PLZ: "",
+        Ort: "Stabio",
+        Telefon: "",
+        Mail: "lea.fuchs@dbschenker.com",
+        Yousty: ""
+    }, {
+        Firma: "Spedimar Sagl",
+        PLZ: "",
+        Ort: "Chiasso",
+        Telefon: "",
+        Mail: "fiorellapezzotti@spedimar.ch",
+        Yousty: ""
+    }, {
+        Firma: "Züst & Bachmeier S",
+        PLZ: "",
+        Ort: "Chiasso",
+        Telefon: "",
+        Mail: "laura.rimoldi@zust-bachmeier.com",
+        Yousty: ""
+    },
+];
 export const ROMANDIE = [
     {
         Firma: "Agence Fret Cargo SA",
