@@ -1,3 +1,5 @@
+import {Locations, LocationsById, trackButtonClick, trackPageView} from './trackingService.js'
+
 const mobileBreakpoint = 768;
 let loopSection = false;
 
@@ -35,6 +37,7 @@ document.querySelectorAll('.header-nav, .sidebar-nav')
         const sectionId = index >= 5 ? ++index % 5 : index;
         nav.addEventListener('click', () => {
             sidebarCheckbox.checked = false;
+            trackButtonClick('nav-' + LocationsById[sectionId], LocationsById[document.body.dataset.activePageId]);
             jumpTo(sectionId);
         });
 
@@ -82,7 +85,7 @@ const jumpTo = nextSectionId => {
     const nextSection = getSectionById(nextSectionId);
     (activeSectionId === 0 || nextSectionId === 0)
         ? transformStartSections(activeSection, nextSection, direction, nextSectionId)
-        : transformSplitSections(activeSection, nextSection, direction,nextSectionId);
+        : transformSplitSections(activeSection, nextSection, direction, nextSectionId);
 
 }
 
@@ -122,6 +125,7 @@ const transformSplitSections = (activeSection, nextSection, direction, nextSecti
     slideChevron.out()
     setActiveNavClass(nextSectionId);
     setActivePageIdToBody(nextSectionId);
+    trackPageView(LocationsById[nextSectionId])
 
     new Promise((resolve, reject) => {
         moveSectionInFrontDom(nextSection)
@@ -156,6 +160,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
     slideChevron.out()
     setActiveNavClass(nextSectionId);
     setActivePageIdToBody(nextSectionId);
+    trackPageView(LocationsById[nextSectionId])
 
     if (direction === 'up') { // when UP means activeSection is StartSection
         new Promise((resolve, reject) => {
@@ -190,7 +195,7 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             setTimeout(() => {
                 addTransitionCss()
                 setTransforms(nextSection.querySelector('.start-content'), 'center');
-                setTransforms(activeSection.querySelector('.topLeft'),     direction)
+                setTransforms(activeSection.querySelector('.topLeft'), direction)
                 setTransforms(activeSection.querySelector('.bottomRight'), direction)
             }, 10);
 
@@ -267,12 +272,15 @@ document.addEventListener('keydown', event => {
 
 document.querySelectorAll('.iconsNav').forEach((navs) => {
     for (let i = 0; i < navs.children.length; i++) {
-        navs.children[i].addEventListener('click', () => jumpTo(i))
+        navs.children[i].addEventListener('click', () => {
+            trackButtonClick('icon-' + LocationsById[i], LocationsById[document.body.dataset.activePageId])
+            jumpTo(i)
+        })
     }
 })
 
 const touchTopLeftMobile = (event) => {
-    if (isMobile()){
+    if (isMobile()) {
         topLeftElements().forEach(e => e.style.height = '50%');
         bottomRightElements().forEach(e => e.style.height = '50%');
         document.body.classList.remove('chevronTopPosition')
@@ -280,7 +288,7 @@ const touchTopLeftMobile = (event) => {
 }
 
 const touchBottomRightMobile = (event) => {
-    if (isMobile()){
+    if (isMobile()) {
         topLeftElements().forEach(e => e.style.height = '25%');
         bottomRightElements().forEach(e => e.style.height = '75%');
         document.body.classList.add('chevronTopPosition')
@@ -295,15 +303,35 @@ bottomRightElements().forEach(bottomRight =>
 new ResizeObserver(entries => {
     const screenWidth = entries[0].contentRect.width;
     if (screenWidth >= mobileBreakpoint) {
-        topLeftElements().forEach(e =>     e.style.setProperty('height', '100%'));
+        topLeftElements().forEach(e => e.style.setProperty('height', '100%'));
         bottomRightElements().forEach(e => e.style.setProperty('height', '100%'));
     } else {
-        topLeftElements().forEach(e =>     e.style.setProperty('height', '50%'))
+        topLeftElements().forEach(e => e.style.setProperty('height', '50%'))
         bottomRightElements().forEach(e => e.style.setProperty('height', '50%'))
     }
 }).observe(document.body)
 
+
+document.querySelector('[data-i18n="jetzt_bewerben"]').addEventListener('click', () => {
+    trackButtonClick('jetzt_bewerben', LocationsById[document.body.dataset.activePageId])
+    jumpTo(1)
+});
+document.querySelector('[data-i18n="bewirb_dich_jetzt"]').addEventListener('click', () => {
+    trackButtonClick('bewirb_dich_jetzt', LocationsById[document.body.dataset.activePageId])
+    jumpTo(1)
+});
+document.querySelector('.prevChevron').addEventListener('click', () => {
+    trackButtonClick('prev-chevron', LocationsById[document.body.dataset.activePageId])
+    nextTo(prevDirection())
+});
+document.querySelector('.nextChevron').addEventListener('click', () => {
+    trackButtonClick('next-chevron', LocationsById[document.body.dataset.activePageId])
+    nextTo(nextDirection())
+});
+
+
 const init = () => {
     document.body.dataset.activePageId = isMobile() ? '1' : '0';
+    trackPageView(Locations.START)
 }
 init()
