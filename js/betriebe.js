@@ -452,7 +452,7 @@ export const NSW = [
         Telefon: "061/315 12 21",
         Mail: "monica.nuno@dachser.com",
         Internet: "www.dachser.com",
-        Yousty: "https://www.berufsberatung.ch/dyn/show/2937?lang=de&idx=20&id=2392474"
+        Yousty: "https://ch.dachser-career.com/karrierewege/schuler"
     },
     {
         Firma: "Dachser Spedition AG",
@@ -837,16 +837,16 @@ export const NSW = [
         Telefon: "058/589 52 32\n058/589 53 62",
         Mail: "sabrina.koepke@dbschenker.com  stefan.simmen@dbschenker.com",
         Internet: "www.dbschenker.com/ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/9553028-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schenker-schweiz-ag"
+        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/9553029-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-eiken-ag-schenker-schweiz-ag"
     },
     {
         Firma: "Schenker Schweiz AG",
-        Adresse: "Steigerhubelstrasse 3",
-        PLZ: "3000",
-        Ort: "Bern 5",
-        Kontaktperson: "Diana Manco",
-        Telefon: "058/589 50 70",
-        Mail: "diana.manco@dbschenker.com",
+        Adresse: "",
+        PLZ: "",
+        Ort: "Basel",
+        Kontaktperson: "",
+        Telefon: "",
+        Mail: "",
         Internet: "www.dbschenker.com/ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/9553028-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-schenker-schweiz-ag"
     },
@@ -1404,16 +1404,6 @@ export const OSTSCHWEIZ = [
         Mail: "michael.baer@translogzoll.ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12658354-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-kreuzlingen-tg-baer-zollagentur-schweiz-gmbh?uid=2367682",
         PLZ: "8280"
-    },
-    {
-        Firma: "Dachser Spedition AG Air & Sea",
-        Adresse: "Rorschacherstrasse 290 / Postfach 333",
-        Ort: "St.Margrethen",
-        Kontaktperson: "Frau Vanessa Palumbo",
-        Telefon: "061 716 16 02",
-        Mail: "vanessa.palumbo@dachser.com",
-        Yousty: "",
-        PLZ: "9019"
     },
     {
         Firma: "DHL Logistics (Schweiz) AG",
