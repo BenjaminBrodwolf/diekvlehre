@@ -125,7 +125,6 @@ const transformSplitSections = (activeSection, nextSection, direction, nextSecti
     slideChevron.out()
     setActiveNavClass(nextSectionId);
     setActivePageIdToBody(nextSectionId);
-    trackPageView(LocationsById[nextSectionId])
 
     new Promise((resolve, reject) => {
         moveSectionInFrontDom(nextSection)
@@ -144,7 +143,8 @@ const transformSplitSections = (activeSection, nextSection, direction, nextSecti
         function handleAnimationEnd(event) {
             event.stopPropagation();
             animationActive = false;
-            slideChevron.in()
+            slideChevron.in();
+            trackPageView(LocationsById[nextSectionId]);
             resolve('Animation ended');
         }
 
@@ -160,7 +160,6 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
     slideChevron.out()
     setActiveNavClass(nextSectionId);
     setActivePageIdToBody(nextSectionId);
-    trackPageView(LocationsById[nextSectionId])
 
     if (direction === 'up') { // when UP means activeSection is StartSection
         new Promise((resolve, reject) => {
@@ -179,7 +178,8 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             function handleAnimationEnd(event) {
                 event.stopPropagation();
                 animationActive = false;
-                slideChevron.in()
+                slideChevron.in();
+                trackPageView(LocationsById[nextSectionId]);
                 resolve('Animation ended');
             }
 
@@ -202,7 +202,8 @@ const transformStartSections = (activeSection, nextSection, direction, nextSecti
             function handleAnimationEnd(event) {
                 event.stopPropagation();
                 animationActive = false;
-                slideChevron.in()
+                slideChevron.in();
+                trackPageView(LocationsById[nextSectionId])
                 resolve('Animation ended');
             }
 
