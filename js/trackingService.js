@@ -14,24 +14,21 @@ export const LocationsById = {
     4: Locations.CONTACT,
 }
 
-const trackPush = obj => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(obj);
-}
+const trackPush = obj => window.dataLayer.push(obj);
 
 export const trackPageView = location =>
     trackPush({
-        event: 'sls-page-view',
-        category: 'view',
-        location: location,
+        'event': 'sls-page-view',
+        'category': 'view',
+        'location': location,
     })
 
 export const trackButtonClick = (label, location) => {
     trackPush({
-        event: 'sls-button-clicked',
-        category: 'buttons',
-        action: 'clicked',
-        label: label,
-        location: location,
+        'event': 'sls-button-clicked',
+        'category': 'buttons',
+        'action': 'clicked',
+        'label': label,
+        'location': location,
     });
 }
