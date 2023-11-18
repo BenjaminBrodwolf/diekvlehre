@@ -14,7 +14,10 @@ export const LocationsById = {
     4: Locations.CONTACT,
 }
 
-const trackPush = obj => window.dataLayer.push(obj);
+const trackPush = obj => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(obj);
+}
 
 export const trackPageView = location =>
     trackPush({
