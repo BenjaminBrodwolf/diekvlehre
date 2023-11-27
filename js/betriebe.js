@@ -308,7 +308,7 @@ export const ROMANDIE = [
         Mail: "camille.parent@ziegler.ch",
         Yousty: ""
     }
-]
+];
 
 export const NSW = [
     {
@@ -397,17 +397,6 @@ export const NSW = [
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
         Internet: "www.birsterminal.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
-    },
-    {
-        Firma: "BPS Speditions Service Basel AG",
-        Adresse: "Dürrenhübelstrasse 7",
-        PLZ: "4133",
-        Ort: "Pratteln",
-        Kontaktperson: "Ausbildungsverbund",
-        Telefon: "061/205 98 06",
-        Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.bps-spedition.ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
@@ -530,17 +519,6 @@ export const NSW = [
         Mail: "salome.huber@dsv.com",
         Internet: "www.dsv.com",
         Yousty: "https://www.berufsberatung.ch/dyn/show/2937?lang=de&idx=20&id=2389428"
-    },
-    {
-        Firma: "EMC Partner AG",
-        Adresse: "Baselstrasse 160",
-        PLZ: "4242",
-        Ort: "Laufen",
-        Kontaktperson: "Ausbildungsverbund",
-        Telefon: "061/205 98 06",
-        Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.emc-partner.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
         Firma: "Eurosped AG",
@@ -895,17 +873,6 @@ export const NSW = [
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12675575-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-transfreight-ag?uid=2393104"
     },
     {
-        Firma: "TS Transport-Service AG",
-        Adresse: "Mailand-Strasse 31",
-        PLZ: "4053",
-        Ort: "Basel",
-        Kontaktperson: "Ausbildungsverbund",
-        Telefon: "061/205 98 06",
-        Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.transport-service.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
-    },
-    {
         Firma: "Ultra-Brag AG",
         Adresse: "Südquaistrasse 55",
         PLZ: "4019",
@@ -970,17 +937,6 @@ export const NSW = [
         Mail: "franziska.vosseler@ziegler.ch",
         Internet: "www.ziegler.ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8873510-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-pratteln-bl-ziegler-schweiz-ag"
-    },
-    {
-        Firma: "Zoll-Flex GmbH",
-        Adresse: "Rüchligweg 101",
-        PLZ: "4125",
-        Ort: "Riehen",
-        Kontaktperson: "Ausbildungsverbund",
-        Telefon: "061/205 98 06",
-        Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.zoll-flex.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     }
 ]
 

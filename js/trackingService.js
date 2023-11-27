@@ -16,19 +16,21 @@ export const LocationsById = {
 
 const trackPush = obj => window.dataLayer.push(obj);
 
-export const trackPageView = location =>
+export const trackPageView = pageTitle =>
     trackPush({
-        'event': 'sls-page-view',
-        'category': 'view',
-        'location': location,
+        event: 'sls-page-view',
+        category: 'view',
+        page_location: '/',
+        page_title: pageTitle
     })
 
-export const trackButtonClick = (label, location) => {
+export const trackButtonClick = (label, pageTitle) => {
     trackPush({
-        'event': 'sls-button-clicked',
-        'category': 'buttons',
-        'action': 'clicked',
-        'label': label,
-        'location': location,
+        event: 'sls-button-clicked',
+        category: 'buttons',
+        action: 'clicked',
+        label: label,
+        page_location: '/',
+        page_title: pageTitle
     });
 }
