@@ -20,7 +20,7 @@ export const trackPageView = pageTitle =>
     trackPush({
         event: 'sls-page-view',
         category: 'view',
-        page_location: '/',
+        page_location: 'https://diekvlehre.ch/'+pageTitle,
         page_title: pageTitle
     })
 
@@ -30,7 +30,7 @@ export const trackButtonClick = (label, pageTitle) => {
         category: 'buttons',
         action: 'clicked',
         label: label,
-        page_location: '/',
+        page_location: 'https://diekvlehre.ch/'+pageTitle,
         page_title: pageTitle
     });
 }
