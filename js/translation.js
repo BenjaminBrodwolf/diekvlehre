@@ -1,12 +1,25 @@
 import {i18n} from "./i18n.js";
 
+const setHtmlLang = selectedLanguage => {
+    document.documentElement.setAttribute("lang", selectedLanguage);
+    window.history.replaceState(null, null, '?lang=' + selectedLanguage);
+}
+
 const availableLocales = ['de', 'fr', 'it'];
 const defaultLanguage = 'de'
 
 const navigatorLanguage = (window.navigator.userLanguage || window.navigator.language).substring(0, 2);
 export let pageLanguage = defaultLanguage;
-if (availableLocales.includes(navigatorLanguage)) {
+
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+if (params?.lang && availableLocales.includes(params.lang)){
+    pageLanguage = params.lang;
+    setHtmlLang(pageLanguage)
+} else if (availableLocales.includes(navigatorLanguage)) {
     pageLanguage = navigatorLanguage;
+    setHtmlLang(pageLanguage)
 }
 
 export const getTranslation = (key) => i18n[key][pageLanguage];
@@ -40,7 +53,7 @@ langElements.forEach(langElement =>
     langElement.addEventListener('click', () => {
             const selectedLanguage = langElement.dataset.lang
             changeLanguage(selectedLanguage);
-            document.documentElement.setAttribute("lang", selectedLanguage);
+            setHtmlLang(pageLanguage);
         }
     ))
 
