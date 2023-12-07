@@ -1,3 +1,9 @@
+export const title = {
+    de: "SPEDLOGSWISS die Kv-Lehre",
+    fr: "SPEDLOGSWISS l'apprentissage Kv",
+    it: "SPEDLOGSWISS la dottrina Kv"
+}
+
 export const i18n =
     {
         "start.headline": {
