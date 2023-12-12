@@ -2,9 +2,9 @@ import {i18n,title, pages} from "./i18n.js";
 
 const setLang = selectedLanguage => {
     document.documentElement.setAttribute("lang", selectedLanguage);
-    window.history.replaceState(null, null, '?lang=' + selectedLanguage);
+    window.history.pushState(pages[selectedLanguage], title[selectedLanguage], '?lang=' + selectedLanguage);
     document.title = title[selectedLanguage];
-    document.domain = pages[selectedLanguage]
+    // window.location.href = pages[selectedLanguage];
 }
 
 const availableLocales = ['de', 'fr', 'it'];
