@@ -4,6 +4,13 @@ export const title = {
     it: "SPEDLOGSWISS la dottrina Kv"
 }
 
+export const pages = {
+    de: "https://diekvlehre.ch/",
+    fr: "https://ormationcommerce.ch/",
+    it: "https://didatticaekv.ch"
+}
+
+
 export const i18n =
     {
         "start.headline": {
