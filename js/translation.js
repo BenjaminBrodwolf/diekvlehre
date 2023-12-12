@@ -4,7 +4,7 @@ const setLang = selectedLanguage => {
     document.documentElement.setAttribute("lang", selectedLanguage);
     window.history.replaceState(null, null, '?lang=' + selectedLanguage);
     document.title = title[selectedLanguage];
-    window.location.href = pages[selectedLanguage]
+    document.domain = pages[selectedLanguage]
 }
 
 const availableLocales = ['de', 'fr', 'it'];

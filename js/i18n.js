@@ -5,7 +5,7 @@ export const title = {
 }
 
 export const pages = {
-    de: "/",
+    de: "https://diekvlehre.ch/",
     fr: "https://ormationcommerce.ch/",
     it: "https://didatticaekv.ch"
 }
