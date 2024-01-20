@@ -17,13 +17,3 @@ eduParents.forEach((ele,index) =>
         educationParentScrollElement.scrollTo({top: 550, behavior: 'smooth'})
     }))
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/service-worker.js')
-        .then((registration) => {
-            console.log('Service Worker registered successfully:', registration);
-        })
-        .catch((error) => {
-            console.log('Service Worker registration failed:', error);
-        });
-}
