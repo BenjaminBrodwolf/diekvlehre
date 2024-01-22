@@ -54,10 +54,7 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     caches.open(STATIC_CACHE_VERSION).then(cache =>
       cache.match(event.request).then(response =>
-          response || fetch(event.request).then(networkResponse => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-          })
+          response || fetch(event.request)
           .catch(err => {
 
           })

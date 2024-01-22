@@ -21,14 +21,16 @@
       });
     }
   </script>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/header.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet"  type="text/css">
+  <link href="css/main.css" rel="stylesheet"  type="text/css">
+  <link href="css/style.css" rel="stylesheet"  type="text/css">
+  <link href="css/header.css" rel="stylesheet"  type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/a2hs.css">
 
   <script src="js/i18n.js" type="module"></script>
   <script src="js/betriebe.js" type="module"></script>
   <script src="js/trackingService.js" type="module"></script>
+  <script src="js/addtohomescreen.js" type="module"></script>
 
   <meta content="" property="og:title">
   <meta content="" property="og:type">
@@ -62,7 +64,6 @@
     f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', 'GTM-NKZH89KC');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M51DR51S5K"></script>
-
 </head>
 
 
@@ -136,6 +137,8 @@
           </svg>
         </a>
       </div>
+      <hr class="installBtnLine" />
+      <button type="button" id="installAppBtn">Als WebApp installieren </button>
       <hr/>
       <a data-i18n="datenschutz" href="datenschutz.html" style="margin-bottom: 0.75rem" target="_blank">Datenschutzerklärung</a><br>
       <a href="impressum.html" target="_blank">Impressum</a>
@@ -1143,7 +1146,7 @@
 
 </body>
 <script src="js/split-pages.js" type="module"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js"  type="module"></script>
 <script src="js/translation.js" type="module"></script>
 <script src="js/regioneMap.js" type="module"></script>
 </html>
