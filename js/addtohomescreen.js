@@ -413,7 +413,7 @@ class AddToHomeScreen {
       this._genModalStart() +
       `<div class="adhs-error-title">` + title + `</div>` +
       `<div class="adhs-error-body">` + body + `</div>` +
-      `<button class="adhs-error-copy-link-button" onclick="AddToHomeScreen.copyToClipboard();" ontouchstart="AddToHomeScreen.copyToClipboard();">Website-Link in die Zwischenablage kopieren/button>` +
+      `<button class="adhs-error-copy-link-button" onclick="AddToHomeScreen.copyToClipboard();" ontouchstart="AddToHomeScreen.copyToClipboard();">Website-Link in die Zwischenablage kopieren</button>` +
       this._genModalEnd();
     container.innerHTML = containerInnerHTML;
   }
@@ -426,7 +426,7 @@ class AddToHomeScreen {
   }
 
   _genTitle() {
-    return this._genTitleWithMessage(`Install the ` + this.appName + ` app to continue`);
+    return this._genTitleWithMessage(`Installieren Sie die Anwendung ` + this.appName + ` um fortzufahren`);
   }
 
   _genModalStart() {
@@ -506,7 +506,7 @@ class AddToHomeScreen {
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, `Tippen Sie auf die <img class="adhs-more-button" src="` + this._genAssetUrl('generic-more-button.svg') + `"/> Schaltfläche oben.`) +
-      this._genListItem(`2`, `Wählen Sie <span class="adhs-emphasis">Im Browser öffnen</span>  .`) +
+      this._genListItem(`2`, `Wählen Sie <span class="adhs-emphasis">Im Browser öffnen</span>.`) +
       this._genListEnd() +
       this._genModalEnd() +
       `<div class="adhs-inappbrowser-openinsystembrowser-bouncing-arrow-container">

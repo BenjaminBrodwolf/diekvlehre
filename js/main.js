@@ -39,8 +39,8 @@ let deferredPrompt;
 if (isStandAlone()) {
   installBtn.style.display = 'none';
   installBtnLine.style.display = 'none';
-
 }
+
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault();
   deferredPrompt = event
