@@ -34,6 +34,8 @@ const translate = () => {
         const key = element.getAttribute('data-i18n');
         if (key === "application.right.ort") {
             element.placeholder = getTranslation(key);
+        } else if (key === "submit_now"){
+           element.value = getTranslation(key);
         } else {
             element.textContent = getTranslation(key);
         }

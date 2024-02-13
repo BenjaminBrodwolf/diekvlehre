@@ -25,14 +25,16 @@ eduParents.forEach((ele, index) =>
 const installBtnLine = document.querySelector('.installBtnLine');
 const installBtn = document.querySelector('#installAppBtn');
 const isStandAlone = () => {
-  // test if web app is already installed to home screen
+  // if web app is already installed to home screen
   return window.navigator.standalone || // IOS
     window.matchMedia('(display-mode: standalone)').matches; // Android
 }
 
 
 export const isBrowserIOS = () => navigator.userAgent.match(/iPhone|iPad|iPod/) || window.navigator.userAgent.match(/Safari/) || (navigator.userAgent.match(/CriOS/) || window.navigator.userAgent.match(/FxiOS/) || window.navigator.userAgent.match(/FBAN|FBAV/))
-export const isAndroidChrome = () => Boolean(navigator.userAgent.match(/Android/) || navigator.userAgent.match(/Chrome/)  ||  navigator.userAgent.match(/Firefox/)  ||  navigator.userAgent.match(/SamsungBrowser/) ||  navigator.userAgent.match(/FBAN|FBAV/))
+const isAndroid = () =>  Boolean(navigator.userAgent.match(/Android/));
+const isChrome = () => Boolean(navigator.userAgent.match(/Chrome/))
+const isAndroidChrome = () => isAndroid() && isChrome();
 
 let deferredPrompt;
 
@@ -75,7 +77,7 @@ window.AddToHomeScreenInstance = new AddToHomeScreen(
 installBtn.addEventListener('click', event => {
   // event.preventDefault();
 
-  if (isAndroidChrome()) {
+  if (isAndroidChrome() || isChrome()) {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then(choice => {
       if (choice.outcome === 'accepted') {

@@ -1,4 +1,4 @@
-const STATIC_CACHE_VERSION = "static-v1";
+const STATIC_CACHE_VERSION = "static-v8";
 
 self.addEventListener('install', (event) => {
   console.log('Service Worker Installing... ' + STATIC_CACHE_VERSION)
@@ -22,6 +22,7 @@ self.addEventListener('install', (event) => {
               '/img/kontakt.webp',
               '/img/movie.webp',
               '/img/start.webp',
+              '/img/schnuppern.webp',
               '/img/logo.svg',
               '/js/betriebe.js',
               '/js/i18n.js',
