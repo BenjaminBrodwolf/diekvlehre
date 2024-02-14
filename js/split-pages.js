@@ -332,8 +332,16 @@ document.querySelector('.nextChevron').addEventListener('click', () => {
 
 
 const init = () => {
-  document.body.dataset.activePageId = isMobile() ? '1' : '0';
-  trackPageView(Locations.START)
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  if (urlSearchParams.has('page') && urlSearchParams.get('page') === 'sniff') {
+    const sniffPageId = '1';
+    document.body.dataset.activePageId = sniffPageId
+    jumpTo(sniffPageId)
+    trackPageView(Locations.SNIFF)
+  } else {
+    document.body.dataset.activePageId = isMobile() ? '1' : '0';
+    trackPageView(Locations.START)
+  }
 }
 init()
 
@@ -374,7 +382,7 @@ document.querySelector('#sniffForm').addEventListener('submit', (e) => {
   const postData =
     {
       "from": "schnuppern@diekvlehre.ch",
-      "to": ["benjamin.brodwolf@outlook.com"],
+      "to": ["andrea.jauslin@spedlogswiss.com"],
       subject,
       html
     }
@@ -410,36 +418,5 @@ const sendMailomat = (postData) => {
       document.querySelector('#submittedErrorMessage').style.visibility = 'visible';
       document.querySelector('#sniffForm').style.display = 'none';
     });
-}
-
-
-export const sendMail = () => {
-  console.log('SEND MAIL')
-  Email.send({
-    Host: "smtp.sui-inter.net",
-    Username: "schnuppern@diekvlehre.ch",
-    Password: "spedlogswiss",
-    To: 'benjamin.brodwolf@outlook.com',
-    From: "schnuppern@diekvlehre.ch",
-    Subject: "Schnuppern Spedlogswiss",
-    Body: "Test inhalt"
-  }).then(
-    message => {
-      console.log(message)
-      alert(message)
-    }
-  );
-  /*
-    Email.send({
-      SecureToken : token,
-      To : 'benjamin.brodwolf@outlook.com',
-      From : "schnuppern@diekvlehre.ch",
-      Subject : "Schnuppern Spedlogswiss",
-      Body : "And this is the body test"
-    }).then(
-      message => alert(message)
-    );
-
-   */
 }
 

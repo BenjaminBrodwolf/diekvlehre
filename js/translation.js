@@ -18,10 +18,10 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 if (params?.lang && availableLocales.includes(params.lang)){
     pageLanguage = params.lang;
-    setLang(pageLanguage)
+    setLang(pageLanguage);
 } else if (availableLocales.includes(navigatorLanguage)) {
     pageLanguage = navigatorLanguage;
-    setLang(pageLanguage)
+    setLang(pageLanguage);
 }
 
 export const getTranslation = (key) => i18n[key][pageLanguage];
