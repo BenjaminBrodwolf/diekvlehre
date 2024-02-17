@@ -274,8 +274,8 @@ document.addEventListener('keydown', event => {
 document.querySelectorAll('.iconsNav').forEach((navs) => {
   for (let i = 0; i < navs.children.length; i++) {
     navs.children[i].addEventListener('click', () => {
-      trackButtonClick('icon-' + LocationsById[i+1], LocationsById[document.body.dataset.activePageId])
-      jumpTo(i+1)
+      trackButtonClick('icon-' + LocationsById[i + 1], LocationsById[document.body.dataset.activePageId])
+      jumpTo(i + 1)
     })
   }
 })
@@ -343,11 +343,12 @@ const init = () => {
     trackPageView(Locations.START)
   }
 }
-init()
+
 
 // SMTP.js
 const PW = 'A0C745F12404E87F117E81BD1B52E8D8319C'
 const token = '4d245dd1-06a8-4838-ac4b-30c1a1748b04'
+const tokenHTTP_API_KEY = '9559DA3EB9098C91E77A3590CF59637926F13CCC211C415AC7169169E871090216A7EEAA2EE104A734F31B29DC1F6FA2';
 
 const formularOptions = {
   schnuppertag: {
@@ -386,23 +387,38 @@ document.querySelector('#sniffForm').addEventListener('submit', (e) => {
       subject,
       html
     }
-  sendMailomat(postData);
+  //sendMailomat(postData);
+  sendMail(subject, html);
 })
 
+const testMail = () => {
+  const html = '<p>Es ist eine Schnupper-Anmeldung auf schnupper.diekvlehre.ch eingegangen.</p><hr><table><tbody> ' + 'schnuppertag' + ' ' + 'values' + '</tbody></table><hr>';
+  const subject = `Neue Schnupper-Anmeldung: vorname name...`;
+  const postData =
+    {
+      "from": "schnuppern@diekvlehre.ch",
+      "to": ["benjamin.brodwolf@outlook.com"],
+      subject,
+      html
+    }
+  sendMailomat(postData);
+}
 
 const sendMailomat = (postData) => {
   const requestOptions = {
     method: 'POST',
     headers: {
+      'mode': 'no-cors',
       'Authorization': `Bearer ${mailomatToken}`,
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(postData)
   };
 
   fetch('https://api.mailomat.swiss/v0.1/message', requestOptions)
     .then(response => {
+      console.log(response)
       if (!response.ok) {
         throw new Error(`Fehler bei der Anfrage: ${response.status}`);
       }
@@ -420,3 +436,49 @@ const sendMailomat = (postData) => {
     });
 }
 
+
+export const sendMail = (subject, body) => {
+  console.log('SEND MAIL')
+  /*
+   Email.send({
+     Host : "smtp.sui-inter.net",
+     Username : "schnuppern@diekvlehre.ch",
+     Password : "spedlogswiss",
+     To : 'benjamin.brodwolf@outlook.com',
+     From : "schnuppern@diekvlehre.ch",
+     Subject : "Schnuppern Spedlogswiss",
+     Body : "Test inhalt"
+   }).then(
+     message => {
+       console.log(message)
+       alert(message)
+     }
+   ); */
+
+  Email.send({
+    SecureToken: token,
+    To: "andrea.jauslin@spedlogswiss.com",
+    From: "schnuppern@diekvlehre.ch",
+    Subject: subject,
+    Body: body
+  }).then(response => {
+    if (response !== 'OK') {
+      throw new Error(`Fehler bei der Anfrage`);
+    }
+    return response;
+  })
+    .then(data => {
+      console.log('Erfolgreiche Antwort:', data);
+      document.querySelector('#submittedSuccessMessage').style.visibility = 'visible';
+      document.querySelector('#sniffForm').style.display = 'none';
+    })
+    .catch(error => {
+      console.error('Fehler beim Senden der Anfrage:', error);
+      document.querySelector('#submittedErrorMessage').style.visibility = 'visible';
+      document.querySelector('#sniffForm').style.display = 'none';
+    });
+
+
+}
+
+init();

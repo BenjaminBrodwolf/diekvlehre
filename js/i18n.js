@@ -43,12 +43,12 @@ export const i18n =
       fr: "Le transport international de marchandises t'intéresse ? Tu parles bien et tu aimes le contact avec la clientèle ? Alors inscris-toi ici ou contacte Mme Andrea Jauslin.",
       it: "Siete interessati al trasporto internazionale di merci? Siete dotati di spirito di iniziativa e vi piace il contatto con i clienti? Registratevi qui o contattate la signora Andrea Jauslin."
     },
-        "sniff.submittedSuccessMessage": {
+    "sniff.submittedSuccessMessage": {
       de: "Deine Anmeldung wurde an Andrea Jauslin weitergeleitet.",
       fr: "Ton inscription a été transmise à Andrea Jauslin.",
       it: "La sua iscrizione è stata inoltrata ad Andrea Jauslin."
     },
-        "sniff.submittedErrorMessage": {
+    "sniff.submittedErrorMessage": {
       de: "Die Anmeldung konnte nicht weitergeleitet werden. Bitte bei Andrea Jauslin direkt per E-Mail anmelden.",
       fr: "L'inscription n'a pas pu être transmise. Veuillez vous inscrire directement auprès d'Andrea Jauslin par e-mail.",
       it: "Non è stato possibile inoltrare la registrazione. Si prega di iscriversi direttamente ad Andrea Jauslin via e-mail."
@@ -328,6 +328,36 @@ export const i18n =
       de: "JETZT ANMELDEN!",
       fr: "INSCRIVEZ-VOUS MAINTENANT!",
       it: "REGISTRATI ORA!"
+    },
+    "dayAndPlace": {
+      de: "Tag und Ort",
+      fr: "Jour et lieu",
+      it: "Giorno e luogo"
+    },
+    "adresse": {
+      de: "Adresse",
+      fr: "Adresse",
+      it: "Indirizzo"
+    },
+    "place": {
+      de: "Ort",
+      fr: "Luogo",
+      it: "Lieu"
+    },
+    "surname": {
+      de: "Vorname",
+      fr: "Prénom",
+      it: "Nome"
+    },
+    "familyName": {
+      de: "Nachname",
+      fr: "Nom de famille",
+      it: "Cognome"
+    },
+    "tel": {
+      de: "Telefonnummer",
+      fr: "Numéro de téléphone",
+      it: "Numero di telefono"
     }
   };
 

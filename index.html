@@ -30,6 +30,7 @@
   <script src="js/betriebe.js" type="module"></script>
   <script src="js/trackingService.js" type="module"></script>
   <script src="js/addtohomescreen.js" type="module"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <meta content="" property="og:title">
   <meta content="" property="og:type">
@@ -533,7 +534,7 @@
     <div class="bottomRight">
       <div class="bottomRightContent">
         <h2 data-i18n="sniff.right.headline">Schnuppern</h2>
-        <hr/>
+
         <p><span data-i18n="sniff.right.copy">Interessiert dich der internationale Transport von Gütern?
           Bist du sprachgewandt und hast gerne Kundenkontakt? Dann melde dich hier an oder kontaktiere Frau Andrea Jauslin,
         </span> <a href="mailto:andrea.jauslin@spedlogswiss.com"
@@ -543,7 +544,7 @@
 
         <form action="" method="post" id="sniffForm">
           <select class="form-control" name="schnuppertag" required="required">
-            <option disabled selected value="">Tag und Ort</option>
+            <option disabled selected value=""><span data-i18n="dayAndPlace">Tag und Ort</span></option>
             <option value="1">
               13.3.2024, 14:00 Uhr - 17:00 Uhr, 6883 Novazzano
             </option>
@@ -563,17 +564,17 @@
               17.4.2024, 14:00 Uhr - 17:00 Uhr, 6855 Stabio
             </option>
           </select>
-          <input class="form-control" name="nachname" autocomplete="family-name" placeholder="Nachname*" required="required" type="text">
-          <input class="form-control" name="vorname" autocomplete="given-name" placeholder="Vorname*" required="required" type="text">
-          <input class="form-control" name="adresse" autcomplete="street-address" placeholder="Adresse*" required="required" type="text">
+          <input class="form-control" data-i18n="familyName" name="nachname" autocomplete="family-name" placeholder="Nachname*" required="required" type="text">
+          <input class="form-control" data-i18n="surname" name="vorname" autocomplete="given-name" placeholder="Vorname*" required="required" type="text">
+          <input class="form-control" data-i18n="adresse" name="adresse" autcomplete="street-address" placeholder="Adresse*" required="required" type="text">
           <div style="display: flex; gap: 1rem;">
             <input class="form-control" name="plz" autocomplete="postal-code" placeholder="PLZ*" required="required"
                    style="min-width: 33%; max-width: 33%;" type="text">
-            <input class="form-control" name="ort" placeholder="Ort*" required="required" style="flex-grow: 1"
+            <input class="form-control" data-i18n="place" name="ort" placeholder="Ort*" required="required" style="flex-grow: 1"
                    type="text">
           </div>
           <input class="form-control" autocomplete="email"  name="email" placeholder="E-Mail*" type="email">
-          <input class="form-control" autocomplete="tel"  name="tel" placeholder="Telefonnummer*" required="required" type="text">
+          <input class="form-control"  data-i18n="tel" autocomplete="tel"  name="tel" placeholder="Telefonnummer*" required="required" type="text">
           <input class="form-send-btn" name="abschicken" data-i18n="submit_now" type="submit" value="JETZT ANMELDEN!">
         </form>
         <div id="submittedSuccessMessage">
