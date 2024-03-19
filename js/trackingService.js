@@ -1,5 +1,6 @@
 export const Locations = {
     START: "start",
+    SNIFF: "schnuppern",
     APPLICATION: "bewerbung",
     EDUCATION: "ausbildung",
     MOVIE: "film",
@@ -8,10 +9,11 @@ export const Locations = {
 
 export const LocationsById = {
     0: Locations.START,
-    1: Locations.APPLICATION,
-    2: Locations.EDUCATION,
-    3: Locations.MOVIE,
-    4: Locations.CONTACT,
+    1: Locations.SNIFF,
+    2: Locations.APPLICATION,
+    4: Locations.EDUCATION,
+    5: Locations.MOVIE,
+    6: Locations.CONTACT,
 }
 
 const trackPush = obj => window.dataLayer.push(obj);

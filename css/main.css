@@ -15,6 +15,12 @@
     --slide-out-chevron: slide-out-blurred 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
+@media all and (display-mode: standalone) {
+  #installAppBtn, .installBtnLine {
+    display: none;
+  }
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
