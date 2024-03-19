@@ -35,23 +35,23 @@ export const i18n =
     },
     "sniff.right.headline": {
       de: "Schnuppern",
-      fr: "Jour du procès",
-      it: "Giorno di prova"
+      fr: "Jour d'essai",
+      it: "Giornata di prova"
     },
     "sniff.right.copy": {
-      de: "Interessiert dich der internationale Transport von Gütern? Bist du sprachgewandt und hast gerne Kundenkontakt? Dann melde dich hier an oder kontaktiere Frau Andrea Jauslin",
-      fr: "Le transport international de marchandises t'intéresse ? Tu parles bien et tu aimes le contact avec la clientèle ? Alors inscris-toi ici ou contacte Mme Andrea Jauslin.",
-      it: "Siete interessati al trasporto internazionale di merci? Siete dotati di spirito di iniziativa e vi piace il contatto con i clienti? Registratevi qui o contattate la signora Andrea Jauslin."
+      de: "Interessiert dich der internationale Transport von Gütern? Bist du sprachgewandt und hast gerne Kundenkontakt? Dann melde dich hier an!",
+      fr: "Le transport international de marchandises t'intéresse ? Tu parles bien et tu aimes le contact avec la clientèle ? Alors inscris-toi ici !",
+      it: "Siete interessati al trasporto internazionale di merci? Siete dotati di spirito di iniziativa e vi piace il contatto con i clienti? Allora candidatevi qui!"
     },
     "sniff.submittedSuccessMessage": {
-      de: "Deine Anmeldung wurde an Andrea Jauslin weitergeleitet.",
-      fr: "Ton inscription a été transmise à Andrea Jauslin.",
-      it: "La sua iscrizione è stata inoltrata ad Andrea Jauslin."
+      de: "Deine Anmeldung wurde an grundbildung@spedlogswiss.com weitergeleitet.",
+      fr: "Ton inscription a été transmise à grundbildung@spedlogswiss.com.",
+      it: "La sua iscrizione è stata inoltrata ad grundbildung@spedlogswiss.com."
     },
     "sniff.submittedErrorMessage": {
-      de: "Die Anmeldung konnte nicht weitergeleitet werden. Bitte bei Andrea Jauslin direkt per E-Mail anmelden.",
-      fr: "L'inscription n'a pas pu être transmise. Veuillez vous inscrire directement auprès d'Andrea Jauslin par e-mail.",
-      it: "Non è stato possibile inoltrare la registrazione. Si prega di iscriversi direttamente ad Andrea Jauslin via e-mail."
+      de: "Die Anmeldung konnte nicht weitergeleitet werden. Bitte bei grundbildung@spedlogswiss.com direkt per E-Mail anmelden.",
+      fr: "L'inscription n'a pas pu être transmise. Veuillez vous inscrire directement auprès grundbildung@spedlogswiss.com par e-mail.",
+      it: "Non è stato possibile inoltrare la registrazione. Si prega di iscriversi direttamente ad grundbildung@spedlogswiss.com via e-mail."
     },
     "application.left.headline": {
       de: "Bewirb dich, wo immer du willst.",
@@ -266,8 +266,8 @@ export const i18n =
     },
     "schnuppern": {
       de: "SCHNUPPERN",
-      fr: "SCHNUPPERN",
-      it: "SCHNUPPERN"
+      fr: "Stage Découverte",
+      it: "Formazione alla scoperta"
     },
     "bewerbung": {
       de: "BEWERBUNG",

@@ -457,7 +457,7 @@ export const sendMail = (subject, body) => {
 
   Email.send({
     SecureToken: token,
-    To: "andrea.jauslin@spedlogswiss.com",
+    To: "grundbildung@spedlogswiss.com",
     From: "schnuppern@diekvlehre.ch",
     Subject: subject,
     Body: body
