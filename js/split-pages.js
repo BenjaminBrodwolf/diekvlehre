@@ -352,12 +352,10 @@ const tokenHTTP_API_KEY = '9559DA3EB9098C91E77A3590CF59637926F13CCC211C415AC7169
 
 const formularOptions = {
   schnuppertag: {
-    1: '13.3.2024, 14:00 Uhr - 17:00 Uhr, 6883 Novazzano',
-    2: '20.3.2024, 14:00 Uhr - 17:00 Uhr, 4000 Basel',
-    3: '20.3.2024, 14:00 Uhr - 17:00 Uhr, 6830 Chiasso',
-    4: '10.4.2024, 14:00 Uhr - 17:00 Uhr, Diverse Orte',
-    5: '10.4.2024, 14:00 Uhr - 17:00 Uhr, 6828 Balerna',
-    6: '17.4.2024, 14:00 Uhr - 17:00 Uhr, 6855 Stabio',
+    1: '29.5.2024, 14:00 Uhr - 17:00 Uhr, 4000 Basel',
+    2: '10.4.2024, 14:00 Uhr - 17:00 Uhr, 6828 Balerna',
+    3: '17.4.2024, 14:00 Uhr - 17:00 Uhr, 6855 Stabio',
+    4: 'November/Dezember 2024, 4000 Basel',
   },
   nachname: 'Nachname',
   vorname: 'Vorname',

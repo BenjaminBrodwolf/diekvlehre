@@ -267,7 +267,7 @@ export const i18n =
     "schnuppern": {
       de: "SCHNUPPERN",
       fr: "Stage Découverte",
-      it: "Formazione alla scoperta"
+      it: "Pomeriggio di prova"
     },
     "bewerbung": {
       de: "BEWERBUNG",
@@ -341,8 +341,8 @@ export const i18n =
     },
     "place": {
       de: "Ort",
-      fr: "Luogo",
-      it: "Lieu"
+      fr: "Lieu",
+      it: "Luogo"
     },
     "surname": {
       de: "Vorname",

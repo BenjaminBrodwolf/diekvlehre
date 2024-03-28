@@ -1,4 +1,4 @@
-const STATIC_CACHE_VERSION = "static-v11";
+const STATIC_CACHE_VERSION = "static-v12.1";
 
 self.addEventListener('install', (event) => {
   console.log('Service Worker Installing... ' + STATIC_CACHE_VERSION)

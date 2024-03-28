@@ -313,9 +313,9 @@ export const ROMANDIE = [
 export const NSW = [
     {
         Firma: "a. hartrodt (Schweiz) AG",
-        Adresse: "Hofackerstrasse 40A",
-        PLZ: "4132",
-        Ort: "Muttenz",
+        Adresse: "",
+        PLZ: "",
+        Ort: "Rheinfelden",
         Kontaktperson: "Ausbildungsverbund",
         Telefon: "061/205 98 06",
         Mail: "teamabv@spedlogswiss.com",
@@ -653,7 +653,7 @@ export const NSW = [
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
-        Firma: "KGH Customs Services Schweiz AG",
+        Firma: "Maersk Logistics & Services AG",
         Adresse: "Salinenstrasse 63",
         PLZ: "4133",
         Ort: "Pratteln",
@@ -675,17 +675,6 @@ export const NSW = [
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/10690489-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-moehlin-ag-kuehne-nagel-ag"
     },
     {
-        Firma: "Lagerhäuser Aarau AG",
-        Adresse: "Aegerten 1",
-        PLZ: "5503",
-        Ort: "Schafisheim",
-        Kontaktperson: "Anja Woellner",
-        Telefon: "062/885 32 87",
-        Mail: "a.woellner@la-aarau.ch",
-        Internet: "www.la-aarau.ch",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/12645223-kaufmann-frau-kv-efz-transport-schafisheim-ag-lagerhaeuser-aarau-ag"
-    },
-    {
         Firma: "Lamprecht Transport AG",
         Adresse: "Peter Merian-Strasse 48",
         PLZ: "4002",
@@ -695,17 +684,6 @@ export const NSW = [
         Mail: "alain.tanner@lamprecht.ch",
         Internet: "www.lamprecht.ch",
         Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8832388-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-lamprecht-transport-ag"
-    },
-    {
-        Firma: "M&M Militzer & Münch AG",
-        Adresse: "Hofackerstrasse 77",
-        PLZ: "4132",
-        Ort: "Muttenz",
-        Kontaktperson: "Ausbildungsverbund",
-        Telefon: "061/205 98 06",
-        Mail: "teamabv@spedlogswiss.com",
-        Internet: "www.mumnet.com",
-        Yousty: "https://www.yousty.ch/de-CH/lehrstellen/profile/8857229-kaufmann-frau-kv-efz-internationale-speditionslogistik-isl-basel-bs-ausbildungsverbund-spedlogswiss-nordwestschweiz"
     },
     {
         Firma: "M+R Spedag Group AG",
@@ -752,7 +730,7 @@ export const NSW = [
         Yousty: ""
     },
     {
-        Firma: "Nord Transport AG",
+        Firma: "Nord-Transport AG",
         Adresse: "Talstrasse 45b",
         PLZ: "4144",
         Ort: "Arlesheim",
@@ -796,7 +774,7 @@ export const NSW = [
         Yousty: ""
     },
     {
-        Firma: "Savino Del Bene AG",
+        Firma: "Savino Del Bene (Switzerland) AG",
         Adresse: "Hohenrainstrasse 10",
         PLZ: "4133",
         Ort: "Pratteln",
