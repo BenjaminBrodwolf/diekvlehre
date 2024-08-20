@@ -1,4 +1,4 @@
-const STATIC_CACHE_VERSION = "static-v12.1";
+const STATIC_CACHE_VERSION = "static-v12.4";
 
 self.addEventListener('install', (event) => {
   console.log('Service Worker Installing... ' + STATIC_CACHE_VERSION)
@@ -63,18 +63,3 @@ self.addEventListener("fetch", event => {
     )
   );
 });
-
-/*
-self.addEventListener('activate', event => {
-  console.log('Activation Service Worker...');
-  return self.clients.claim();
-})
-
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
-  )
-})
-
- */

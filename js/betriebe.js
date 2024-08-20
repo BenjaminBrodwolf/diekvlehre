@@ -35,11 +35,25 @@ export const TESSIN = [
         Mail: "fiorellapezzotti@spedimar.ch",
         Yousty: ""
     }, {
-        Firma: "Züst & Bachmeier S",
+        Firma: "Züst & Bachmeier SA",
         PLZ: "",
         Ort: "Chiasso",
         Telefon: "",
         Mail: "laura.rimoldi@zust-bachmeier.com",
+        Yousty: ""
+    }, {
+        Firma: "FOX Logistics SA",
+        PLZ: "",
+        Ort: "Balerna",
+        Telefon: "",
+        Mail: "smarciello@foxlogistics.ch",
+        Yousty: ""
+    }, {
+        Firma: "Greenwill SA ",
+        PLZ: "",
+        Ort: "Chiasso",
+        Telefon: "",
+        Mail: "v.polifemo@greenwill.ch",
         Yousty: ""
     },
 ];
