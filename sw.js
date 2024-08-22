@@ -1,7 +1,9 @@
-const STATIC_CACHE_VERSION = "static-v12.4";
+const STATIC_CACHE_VERSION = "static-v13.3";
 
 self.addEventListener('install', (event) => {
-  console.log('Service Worker Installing... ' + STATIC_CACHE_VERSION)
+  console.log('Service Worker Installing... ' + STATIC_CACHE_VERSION);
+  self.skipWaiting(); // Ermöglicht dem Service Worker, sofort zu aktivieren
+
   event.waitUntil(
     caches.open(STATIC_CACHE_VERSION).then((cache) =>
       cache.addAll([
@@ -47,19 +49,31 @@ self.addEventListener("activate", event => {
           }
         })
       )
-    )
+    ).then(() => self.clients.claim()) // Aktiviert den Service Worker sofort für alle Clients
   );
 });
 
 self.addEventListener("fetch", event => {
+  // Check if the request is a GET request
+  if (event.request.method !== 'GET') {
+    // If not a GET request, fetch from the network without caching
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   event.respondWith(
-    caches.open(STATIC_CACHE_VERSION).then(cache =>
-      cache.match(event.request).then(response =>
-        response || fetch(event.request)
-          .catch(err => {
-            // empty to skip those unnecessary logs
-          })
-      )
-    )
+    caches.match(event.request).then(response => {
+      // Serve from cache if available, else fetch from network
+      return response || fetch(event.request).then(fetchResponse => {
+        return caches.open(STATIC_CACHE_VERSION).then(cache => {
+          // Cache the fetched response
+          cache.put(event.request, fetchResponse.clone());
+          return fetchResponse;
+        });
+      });
+    }).catch(() => {
+      // Optional: Handle errors or return a fallback resource
+    })
   );
 });
+

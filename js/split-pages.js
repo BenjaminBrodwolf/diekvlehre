@@ -380,33 +380,24 @@ document.querySelector('#sniffForm').addEventListener('submit', (e) => {
   const subject = `Neue Schnupper-Anmeldung: ${elements.vorname.value} ${elements.nachname.value}`;
   const postData =
     {
-      "from": "schnuppern@diekvlehre.ch",
-      "to": ["andrea.jauslin@spedlogswiss.com"],
-      subject,
-      html
-    }
-  //sendMailomat(postData);
-  sendMail(subject, html);
-})
-
-const testMail = () => {
-  const html = '<p>Es ist eine Schnupper-Anmeldung auf schnupper.diekvlehre.ch eingegangen.</p><hr><table><tbody> ' + 'schnuppertag' + ' ' + 'values' + '</tbody></table><hr>';
-  const subject = `Neue Schnupper-Anmeldung: vorname name...`;
-  const postData =
-    {
-      "from": "schnuppern@diekvlehre.ch",
-      "to": ["benjamin.brodwolf@outlook.com"],
+      "from": {
+        email: "schnuppern@diekvlehre.ch",
+        name: 'Schnuppern bei Spedlogswiss'
+      },
+      "to": [{
+        email: "andrea.jauslin@spedlogswiss.com",
+        name: 'Andrea Jauslin SPEDLOGSWISS'
+      }],
       subject,
       html
     }
   sendMailomat(postData);
-}
+})
 
 const sendMailomat = (postData) => {
   const requestOptions = {
     method: 'POST',
     headers: {
-      'mode': 'no-cors',
       'Authorization': `Bearer ${mailomatToken}`,
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -414,7 +405,7 @@ const sendMailomat = (postData) => {
     body: JSON.stringify(postData)
   };
 
-  fetch('https://api.mailomat.swiss/v0.1/message', requestOptions)
+  fetch('https://api.mailomat.swiss/message', requestOptions)
     .then(response => {
       console.log(response)
       if (!response.ok) {
@@ -432,51 +423,6 @@ const sendMailomat = (postData) => {
       document.querySelector('#submittedErrorMessage').style.visibility = 'visible';
       document.querySelector('#sniffForm').style.display = 'none';
     });
-}
-
-
-export const sendMail = (subject, body) => {
-  console.log('SEND MAIL')
-  /*
-   Email.send({
-     Host : "smtp.sui-inter.net",
-     Username : "schnuppern@diekvlehre.ch",
-     Password : "spedlogswiss",
-     To : 'benjamin.brodwolf@outlook.com',
-     From : "schnuppern@diekvlehre.ch",
-     Subject : "Schnuppern Spedlogswiss",
-     Body : "Test inhalt"
-   }).then(
-     message => {
-       console.log(message)
-       alert(message)
-     }
-   ); */
-
-  Email.send({
-    SecureToken: token,
-    To: "grundbildung@spedlogswiss.com",
-    From: "schnuppern@diekvlehre.ch",
-    Subject: subject,
-    Body: body
-  }).then(response => {
-    if (response !== 'OK') {
-      throw new Error(`Fehler bei der Anfrage`);
-    }
-    return response;
-  })
-    .then(data => {
-      console.log('Erfolgreiche Antwort:', data);
-      document.querySelector('#submittedSuccessMessage').style.visibility = 'visible';
-      document.querySelector('#sniffForm').style.display = 'none';
-    })
-    .catch(error => {
-      console.error('Fehler beim Senden der Anfrage:', error);
-      document.querySelector('#submittedErrorMessage').style.visibility = 'visible';
-      document.querySelector('#sniffForm').style.display = 'none';
-    });
-
-
 }
 
 init();
