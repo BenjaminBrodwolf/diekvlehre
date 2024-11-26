@@ -352,8 +352,8 @@ const tokenHTTP_API_KEY = '9559DA3EB9098C91E77A3590CF59637926F13CCC211C415AC7169
 
 const formularOptions = {
   schnuppertag: {
-    1: '27.11.2024, Basel',
-    2: '15.1.2025, Basel',
+    // 1: '27.11.2024, Basel',
+    // 2: '15.1.2025, Basel',
     3: '19.3.2025, Basel',
     4: '14.5.2025, Pratteln',
   },
