@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.adhs-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.adhs-container.visible {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+}
+
+.adhs-container .adhs-modal {
+  background-color: #F5F5F5;
+  border-radius: 7px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 49px 19px 32px 19px;
+  margin: auto;
+  margin-top: 40px;
+  max-width: 400px;
+  width: 90%;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+}
+
+@keyframes adhs-bounce-modal {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+.adhs-container.visible .adhs-modal,
+.adhs-container.visible .adhs-logo {
+  transform: translateY(0);
+  opacity: 1;
+  animation: adhs-bounce-modal .5s;
+}
+
+
+.adhs-container .adhs-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  z-index: 10000;
+}
+
+.adhs-container .adhs-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+
+.adhs-container .adhs-modal .adhs-title {
+  font-size: 27px;
+  font-weight: 700;
+  padding: 0px 0px 18px 0px;
+  text-align: justify;
+  word-spacing: -0.1em;
+}
+
+.adhs-container .adhs-modal .adhs-error-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 5px 10px 15px 10px;
+  text-align: justify;
+}
+
+.adhs-container .adhs-modal .adhs-error-body {
+    font-size: 20px;
+    margin: 0px 10px 20px 10px;
+    text-align: justify;
+}
+
+.adhs-container .adhs-modal .adhs-error-copy-link-button {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 19px;
+  padding: 5px;
+}
+
+
+.adhs-container .adhs-modal .adhs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.adhs-container .adhs-modal .adhs-list .adhs-emphasis {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.adhs-container .adhs-modal .adhs-list .adhs-your-app-icon {
+  height: 40px;
+  margin: 0px 5px -13px 5px;
+  border-radius: 6px;
+}
+
+.adhs-container .adhs-modal .adhs-list .adhs-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  margin: 0px 0px 10px 0px;
+}
+
+.adhs-container .adhs-modal .adhs-list .adhs-list-item .adhs-number-container {
+  flex-direction: column;
+  display: flex;
+  margin: 0px 5px 0px 0px;
+}
+
+.adhs-container .adhs-modal .adhs-list .adhs-list-item .adhs-circle {
+  font-size: 30px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  background-color: #979797;
+}
+
+
+.adhs-container .adhs-modal .adhs-list .adhs-list-item .adhs-number {
+  padding: 9px 0px 0px 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+
+
+.adhs-container .adhs-modal .adhs-list .adhs-list-item .adhs-instruction {
+  font-size: 19px;
+  line-height: 27px;
+  padding: 0px 5px 0px 5px;
+  text-align: justify;
+}
+
+/* IOS Safari */
+.adhs-container.adhs-ios.adhs-safari .adhs-modal .adhs-list .adhs-ios-safari-sharing-api-button {
+  height: 35px;
+  margin: 0px 5px -7px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.adhs-container.adhs-ios.adhs-safari .adhs-modal .adhs-list .adhs-ios-safari-add-to-home-screen-button {
+  height: 33px;
+  margin: 0px 5px -7px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+@keyframes adhs-ios-safari-bouncing-arrow-animation {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.adhs-container.adhs-ios.adhs-safari .adhs-ios-safari-bouncing-arrow-container img {
+  height: 60px;
+  position: absolute;
+  top: calc(100dvh - 60px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: adhs-ios-safari-bouncing-arrow-animation 2s infinite;
+}
+
+/* IOS Chrome */
+@keyframes adhs-ios-chrome-bouncing-arrow-animation {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.adhs-container.adhs-ios.adhs-chrome .adhs-modal .adhs-list .adhs-ios-chrome-more-button {
+  height: 35px;
+  margin: 0px 5px -7px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.adhs-container.adhs-ios.adhs-chrome .adhs-ios-chrome-bouncing-arrow-container img {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 18px;
+  animation: adhs-ios-chrome-bouncing-arrow-animation 1.5s infinite;
+}
+
+.adhs-container.adhs-ios.adhs-chrome .adhs-modal .adhs-list .adhs-ios-chrome-add-to-home-screen-button {
+  height: 35px;
+  margin: 0px 5px -7px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* Android Chrome */
+@keyframes adhs-android-chrome-bouncing-arrow-animation {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.adhs-container.adhs-android.adhs-chrome .adhs-android-chrome-bouncing-arrow-container img {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  animation: adhs-android-chrome-bouncing-arrow-animation 1.5s infinite;
+}
+
+.adhs-container.adhs-android.adhs-chrome .adhs-modal .adhs-list .adhs-android-chrome-more-button {
+  height: 30px;
+  background: white;
+  margin: 0px 5px -7px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+}
+
+.adhs-container.adhs-android.adhs-chrome .adhs-modal .adhs-list .adhs-android-chrome-add-to-homescreen-button {
+  height: 30px;
+  background: white;
+  margin: 0px 5px -9px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  padding: 0px 7px 0px 4px;
+}
+
+.adhs-container.adhs-android.adhs-chrome .adhs-modal .adhs-list .adhs-android-chrome-install-app {
+  height: 30px;
+  background: white;
+  margin: 10px 5px -10px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+  padding: 0px;
+}
+
+.adhs-container.adhs-android.adhs-chrome .adhs-modal .adhs-list .adhs-list-item .adhs-instruction {
+  line-height: 34px;
+}
+
+/* In-App System Browser */
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-modal .adhs-title {
+  padding: 0px 0px 9px 0px;
+}
+
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-modal .adhs-list .adhs-emphasis {
+  padding: 6px 8px;
+  border-radius: 5px;
+  margin: 0px 0px 0px 5px;
+  box-shadow: 1px 1px 2px gray;
+  background: white;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-modal .adhs-list .adhs-list-item {
+  margin: 6px 0px 9px 0px;
+}
+
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-modal .adhs-list .adhs-list-item .adhs-instruction {
+  padding: 0px 0px 2px 9px;
+  line-height: 42px;
+}
+
+@keyframes adhs-inappbrowser-openinsystembrowser-bouncing-arrow-animation {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-inappbrowser-openinsystembrowser-bouncing-arrow-container img {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  animation: adhs-inappbrowser-openinsystembrowser-bouncing-arrow-animation 1.5s infinite;
+}
+
+.adhs-container.adhs-inappbrowser-openinsystembrowser .adhs-modal .adhs-list .adhs-more-button {
+  height: 35px;
+  background: white;
+  margin: 0px 5px -11px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+}
+
+/* In-App Safari Browser */
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-modal .adhs-title {
+  padding: 0px 0px 9px 0px;
+}
+
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-modal .adhs-list .adhs-emphasis {
+  padding: 6px 8px;
+  border-radius: 5px;
+  margin: 0px 0px 0px 5px;
+  box-shadow: 1px 1px 2px gray;
+  background: white;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-modal .adhs-list .adhs-list-item {
+  margin: 6px 0px 9px 0px;
+}
+
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-modal .adhs-list .adhs-list-item .adhs-instruction {
+  padding: 0px 0px 0px 9px;
+  line-height: 34px;
+  margin: 4px 0px 0px 0px;
+}
+
+@keyframes adhs-inappbrowser-openinsafari-bouncing-arrow-animation {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-inappbrowser-openinsafari-bouncing-arrow-container img {
+  height: 40px;
+  position: absolute;
+  top: calc(100dvh - 40px);
+  right: 15px;
+  animation: adhs-inappbrowser-openinsafari-bouncing-arrow-animation 1.5s infinite;
+}
+
+.adhs-container.adhs-inappbrowser-openinsafari .adhs-modal .adhs-list .adhs-more-button {
+  height: 35px;
+  background: white;
+  margin: 0px 5px -11px 5px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 4px;
+}

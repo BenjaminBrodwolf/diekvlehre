@@ -1,0 +1,111 @@
+:root {
+    --mobile-breakpoint: 768px;
+    --header-height: 30px;
+    --padding: min(5vw + 1rem, 2rem);
+
+    --dunkelblau: #245a74;
+    --mittelblau: #5facbd;
+    --hellblau: #b7d4dc;
+    --weiss: #ffffff;
+    --senfgelb: #e9cb44;
+    --rot: #cc0000;
+
+    --shake-chevron: shake-chevron 3.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1s infinite both;
+    --slide-in-chevron: slide-in-blurred 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    --slide-out-chevron: slide-out-blurred 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@media all and (display-mode: standalone) {
+  #installAppBtn, .installBtnLine {
+    display: none;
+  }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../font/Montserrat-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../font/Montserrat-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../font/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'MontserratAlternates-Bold';
+    src: url('../font/MontserratAlternates-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'MontserratAlternates-ExtraBold';
+    src: url('../font/MontserratAlternates-ExtraBold.woff2') format('woff2');
+}
+
+h1 {
+    font-family: MontserratAlternates-ExtraBold, Montserrat, sans-serif;
+    font-size: clamp(2.5rem, 0.7857rem + 3.5714vw, 4rem);
+}
+
+h2 {
+    font-family: MontserratAlternates-Bold, Montserrat, sans-serif;
+    font-size: clamp(1.25rem, 0.8486rem + 1.8349vw, 2.5rem);
+}
+
+h3 {
+    font-family: Montserrat-Regular, Montserrat, sans-serif;
+    font-size: clamp(1.175rem, 0.9904rem + 0.844vw, 1.75rem);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-family: Montserrat-Bold, Montserrat, sans-serif;
+    font-size: clamp(1rem, 0.9197rem + 0.367vw, 1.25rem);
+    margin-bottom: 1rem;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.5rem;
+    word-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    margin-block: 0.175rem;
+    color: var(--dunkelblau);
+    display: inline-block;
+}
+
+a:hover {
+    color: var(--senfgelb);
+}
+
+html {
+    overflow: hidden;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100dvh;
+    font-family: Montserrat-Medium, Montserrat, sans-serif;
+    background-color: var(--dunkelblau);
+}

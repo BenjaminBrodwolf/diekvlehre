@@ -1,4 +1,4 @@
-const STATIC_CACHE_VERSION = "static-v16.0";
+const STATIC_CACHE_VERSION = "static-v16.1";
 const STATIC_CACHE_FILES = [
   '/',
   '/?lang=de',

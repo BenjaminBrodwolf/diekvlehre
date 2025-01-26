@@ -1,0 +1,10 @@
+/*
+Theme Name: DieKvLehre Theme
+Author: Benjamin Brodwolf
+Description: Single Page Theme für dieKvLehre.ch
+Version: 1.0
+*/
+
+option[disabled] {
+  text-decoration: line-through;
+}
