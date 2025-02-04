@@ -21,9 +21,13 @@ const renderTable = (regionKey, locationFilter) => {
   }
 
   rowContainer.innerHTML = "";
-  jsonArray.forEach(({firma, ort, email, yousty}) => {
+  jsonArray.forEach(({id, firma, ort, email, yousty, form_active}) => {
     const rowElement = document.createElement('tr');
-    if (yousty) {
+    if (form_active) {
+      rowElement.addEventListener('click', () => {
+        window.location.href = `/single.php?p=${id}`
+      })
+    } else if (yousty) {
       rowElement.addEventListener('click', () =>
         window.open(yousty, "_blank"));
     } else if (email) {

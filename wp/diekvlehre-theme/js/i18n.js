@@ -358,6 +358,11 @@ export const i18n =
       de: "Telefonnummer",
       fr: "Numéro de téléphone",
       it: "Numero di telefono"
+    },
+    "lehrstellenbeschreibung": {
+      de: "Lehrstellenbeschreibung",
+      fr: "Description de l'apprentissage",
+      it: "Descrizione dell'apprendistato"
     }
   };
 

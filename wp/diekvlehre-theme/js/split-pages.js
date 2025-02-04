@@ -333,10 +333,13 @@ document.querySelector('.nextChevron').addEventListener('click', () => {
 
 const init = () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
-  if (urlSearchParams.has('page') && urlSearchParams.get('page') === 'sniff') {
-    const sniffPageId = '1';
-    document.body.dataset.activePageId = sniffPageId
-    jumpTo(sniffPageId)
+  if (urlSearchParams.has('page')) {
+    let pageId = urlSearchParams.get('page');
+    if(urlSearchParams.get('page') === 'sniff') {
+      pageId = '1';
+    }
+    document.body.dataset.activePageId = pageId
+    jumpTo(pageId)
     trackPageView(Locations.SNIFF)
   } else {
     document.body.dataset.activePageId = isMobile() ? '1' : '0';
