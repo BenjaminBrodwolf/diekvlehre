@@ -96,3 +96,105 @@ body {
   }
 }
 
+.application-form {
+  margin-top: 2rem;
+  border: solid 2px var(--hellblau);
+  padding: 2rem;
+  background-color: white;
+  h3, h4, h5, strong, b {
+    color: var(--mittelblau);
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  input.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #5a8ea3;
+    background-color: white;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--hellblau);
+    color: var(--dunkelblau);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: #48707f;
+    color: white;
+  }
+  .flex-container {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.file-input-wrapper {
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.file-input-wrapper:hover .file-icon{
+  cursor: pointer;
+  background-color: var(--hellblau);
+}
+
+.file-input-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--dunkelblau);
+  background-color: white;
+  color: var(--dunkelblau);
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.file-icon:hover {
+  background-color: #9abee3;
+}
+
+.file-label {
+  color: var(--dunkelblau);
+  font-size: 16px;
+}
+
+.file-name {
+  color: #333;
+  font-size: 14px;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.file-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
