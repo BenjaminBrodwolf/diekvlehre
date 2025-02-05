@@ -54,13 +54,11 @@ $post_region = $post_type_object->labels->name;
         <div class="application-offer_2 application-offer_title"><?php echo esc_html($lehrstelle_2_titel); ?></div>
         <div class="application-offer_2 application-offer_year"><?php echo esc_html($lehrstelle_2_jahr); ?></div>
       <?php endif; ?>
-
     </div>
-
 
     <h3 data-i18n="lehrstellenbeschreibung">Lehrstellenbeschreibung</h3>
     <div class="application-description">
-      <!--      --><?php //echo wp_kses_post($lehrstellenbeschreibung); ?>
+      <?php echo wp_kses_post($lehrstellenbeschreibung); ?>
     </div>
 
     <h3>Kontaktperson</h3>

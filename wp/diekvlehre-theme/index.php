@@ -329,7 +329,6 @@ $region_data = get_region_data();
           Unternehmen in deiner Nähe oder an deinem Wunsch-Wohnort. Wähle eine Region aus und finde so den
           Arbeitgeber, bei dem du deine Ausbildung machen wirst.</p>
 
-        test
         <svg viewBox="0 0 752 466">
           <use class="svgMap mapNWS" href="#svgMapNWS"/>
           <use class="svgMap mapOS" href="#svgMapOS"/>
@@ -393,11 +392,11 @@ $region_data = get_region_data();
         <p data-i18n="sniff.right.copy">Interessiert dich der internationale Transport von Gütern?
           Bist du sprachgewandt und hast gerne Kundenkontakt?<br> Dann melde dich hier an!
         </p>
-        <form action="" method="post" id="sniffForm">
-          <select class="form-control" name="schnuppertag" required="required">
+
+        <form id="sniffForm">
+          <select class="form-control" name="schnuppertag" required>
             <option disabled selected value="" data-i18n="dayAndPlace">Tag und Ort</option>
             <?php
-            // Abrufen der Schnuppertag-Posts
             $schnuppertag_posts = get_posts(array(
               'post_type' => 'schnuppertag',
               'posts_per_page' => -1,
@@ -406,54 +405,134 @@ $region_data = get_region_data();
             ));
 
             foreach ($schnuppertag_posts as $post) {
-              // Hole benutzerdefinierte Felder aus ACF
               $label = get_field('label', $post->ID);
               $disabled = get_field('disabled', $post->ID);
 
-              // Dynamische ID basierend auf dem Post-Titel
               $value = $post->ID;
-
-              // Inline-CSS für durchgestrichenen Text, wenn disabled
               $style = $disabled ? 'style="text-decoration: line-through;"' : '';
               $disabled_attr = $disabled ? 'disabled' : '';
 
-              // "(Ausgebucht)" hinzufügen, wenn disabled
               $label .= $disabled ? " (Ausgebucht)" : "";
 
-              // Option generieren
               echo "<option value='{$value}' {$disabled_attr} {$style}>{$label}</option>";
             }
             ?>
           </select>
 
           <input class="form-control" data-i18n="familyName" name="nachname" autocomplete="family-name"
-                 placeholder="Nachname*" required="required" type="text">
+                 placeholder="Nachname*" required type="text">
           <input class="form-control" data-i18n="surname" name="vorname" autocomplete="given-name"
-                 placeholder="Vorname*" required="required" type="text">
+                 placeholder="Vorname*" required type="text">
           <input class="form-control" data-i18n="adresse" name="adresse" autocomplete="street-address"
-                 placeholder="Adresse*" required="required" type="text">
+                 placeholder="Adresse*" required type="text">
           <div style="display: flex; gap: 1rem;">
-            <input class="form-control" name="plz" autocomplete="postal-code" placeholder="PLZ*" required="required"
+            <input class="form-control" name="plz" autocomplete="postal-code"
+                   placeholder="PLZ*" required
                    style="min-width: 33%; max-width: 33%;" type="text">
-            <input class="form-control" data-i18n="place" name="ort" placeholder="Ort*" required="required"
-                   style="flex-grow: 1"
-                   type="text">
+            <input class="form-control" data-i18n="place" name="ort"
+                   placeholder="Ort*" required
+                   style="flex-grow: 1" type="text">
           </div>
-          <input class="form-control" autocomplete="email" name="email" placeholder="E-Mail*" type="email">
-          <input class="form-control" data-i18n="tel" autocomplete="tel" name="tel" placeholder="Telefonnummer*"
-                 required="required" type="text">
-          <input class="form-send-btn" name="abschicken" data-i18n="submit_now" type="submit" value="JETZT ANMELDEN!">
+          <input class="form-control" autocomplete="email" name="email" placeholder="E-Mail*" required type="email">
+          <input class="form-control" data-i18n="tel" autocomplete="tel" name="tel"
+                 placeholder="Telefonnummer*" required type="text">
+          <input class="form-send-btn" data-i18n="submit_now" type="submit" value="JETZT ANMELDEN!">
         </form>
-        <div id="submittedSuccessMessage" style="display:none;">
-          <h3 data-i18n="sniff.submittedSuccessMessage" style="color: var(--senfgelb)">Deine Anmeldung wurde an Andrea
-            Jauslin weitergeleitet.</h3>
-        </div>
-        <div id="submittedErrorMessage" style="display:none;">
-          <h3 data-i18n="sniff.submittedErrorMessage" style="color: var(--rot)">Die Anmeldung konnte nicht
-            weitergeleitet werden. Bitte bei grundbildung@spedlogswiss.com direkt per E-Mail anmelden.</h3>
-        </div>
+
+        <div id="sniffFormMessage" style="margin-top: 1rem;"></div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const sniffForm = document.getElementById('sniffForm');
+            const messageContainer = document.getElementById('sniffFormMessage');
+
+            sniffForm.addEventListener('submit', async (event) => {
+              event.preventDefault(); // Verhindert das automatische Neuladen
+
+              const apiKey = 'bddf5e7deed83143038488bfebdbc394-667818f5-8d43372f';
+              const domain = 'bewerbung.diekvlehre.ch';
+              const apiUrl = `https://api.eu.mailgun.net/v3/${domain}/messages`;
+
+              const formData = new FormData(sniffForm);
+              const schnuppertagSelect = sniffForm.querySelector('select[name="schnuppertag"]');
+
+              const schnuppertagLabel = schnuppertagSelect.options[
+                schnuppertagSelect.selectedIndex
+                ].text;
+
+              const nachname = formData.get('nachname');
+              const vorname = formData.get('vorname');
+              const adresse = formData.get('adresse');
+              const plz = formData.get('plz');
+              const ort = formData.get('ort');
+              const email = formData.get('email');
+              const tel = formData.get('tel');
+
+              const message = `
+        <p>Es ist eine Schnupper-Anmeldung auf schnupper.diekvlehre.ch eingegangen.</p>
+        <hr>
+        <table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%;'>
+          <tbody>
+          <tr><td><strong>Datum/Ort:</strong></td><td>${schnuppertagLabel}</td></tr>
+          <tr><td><strong>Nachname:</strong></td><td>${nachname}</td></tr>
+          <tr><td><strong>Vorname:</strong></td><td>${vorname}</td></tr>
+          <tr><td><strong>Adresse:</strong></td><td>${adresse}</td></tr>
+          <tr><td><strong>PLZ:</strong></td><td>${plz}</td></tr>
+          <tr><td><strong>Ort:</strong></td><td>${ort}</td></tr>
+          <tr><td><strong>E-Mail:</strong></td><td>${email}</td></tr>
+          <tr><td><strong>Telefonnummer:</strong></td><td>${tel}</td></tr>
+          </tbody>
+        </table>
+        <hr>
+      `;
+
+              const postFields = new URLSearchParams({
+                from: 'Schnuppertag Anmeldung <bewerbung@diekvlehre.ch>',
+                to: 'benjamin.brodwolf@outlook.com',
+                subject: `Neue Schnupper-Anmeldung: ${vorname} ${nachname}`,
+                html: message
+              });
+
+              console.log(postFields);
+
+              try {
+                const response = await fetch(apiUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Basic ' + btoa('api:' + apiKey)
+                  },
+                  body: postFields.toString()
+                });
+
+                if (!response.ok) {
+                  new Error(`Fehler beim Mailversand: ${response.status} ${response.statusText}`);
+                }
+
+                // Erfolgsmeldung ausgeben
+                messageContainer.innerHTML = `
+          <h3 data-i18n="sniff.submittedSuccessMessage" style="color: var(--senfgelb)">
+            Deine Anmeldung wurde an Andrea Jauslin weitergeleitet.
+          </h3>
+        `;
+                sniffForm.reset();
+
+              } catch (error) {
+                // Fehlermeldung
+                console.error(error);
+                messageContainer.innerHTML = `
+          <h3 data-i18n="sniff.submittedErrorMessage" style="color: var(--rot)">
+            Die Anmeldung konnte nicht weitergeleitet werden. Bitte melde dich direkt per E-Mail an
+            <a href="mailto:grundbildung@spedlogswiss.com">grundbildung@spedlogswiss.com</a>.
+          </h3>
+        `;
+              }
+              sniffForm.style.display = 'none';
+            });
+          });
+        </script>
+
       </div>
-    </div>
   </section>
 
   <section class="section-start" data-page-id="0">
@@ -501,7 +580,6 @@ $region_data = get_region_data();
 </div>
 <script>
   const regionData = <?php echo json_encode($region_data); ?>;
-  console.log(regionData)
 </script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/region-handling.js"></script>
 
